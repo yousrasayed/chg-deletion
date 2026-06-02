@@ -1,0 +1,94 @@
+wwwroot\css\site.css
+wwwroot\favicon.ico
+wwwroot\images\logo-removebg-preview.png
+wwwroot\images\logo.jpg
+wwwroot\js\attachments.js
+wwwroot\js\companies.js
+wwwroot\js\site.js
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+wwwroot\lib\bootstrap\LICENSE
+wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
+wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
+wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\lib\jquery-validation\dist\additional-methods.js
+wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+wwwroot\lib\jquery-validation\dist\jquery.validate.js
+wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+wwwroot\lib\jquery-validation\LICENSE.md
+wwwroot\lib\jquery\dist\jquery.js
+wwwroot\lib\jquery\dist\jquery.min.js
+wwwroot\lib\jquery\dist\jquery.min.map
+wwwroot\lib\jquery\LICENSE.txt
+wwwroot\uploads\meetings\1004\decisions\1004\Screenshot 2026-03-26 131530.png
+wwwroot\uploads\meetings\1005\Screenshot 2026-03-03 133109.png
+wwwroot\uploads\meetings\1005\Screenshot 2026-03-04 142611.png
+wwwroot\uploads\meetings\1006\639107308436883706_Screenshot 2026-03-04 142611.png
+wwwroot\uploads\meetings\1006\Screenshot 2026-03-03 133109.png
+wwwroot\uploads\meetings\1008\Screenshot 2026-03-29 152748.png
+wwwroot\uploads\meetings\1009\Screenshot 2026-03-09 105225.png
+wwwroot\uploads\meetings\1009\Screenshot 2026-03-26 131530.png
+wwwroot\uploads\meetings\1010\Screenshot 2026-03-26 131530.png
+wwwroot\uploads\meetings\1014\Screenshot 2026-03-26 134355.png
+wwwroot\uploads\meetings\1016\UI Task.pdf
+wwwroot\uploads\meetings\1017\639117603930276010_UI Task.pdf
+wwwroot\uploads\meetings\1019\639117619414275227_UI Task.pdf
+wwwroot\uploads\meetings\1021\Amin-Abd El-Shafy-Front-End.pdf
+wwwroot\uploads\meetings\1022\Amin-Abd El-Shafy-Front-End (1).pdf
+wwwroot\uploads\meetings\1022\WhatsApp Image 2026-04-02 at 11.18.22 AM.jpeg
+wwwroot\uploads\meetings\1027\Screenshot 2026-03-15 124631.png
+wwwroot\uploads\meetings\1028\Screenshot 2026-03-04 142611.png
+wwwroot\uploads\meetings\1028\Screenshot 2026-03-15 124631.png
+wwwroot\uploads\meetings\1037\639117603930276010_UI Task.pdf
+wwwroot\uploads\meetings\1\Amin-Abd El-Shafy-Front-End.pdf
+wwwroot\uploads\meetings\1\decisions\2\UI Task.pdf
+wwwroot\uploads\meetings\3\Amin-Abd El-Shafy-Front-End.pdf
+wwwroot\uploads\meetings\3\decisions\2\Screenshot 2026-03-04 142611.png
+wwwroot\uploads\meetings\3\decisions\2\Screenshot 2026-03-09 105225.png
+wwwroot\uploads\meetings\3\decisions\2\UI Task.pdf
+wwwroot\uploads\meetings\3\Screenshot 2026-03-03 133109.png
+wwwroot\uploads\meetings\3\Screenshot 2026-03-04 142611.png
+wwwroot\uploads\meetings\4\decisions\3\Screenshot 2026-03-26 131530.png
+wwwroot\uploads\meetings\4\Screenshot 2026-03-09 105225.png

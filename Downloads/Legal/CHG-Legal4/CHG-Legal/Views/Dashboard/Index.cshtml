@@ -1,0 +1,1300 @@
+﻿@* @model CHG_Legal.Models.ViewModels.DashboardViewModel
+@{
+    ViewData["Title"] = "لوحة التحكم";
+}
+
+<div class="d-flex">
+    @await Html.PartialAsync("_SidebarPartial")
+    <div class="flex-grow-1 p-4" style="background-color: #f0f7f7;">
+        <div class="header mb-4" style="background: linear-gradient(135deg, #91d3d1 0%, #7bc6c3 50%, #65b8b5 100%); border-radius: 15px; padding: 20px 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+            <h2 class="mb-0 text-white">لوحة التحكم</h2>
+        </div>
+
+        <!-- Stats Cards - 4 cards now with white background and colored border-left -->
+        <div class="row mb-4 g-4">
+            <div class="col-md-3">
+                <div class="card border-0 h-100 shadow-sm" style="border-radius: 20px; background: white; transition: transform 0.3s ease, box-shadow 0.3s ease; border-right: 1px solid rgba(0,0,0,0.05); border-bottom: 1px solid rgba(0,0,0,0.05);">
+                    <div class="card-body p-4" style="border-left: 5px solid #7bc6c3; border-radius: 20px;">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <p class="text-muted mb-1 small fw-semibold">إجمالي الاجتماعات</p>
+                                <h2 class="display-4 bold mb-0" style="color: #4a9f9c;">@Model.TotalMeetings</h2>
+                            </div>
+                            <div class="rounded-circle p-3" style="background: rgba(123, 198, 195, 0.1);">
+                                <i class="fas fa-calendar-alt fa-2x" style="color: #7bc6c3;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 h-100 shadow-sm" style="border-radius: 20px; background: white; transition: transform 0.3s ease, box-shadow 0.3s ease; border-right: 1px solid rgba(0,0,0,0.05); border-bottom: 1px solid rgba(0,0,0,0.05);">
+                    <div class="card-body p-4" style="border-left: 5px solid #65b8b5; border-radius: 20px;">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <p class="text-muted mb-1 small fw-semibold">الاجتماعات المعتمدة</p>
+                                <h2 class="display-4 bold mb-0" style="color: #4a9f9c;">@Model.ApprovedMeetings</h2>
+                            </div>
+                            <div class="rounded-circle p-3" style="background: rgba(101, 184, 181, 0.1);">
+                                <i class="fas fa-check-circle fa-2x" style="color: #65b8b5;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 h-100 shadow-sm" style="border-radius: 20px; background: white; transition: transform 0.3s ease, box-shadow 0.3s ease; border-right: 1px solid rgba(0,0,0,0.05); border-bottom: 1px solid rgba(0,0,0,0.05);">
+                    <div class="card-body p-4" style="border-left: 5px solid #91d3d1; border-radius: 20px;">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <p class="text-muted mb-1 small fw-semibold">الاجتماعات غير المعتمدة</p>
+                                <h2 class="display-4 bold mb-0" style="color: #4a9f9c;">@Model.RejectedMeetings</h2>
+                            </div>
+                            <div class="rounded-circle p-3" style="background: rgba(145, 211, 209, 0.1);">
+                                <i class="fas fa-times-circle fa-2x" style="color: #91d3d1;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 h-100 shadow-sm" style="border-radius: 20px; background: white; transition: transform 0.3s ease, box-shadow 0.3s ease; border-right: 1px solid rgba(0,0,0,0.05); border-bottom: 1px solid rgba(0,0,0,0.05);">
+                    <div class="card-body p-4" style="border-left: 5px solid #4a9f9c; border-radius: 20px;">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <p class="text-muted mb-1 small fw-semibold">قيد الانتظار</p>
+                                <h2 class="display-4 bold mb-0" style="color: #4a9f9c;">@Model.PendingMeetings</h2>
+                            </div>
+                            <div class="rounded-circle p-3" style="background: rgba(74, 159, 156, 0.1);">
+                                <i class="fas fa-clock fa-2x" style="color: #4a9f9c;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Charts Row 1: Two charts side by side -->
+        <div class="row g-4 mb-4">
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm h-100" style="border-radius: 20px; overflow: hidden;">
+                    <div class="card-header bg-white border-0 pt-4 pb-0 px-4" style="color: #4a9f9c; font-weight: bold;">
+                        <i class="fas fa-chart-pie me-2"></i> الاجتماعات حسب النوع
+                    </div>
+                    <div class="card-body p-4">
+                        <canvas id="meetingsByTypeChart" style="width: 100%; height: 350px;"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm h-100" style="border-radius: 20px; overflow: hidden;">
+                    <div class="card-header bg-white border-0 pt-4 pb-0 px-4" style="color: #4a9f9c; font-weight: bold;">
+                        <i class="fas fa-chart-bar me-2"></i> الاجتماعات حسب المستشفى
+                    </div>
+                    <div class="card-body p-4">
+                        <canvas id="meetingsByHospitalChart" style="width: 100%; height: 350px;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Row 2: Monthly meetings by type (Grouped Bar Chart) -->
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <div class="card border-0 shadow-sm" style="border-radius: 20px; overflow: hidden;">
+                    <div class="card-header bg-white border-0 pt-4 pb-0 px-4" style="color: #4a9f9c; font-weight: bold;">
+                        <i class="fas fa-chart-line me-2"></i> الاجتماعات حسب الشهر والنوع
+                    </div>
+                    <div class="card-body p-4">
+                        <canvas id="monthlyMeetingsChart" style="width: 100%; height: 450px;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Yearly Reports Table -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card border-0 shadow-sm" style="border-radius: 20px; overflow: hidden;">
+                    <div class="card-header bg-white border-0 pt-4 pb-0 px-4" style="color: #4a9f9c; font-weight: bold;">
+                        <i class="fas fa-chart-line me-2"></i> تقارير مجلس الإدارة السنوية
+                        <small class="text-muted">(اضغط على السنة لعرض التفاصيل)</small>
+                    </div>
+                    <div class="card-body p-4 table-container">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0" id="reportsTable" style="border-collapse: separate; border-spacing: 0 10px;">
+                                <thead>
+                                    <tr style="background: linear-gradient(135deg, #91d3d1 0%, #7bc6c3 50%, #65b8b5 100%); color: white; border-radius: 15px;">
+                                        <th style="width: 40px; border-top-right-radius: 15px; border-top-left-radius: 15px; padding: 15px 10px;"></th>
+                                        <th style="padding: 15px 10px;">السنة</th>
+                                        @{
+                                            var allTypes = Model.YearlyReports
+                                                .SelectMany(r => r.MeetingsByType.Keys)
+                                                .Distinct()
+                                                .OrderBy(t => t)
+                                                .ToList();
+                                            
+                                            foreach (var type in allTypes)
+                                            {
+                                                <th style="padding: 15px 10px;">@type</th>
+                                            }
+                                        }
+                                        <th style="padding: 15px 10px;">إجمالي الاجتماعات</th>
+                                        <th style="padding: 15px 10px;">موافقة كاملة</th>
+                                        <th style="padding: 15px 10px; border-top-left-radius: 15px; border-top-right-radius: 15px;">قيد الانتظار</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="reportsTableBody">
+                                    @{
+                                        var allTypesList = Model.YearlyReports
+                                            .SelectMany(r => r.MeetingsByType.Keys)
+                                            .Distinct()
+                                            .OrderBy(t => t)
+                                            .ToList();
+                                    }
+                                    @foreach (var report in Model.YearlyReports.OrderByDescending(r => r.Year))
+                                    {
+                                        <tr class="expandable-row" data-year="@report.Year" style="background-color: white; border-radius: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); transition: all 0.2s ease; cursor: pointer;">
+                                            <td class="text-center" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px;">
+                                                <i class="fas fa-chevron-left expand-icon" style="color: #7bc6c3;"></i>
+                                            </td>
+                                            <td class="fw-bold year-cell" data-year="@report.Year" style="border-top-left-radius: 15px; border-bottom-left-radius: 15px;">@report.Year</td>
+                                            @foreach (var type in allTypesList)
+                                            {
+                                                <td class="text-center">
+                                                    @(report.MeetingsByType.ContainsKey(type) ? report.MeetingsByType[type] : 0)
+                                                </td>
+                                            }
+                                            <td class="fw-bold text-center" style="color: #4a9f9c;">@report.TotalMeetings</td>
+                                            <td class="text-success fw-bold text-center">@report.FullyApprovedMeetings</td>
+                                            <td class="text-warning fw-bold text-center">@report.WaitingMeetings</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <style>
+        /* Custom styling for expandable rows and modern UI */
+        .expandable-row:hover {
+        background-color: #f8fbfb !important;
+        transform: scale(1.01);
+        box-shadow: 0 4px 12px rgba(101, 184, 181, 0.15) !important;
+        }
+        
+        .expand-icon {
+        transition: transform 0.3s ease;
+        }
+        
+        .expanded .expand-icon {
+        transform: rotate(-90deg);
+        }
+        
+        .detail-content {
+        background: #f8fbfb;
+        padding: 20px;
+        border-radius: 15px;
+        margin: 10px 0;
+        }
+        
+        .detail-title {
+        font-weight: bold;
+        color: #4a9f9c;
+        border-right: 4px solid #7bc6c3;
+        padding-right: 12px;
+        }
+        
+        .detail-table {
+        width: 100%;
+        border-collapse: collapse;
+        }
+        
+        .detail-table th {
+        background: linear-gradient(135deg, #91d3d1 0%, #7bc6c3 50%, #65b8b5 100%);
+        color: white;
+        padding: 10px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        }
+        
+        .detail-table td {
+        padding: 10px;
+        border-bottom: 1px solid #e0eceb;
+        vertical-align: middle;
+        }
+        
+        .detail-table tr:hover td {
+        background-color: #f0f7f7;
+        }
+        
+        .hospital-badge {
+        background: linear-gradient(135deg, #91d3d1 0%, #7bc6c3 50%, #65b8b5 100%);
+        color: white;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        display: inline-block;
+        }
+        
+        .progress-bar {
+        background: linear-gradient(135deg, #91d3d1 0%, #7bc6c3 50%, #65b8b5 100%) !important;
+        }
+        
+        /* Card hover effect */
+        .card.h-100 {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card.h-100:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(101, 184, 181, 0.25) !important;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+        background: #e0eceb;
+        border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+        background: #7bc6c3;
+        border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+        background: #65b8b5;
+        }
+    </style>
+    
+    <script>
+        // Pass data from Model to JavaScript
+        const meetingsByType = @Html.Raw(Json.Serialize(Model.MeetingsByType));
+        const meetingsByHospital = @Html.Raw(Json.Serialize(Model.MeetingsByHospital));
+        
+        // Prepare monthly data
+        const monthlyData = @Html.Raw(Json.Serialize(Model.YearlyMeetingsByType));
+        
+        // New primary color palette from the gradient
+        const primaryColor = '#7bc6c3';
+        const primaryLight = '#91d3d1';
+        const primaryDark = '#65b8b5';
+        const gradientColors = ['#91d3d1', '#7bc6c3', '#65b8b5'];
+        
+        // Chart 1: Meetings by type (Bar Chart)
+        const ctx1 = document.getElementById('meetingsByTypeChart').getContext('2d');
+        new Chart(ctx1, {
+        type: 'bar',
+        data: {
+        labels: Object.keys(meetingsByType),
+        datasets: [{
+        label: 'عدد الاجتماعات',
+        data: Object.values(meetingsByType),
+        backgroundColor: (context) => {
+        const chart = context.chart;
+        const {ctx, chartArea} = chart;
+        if (!chartArea) return primaryColor;
+        const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+        gradient.addColorStop(0, primaryDark);
+        gradient.addColorStop(0.5, primaryColor);
+        gradient.addColorStop(1, primaryLight);
+        return gradient;
+        },
+        borderColor: primaryDark,
+        borderWidth: 1,
+        borderRadius: 8,
+        barPercentage: 0.7,
+        categoryPercentage: 0.8
+        }]
+        },
+        options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+        legend: { position: 'top', labels: { font: { size: 12 }, color: '#4a9f9c' } },
+        tooltip: { mode: 'index', intersect: false, backgroundColor: primaryDark, titleColor: 'white', bodyColor: 'white' }
+        },
+        scales: {
+        y: {
+        beginAtZero: true,
+        ticks: { stepSize: 1, font: { size: 11 }, color: '#5a7a78' },
+        title: { display: true, text: 'عدد الاجتماعات', font: { size: 12 }, color: '#4a9f9c' },
+        grid: { color: '#e0eceb' }
+        },
+        x: {
+        ticks: { font: { size: 11 }, rotation: 0, color: '#5a7a78' },
+        title: { display: true, text: 'نوع الاجتماع', font: { size: 12 }, color: '#4a9f9c' },
+        grid: { display: false }
+        }
+        }
+        }
+        });
+        
+        // Chart 2: Meetings by hospital (Bar Chart)
+        const ctx2 = document.getElementById('meetingsByHospitalChart').getContext('2d');
+        new Chart(ctx2, {
+        type: 'bar',
+        data: {
+        labels: Object.keys(meetingsByHospital),
+        datasets: [{
+        label: 'عدد الاجتماعات',
+        data: Object.values(meetingsByHospital),
+        backgroundColor: (context) => {
+        const chart = context.chart;
+        const {ctx, chartArea} = chart;
+        if (!chartArea) return primaryColor;
+        const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+        gradient.addColorStop(0, primaryDark);
+        gradient.addColorStop(0.5, primaryColor);
+        gradient.addColorStop(1, primaryLight);
+        return gradient;
+        },
+        borderColor: primaryDark,
+        borderWidth: 1,
+        borderRadius: 8,
+        barPercentage: 0.7,
+        categoryPercentage: 0.8
+        }]
+        },
+        options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+        legend: { position: 'top', labels: { font: { size: 12 }, color: '#4a9f9c' } },
+        tooltip: { mode: 'index', intersect: false, backgroundColor: primaryDark, titleColor: 'white', bodyColor: 'white' }
+        },
+        scales: {
+        y: {
+        beginAtZero: true,
+        ticks: { stepSize: 1, font: { size: 11 }, color: '#5a7a78' },
+        title: { display: true, text: 'عدد الاجتماعات', font: { size: 12 }, color: '#4a9f9c' },
+        grid: { color: '#e0eceb' }
+        },
+        x: {
+        ticks: { font: { size: 11 }, rotation: 0, color: '#5a7a78' },
+        title: { display: true, text: 'المستشفى', font: { size: 12 }, color: '#4a9f9c' },
+        grid: { display: false }
+        }
+        }
+        }
+        });
+        
+        // Chart 3: Monthly meetings by type (Grouped Bar Chart)
+        const years = Object.keys(monthlyData).sort();
+        
+        // Get all meeting types across all years
+        const allMeetingTypes = [...new Set(
+        years.flatMap(year => Object.keys(monthlyData[year]))
+        )].sort();
+       
+        const typeColors = {
+        'مجلس ادارة': primaryColor,
+        'جمعيات عادية': primaryLight,
+        'جمعيات غير عادية': primaryDark
+        };
+        
+        // If there are any other types, generate shades from gradient
+        allMeetingTypes.forEach((type, index) => {
+        if (!typeColors[type]) {
+        typeColors[type] = gradientColors[index % gradientColors.length];
+        }
+        });
+        
+        // Prepare data for grouped bar chart (months from 1 to 12)
+        const months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+        const monthNames = {
+        1: 'يناير', 2: 'فبراير', 3: 'مارس', 4: 'أبريل', 5: 'مايو', 6: 'يونيو',
+        7: 'يوليو', 8: 'أغسطس', 9: 'سبتمبر', 10: 'أكتوبر', 11: 'نوفمبر', 12: 'ديسمبر'
+        };
+        
+        // Create datasets for each meeting type
+        const datasets = allMeetingTypes.map(type => ({
+        label: type,
+        data: months.map(month => {
+        let total = 0;
+        years.forEach(year => {
+        if (monthlyData[year] && monthlyData[year][type] && monthlyData[year][type][month]) {
+        total += monthlyData[year][type][month];
+        }
+        });
+        return total;
+        }),
+        backgroundColor: typeColors[type],
+        borderColor: typeColors[type],
+        borderWidth: 1,
+        borderRadius: 4,
+        barPercentage: 0.7,
+        categoryPercentage: 0.8
+        }));
+        
+        const ctx3 = document.getElementById('monthlyMeetingsChart').getContext('2d');
+        new Chart(ctx3, {
+        type: 'bar',
+        data: {
+        labels: months.map(m => monthNames[m]),
+        datasets: datasets
+        },
+        options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+        legend: { position: 'top', labels: { font: { size: 12 }, color: '#4a9f9c' } },
+        tooltip: { mode: 'index', intersect: false, backgroundColor: primaryDark, titleColor: 'white', bodyColor: 'white' }
+        },
+        scales: {
+        x: {
+        stacked: false,
+        ticks: { font: { size: 11 }, rotation: 45, color: '#5a7a78' },
+        title: { display: true, text: 'الشهر', font: { size: 12 }, color: '#4a9f9c' },
+        grid: { display: false }
+        },
+        y: {
+        stacked: false,
+        beginAtZero: true,
+        ticks: { stepSize: 1, font: { size: 11 }, color: '#5a7a78' },
+        title: { display: true, text: 'عدد الاجتماعات', font: { size: 12 }, color: '#4a9f9c' },
+        grid: { color: '#e0eceb' }
+        }
+        }
+        }
+        });
+        
+        // ============ EXPANDABLE ROWS FUNCTIONALITY ============
+        
+        // Hospital yearly data from backend
+        window.hospitalYearlyData = @Html.Raw(Json.Serialize(ViewBag.HospitalYearlyData ?? new Dictionary<string, Dictionary<int, int>>()));
+        window.hospitalYearlyTypeData = @Html.Raw(Json.Serialize(ViewBag.HospitalYearlyTypeData ?? new Dictionary<string, Dictionary<string, int>>()));
+
+        // Function to get current column count dynamically
+        function getCurrentColumnCount() {
+        var $headerRow = $('#reportsTable thead tr:first');
+        var columnCount = $headerRow.find('th:not([style*="display: none"])').length;
+        return columnCount;
+        }
+
+        // Function to get hospital details for a specific year
+        function getHospitalDetails(year) {
+        let hospitals = {};
+        for (let key in window.hospitalYearlyData) {
+        if (key.startsWith(year + "_")) {
+        let hospitalName = key.substring((year + "_").length);
+        hospitals[hospitalName] = window.hospitalYearlyData[key][year] || 0;
+        }
+        }
+        return hospitals;
+        }
+
+        // Function to get all meeting types for a specific year
+        function getMeetingTypesForYear(year) {
+        let meetingTypes = new Set();
+        for (let key in window.hospitalYearlyTypeData) {
+        if (key.startsWith(year + "_")) {
+        var types = Object.keys(window.hospitalYearlyTypeData[key]);
+        types.forEach(t => meetingTypes.add(t));
+        }
+        }
+        return Array.from(meetingTypes).sort();
+        }
+
+        // Toggle expand/collapse
+        $(document).ready(function() {
+        $('.expandable-row').off('click').on('click', function(e) {
+        var $this = $(this);
+        var year = $this.data('year');
+        var $nextRow = $this.next('.detail-row');
+                
+        if ($nextRow.length && $nextRow.hasClass('detail-row')) {
+        $nextRow.remove();
+        $this.removeClass('expanded');
+        } else {
+        var columnCount = getCurrentColumnCount();
+        var hospitals = getHospitalDetails(year);
+        var hospitalsList = Object.keys(hospitals);
+        var totalMeetings = parseInt($this.find('td:eq(' + (columnCount - 3) + ')').text()) || 1;
+                    
+        if (hospitalsList.length === 0) {
+        var noDataHtml = `
+        <tr class="detail-row">
+        <td colspan="${columnCount}">
+        <div class="detail-content text-center text-muted py-3">
+        <i class="fas fa-info-circle me-2"></i>
+        لا توجد بيانات مستشفيات لهذه السنة
+        </div>
+        </td>
+        </tr>
+        `;
+        $this.after(noDataHtml);
+        } else {
+        // Get all meeting types for this year to use as headers
+        var meetingTypesForYear = getMeetingTypesForYear(year);
+                        
+        // Build the header with meeting types
+        var typeHeaderHtml = '';
+        meetingTypesForYear.forEach(type => {
+        typeHeaderHtml += `<th class="text-center" style="font-size: 0.8rem; padding: 8px;">${type}</th>`;
+        });
+                        
+        var totalByHospital = hospitalsList.map(h => ({
+        name: h,
+        count: hospitals[h]
+        })).sort((a, b) => b.count - a.count);
+                        
+        var detailHtml = `
+        <tr class="detail-row">
+        <td colspan="${columnCount}">
+        <div class="detail-content">
+        <div class="detail-title mb-3">
+        <i class="fas fa-hospital me-2"></i>
+        تفاصيل الاجتماعات حسب المستشفى - سنة ${year}
+        </div>
+        <div class="table-responsive">
+        <table class="detail-table">
+        <thead>
+        <tr>
+        <th style="width: 40px;">#</th>
+        <th>اسم المستشفى</th>
+        ${typeHeaderHtml}
+        <th style="width: 100px;">إجمالي</th>
+        <th style="width: 100px;">النسبة</th>
+        </tr>
+        </thead>
+        <tbody>
+        `;
+                        
+        totalByHospital.forEach((h, idx) => {
+        var percentage = ((h.count / totalMeetings) * 100).toFixed(1);
+        var key = `${year}_${h.name}`;
+        var typeBreakdown = window.hospitalYearlyTypeData[key] || {};
+                            
+        // Build type data cells
+        var typeDataHtml = '';
+        meetingTypesForYear.forEach(type => {
+        var count = typeBreakdown[type] || 0;
+        typeDataHtml += `<td class="text-center" style="font-size: 0.85rem;">${count > 0 ? count : '-'}</td>`;
+        });
+                            
+        detailHtml += `
+        <tr>
+        <td class="text-center">${idx + 1}</td>
+        <td><span class="hospital-badge">${escapeHtml(h.name)}</span></td>
+        ${typeDataHtml}
+        <td class="text-center fw-bold" style="color: #4a9f9c;">${h.count}</td>
+        <td>
+        <div class="d-flex align-items-center gap-2">
+        <div class="progress flex-grow-1" style="height: 8px;">
+        <div class="progress-bar" style="width: ${percentage}%; background: linear-gradient(135deg, #91d3d1, #7bc6c3, #65b8b5) !important;"></div>
+        </div>
+        <span class="small fw-bold" style="color: #4a9f9c;">${percentage}%</span>
+        </div>
+        </td>
+        </tr>
+        `;
+        });
+                        
+        detailHtml += `
+        </tbody>
+        </table>
+        </div>
+        </div>
+        </td>
+        </tr>
+        `;
+                        
+        $this.after(detailHtml);
+        }
+        $this.addClass('expanded');
+        }
+        });
+            
+        $('.expand-icon').off('click').on('click', function(e) {
+        e.stopPropagation();
+        $(this).closest('.expandable-row').trigger('click');
+        });
+        });
+
+        // Helper function to escape HTML
+        function escapeHtml(text) {
+        if (!text) return '';
+        return text.replace(/[&<>]/g, function(m) {
+        if (m === '&') return '&amp;';
+        if (m === '<') return '&lt;';
+        if (m === '>') return '&gt;';
+        return m;
+        });
+        }
+    </script>
+} *@
+@model CHG_Legal.Models.ViewModels.DashboardViewModel
+@{
+    ViewData["Title"] = "لوحة التحكم";
+}
+
+<!-- Stats Cards -->
+<div class="row mb-4 g-4">
+    <div class="col-md-3">
+        <div class="card border-0 h-100 shadow-sm" style="border-radius: 20px; background: white;">
+            <div class="card-body p-4" style="border-left: 5px solid #7bc6c3; border-radius: 20px;">
+                <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                        <p class="text-muted mb-1 small fw-semibold">إجمالي الشركات</p>
+                        <h2 class="display-4 bold mb-0" style="color: #4a9f9c;">@Model.TotalCompanies</h2>
+                    </div>
+                    <div class="rounded-circle p-3" style="background: rgba(123, 198, 195, 0.1);">
+                        <i class="fas fa-building fa-2x" style="color: #7bc6c3;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card border-0 h-100 shadow-sm" style="border-radius: 20px; background: white;">
+            <div class="card-body p-4" style="border-left: 5px solid #65b8b5; border-radius: 20px;">
+                <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                        <p class="text-muted mb-1 small fw-semibold">الشركات النشطة</p>
+                        <h2 class="display-4 bold mb-0" style="color: #4a9f9c;">@Model.ActiveCompanies</h2>
+                    </div>
+                    <div class="rounded-circle p-3" style="background: rgba(101, 184, 181, 0.1);">
+                        <i class="fas fa-check-circle fa-2x" style="color: #65b8b5;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card border-0 h-100 shadow-sm" style="border-radius: 20px; background: white;">
+            <div class="card-body p-4" style="border-left: 5px solid #91d3d1; border-radius: 20px;">
+                <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                        <p class="text-muted mb-1 small fw-semibold">شركات على وشك الانتهاء</p>
+                        <h2 class="display-4 bold mb-0" style="color: #4a9f9c;">@Model.ExpiringCompanies</h2>
+                    </div>
+                    <div class="rounded-circle p-3" style="background: rgba(145, 211, 209, 0.1);">
+                        <i class="fas fa-hourglass-half fa-2x" style="color: #91d3d1;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card border-0 h-100 shadow-sm" style="border-radius: 20px; background: white;">
+            <div class="card-body p-4" style="border-left: 5px solid #4a9f9c; border-radius: 20px;">
+                <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                        <p class="text-muted mb-1 small fw-semibold">شركات منتهية</p>
+                        <h2 class="display-4 bold mb-0" style="color: #4a9f9c;">@Model.ExpiredCompanies</h2>
+                    </div>
+                    <div class="rounded-circle p-3" style="background: rgba(74, 159, 156, 0.1);">
+                        <i class="fas fa-ban fa-2x" style="color: #4a9f9c;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Charts Row 1 - Two charts side by side مع تقليل الحجم -->
+<div class="row g-4 mb-4">
+    <div class="col-md-6">
+        <div class="card border-0 shadow-sm h-100" style="border-radius: 20px; overflow: hidden;">
+            <div class="card-header bg-white border-0 pt-4 pb-0 px-4" style="color: #4a9f9c; font-weight: bold;">
+                <i class="fas fa-users me-2"></i> الشركات حسب عدد المساهمين
+            </div>
+            <div class="card-body p-4 d-flex justify-content-center align-items-center" style="min-height: 320px;">
+                <canvas id="companiesByShareholdersChart" style="width: 100%; height: 280px; max-width: 500px;"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card border-0 shadow-sm h-100" style="border-radius: 20px; overflow: hidden;">
+            <div class="card-header bg-white border-0 pt-4 pb-0 px-4" style="color: #4a9f9c; font-weight: bold;">
+                <i class="fas fa-code-branch me-2"></i> الشركات حسب عدد الفروع
+            </div>
+            <div class="card-body p-4 d-flex justify-content-center align-items-center" style="min-height: 320px;">
+                <canvas id="companiesByBranchesChart" style="width: 100%; height: 280px; max-width: 500px;"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Chart Row 2: Monthly Registrations -->
+<div class="row mb-4">
+    <div class="col-md-12">
+        <div class="card border-0 shadow-sm" style="border-radius: 20px; overflow: hidden;">
+            <div class="card-header bg-white border-0 pt-4 pb-0 px-4" style="color: #4a9f9c; font-weight: bold;">
+                <i class="fas fa-chart-line me-2"></i> تسجيلات الشركات حسب الشهر
+            </div>
+            <div class="card-body p-4">
+                <canvas id="monthlyRegistrationsChart" style="width: 100%; height: 400px;"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Chart Row 3: Top Companies -->
+<div class="row g-4 mb-4">
+    <div class="col-md-6">
+        <div class="card border-0 shadow-sm h-100" style="border-radius: 20px; overflow: hidden;">
+            <div class="card-header bg-white border-0 pt-4 pb-0 px-4" style="color: #4a9f9c; font-weight: bold;">
+                <i class="fas fa-trophy me-2"></i> أكبر الشركات من حيث عدد المساهمين
+            </div>
+            <div class="card-body p-4">
+                <canvas id="topCompaniesByShareholdersChart" style="width: 100%; height: 400px;"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card border-0 shadow-sm h-100" style="border-radius: 20px; overflow: hidden;">
+            <div class="card-header bg-white border-0 pt-4 pb-0 px-4" style="color: #4a9f9c; font-weight: bold;">
+                <i class="fas fa-code-branch me-2"></i> أكبر الشركات من حيث عدد الفروع
+            </div>
+            <div class="card-body p-4">
+                <canvas id="topCompaniesByBranchesChart" style="width: 100%; height: 400px;"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Yearly Reports Table -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="card border-0 shadow-sm" style="border-radius: 20px; overflow: hidden;">
+            <div class="card-header bg-white border-0 pt-4 pb-0 px-4" style="color: #4a9f9c; font-weight: bold;">
+                <i class="fas fa-calendar-alt me-2"></i> تقارير الشركات السنوية
+                <small class="text-muted">(اضغط على السنة لعرض التفاصيل)</small>
+            </div>
+            <div class="card-body p-4 table-container">
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0" id="reportsTable" style="border-collapse: separate; border-spacing: 0 10px;">
+                        <thead>
+                            <tr style="background: linear-gradient(135deg, #91d3d1 0%, #7bc6c3 50%, #65b8b5 100%); color: white; border-radius: 15px;">
+                                <th style="width: 40px; border-top-right-radius: 15px; padding: 15px 10px;"></th>
+                                <th style="padding: 15px 10px;">السنة</th>
+                                <th style="padding: 15px 10px;">إجمالي الشركات</th>
+                                <th style="padding: 15px 10px;">شركات نشطة</th>
+                                <th style="padding: 15px 10px;">شركات منتهية</th>
+                                <th style="padding: 15px 10px;">إجمالي المساهمين</th>
+                                <th style="padding: 15px 10px;">إجمالي الفروع</th>
+                                <th style="padding: 15px 10px; border-top-left-radius: 15px;">متوسط المساهمين</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reportsTableBody">
+                            @foreach (var report in Model.YearlyReports.OrderByDescending(r => r.Year))
+                            {
+                                <tr class="expandable-row" data-year="@report.Year" style="background-color: white; border-radius: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); cursor: pointer;">
+                                    <td class="text-center" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px;">
+                                        <i class="fas fa-chevron-left expand-icon" style="color: #7bc6c3;"></i>
+                                    </td>
+                                    <td class="fw-bold" style="border-top-left-radius: 15px; border-bottom-left-radius: 15px;">@report.Year</td>
+                                    <td class="text-center fw-bold" style="color: #4a9f9c;">@report.TotalCompanies</td>
+                                    <td class="text-center text-success fw-bold">@report.ActiveCompanies</td>
+                                    <td class="text-center text-danger fw-bold">@report.ExpiredCompanies</td>
+                                    <td class="text-center">@report.TotalShareholders</td>
+                                    <td class="text-center">@report.TotalBranches</td>
+                                    <td class="text-center fw-bold" style="color: #65b8b5;">@report.AverageShareholdersPerCompany.ToString("0.0")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <style>
+        /* Custom styling for expandable rows and modern UI */
+        .expandable-row:hover {
+        background-color: #f8fbfb !important;
+        transform: scale(1.01);
+        box-shadow: 0 4px 12px rgba(101, 184, 181, 0.15) !important;
+        }
+        
+        .expand-icon {
+        transition: transform 0.3s ease;
+        }
+        
+        .expanded .expand-icon {
+        transform: rotate(-90deg);
+        }
+        
+        .detail-content {
+        background: #f8fbfb;
+        padding: 20px;
+        border-radius: 15px;
+        margin: 10px 0;
+        }
+        
+        .detail-title {
+        font-weight: bold;
+        color: #4a9f9c;
+        border-right: 4px solid #7bc6c3;
+        padding-right: 12px;
+        }
+        
+        .detail-table {
+        width: 100%;
+        border-collapse: collapse;
+        }
+        
+        .detail-table th {
+        background: linear-gradient(135deg, #91d3d1 0%, #7bc6c3 50%, #65b8b5 100%);
+        color: white;
+        padding: 10px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        }
+        
+        .detail-table td {
+        padding: 10px;
+        border-bottom: 1px solid #e0eceb;
+        vertical-align: middle;
+        }
+        
+        .detail-table tr:hover td {
+        background-color: #f0f7f7;
+        }
+        
+        .company-badge {
+        background: linear-gradient(135deg, #91d3d1 0%, #7bc6c3 50%, #65b8b5 100%);
+        color: white;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        display: inline-block;
+        }
+        
+        .progress-bar {
+        background: linear-gradient(135deg, #91d3d1 0%, #7bc6c3 50%, #65b8b5 100%) !important;
+        }
+        
+        /* Card hover effect */
+        .card.h-100 {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card.h-100:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(101, 184, 181, 0.25) !important;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+        background: #e0eceb;
+        border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+        background: #7bc6c3;
+        border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+        background: #65b8b5;
+        }
+    </style>
+    
+    <script>
+        // Data from Model
+        const companiesByShareholders = @Html.Raw(Json.Serialize(Model.CompaniesByShareholderCount));
+        const companiesByBranches = @Html.Raw(Json.Serialize(Model.CompaniesByBranchCount));
+        const monthlyRegistrations = @Html.Raw(Json.Serialize(Model.MonthlyRegistrations));
+        const topCompaniesByShareholders = @Html.Raw(Json.Serialize(Model.TopCompaniesByShareholders));
+        const topCompaniesByBranches = @Html.Raw(Json.Serialize(Model.TopCompaniesByBranches));
+        
+        const primaryColor = '#7bc6c3';
+        const primaryLight = '#91d3d1';
+        const primaryDark = '#65b8b5';
+        
+        // Chart 1: Companies by Shareholder Count (Bar Chart) - حجم أصغر
+        const ctx1 = document.getElementById('companiesByShareholdersChart').getContext('2d');
+        new Chart(ctx1, {
+        type: 'bar',
+        data: {
+        labels: Object.keys(companiesByShareholders),
+        datasets: [{
+        label: 'عدد الشركات',
+        data: Object.values(companiesByShareholders),
+        backgroundColor: (context) => {
+        const chart = context.chart;
+        const {ctx, chartArea} = chart;
+        if (!chartArea) return primaryColor;
+        const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+        gradient.addColorStop(0, primaryDark);
+        gradient.addColorStop(0.5, primaryColor);
+        gradient.addColorStop(1, primaryLight);
+        return gradient;
+        },
+        borderRadius: 8,
+        barPercentage: 0.6,
+        categoryPercentage: 0.7
+        }]
+        },
+        options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        aspectRatio: 1.5,
+        plugins: {
+        legend: {
+        position: 'top',
+        labels: {
+        font: { size: 11 },
+        color: '#4a9f9c',
+        boxWidth: 10
+        }
+        },
+        tooltip: {
+        backgroundColor: primaryDark,
+        titleColor: 'white',
+        bodyColor: 'white'
+        }
+        },
+        scales: {
+        y: {
+        beginAtZero: true,
+        ticks: {
+        stepSize: 1,
+        color: '#5a7a78',
+        font: { size: 10 }
+        },
+        grid: { color: '#e0eceb' },
+        title: {
+        display: true,
+        text: 'عدد الشركات',
+        font: { size: 10 },
+        color: '#4a9f9c'
+        }
+        },
+        x: {
+        ticks: {
+        color: '#5a7a78',
+        font: { size: 10 }
+        },
+        grid: { display: false }
+        }
+        }
+        }
+        });
+        
+        // Chart 2: Companies by Branch Count (Bar Chart) - حجم أصغر
+        const ctx2 = document.getElementById('companiesByBranchesChart').getContext('2d');
+        new Chart(ctx2, {
+        type: 'bar',
+        data: {
+        labels: Object.keys(companiesByBranches),
+        datasets: [{
+        label: 'عدد الشركات',
+        data: Object.values(companiesByBranches),
+        backgroundColor: (context) => {
+        const chart = context.chart;
+        const {ctx, chartArea} = chart;
+        if (!chartArea) return primaryColor;
+        const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+        gradient.addColorStop(0, primaryDark);
+        gradient.addColorStop(0.5, primaryColor);
+        gradient.addColorStop(1, primaryLight);
+        return gradient;
+        },
+        borderRadius: 8,
+        barPercentage: 0.6,
+        categoryPercentage: 0.7
+        }]
+        },
+        options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        aspectRatio: 1.5,
+        plugins: {
+        legend: {
+        position: 'top',
+        labels: {
+        font: { size: 11 },
+        color: '#4a9f9c',
+        boxWidth: 10
+        }
+        },
+        tooltip: {
+        backgroundColor: primaryDark,
+        titleColor: 'white',
+        bodyColor: 'white'
+        }
+        },
+        scales: {
+        y: {
+        beginAtZero: true,
+        ticks: {
+        stepSize: 1,
+        color: '#5a7a78',
+        font: { size: 10 }
+        },
+        grid: { color: '#e0eceb' },
+        title: {
+        display: true,
+        text: 'عدد الشركات',
+        font: { size: 10 },
+        color: '#4a9f9c'
+        }
+        },
+        x: {
+        ticks: {
+        color: '#5a7a78',
+        font: { size: 10 }
+        },
+        grid: { display: false }
+        }
+        }
+        }
+        });
+        
+        // Chart 3: Monthly Registrations (Line Chart)
+        const ctx3 = document.getElementById('monthlyRegistrationsChart').getContext('2d');
+        new Chart(ctx3, {
+        type: 'line',
+        data: {
+        labels: Object.keys(monthlyRegistrations),
+        datasets: [{
+        label: 'عدد الشركات المسجلة',
+        data: Object.values(monthlyRegistrations),
+        borderColor: primaryColor,
+        backgroundColor: (context) => {
+        const chart = context.chart;
+        const {ctx, chartArea} = chart;
+        if (!chartArea) return 'transparent';
+        const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+        gradient.addColorStop(0, 'rgba(123, 198, 195, 0.1)');
+        gradient.addColorStop(1, 'rgba(123, 198, 195, 0.4)');
+        return gradient;
+        },
+        fill: true,
+        tension: 0.4,
+        pointBackgroundColor: primaryDark,
+        pointBorderColor: 'white',
+        pointRadius: 4,
+        pointHoverRadius: 6
+        }]
+        },
+        options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+        legend: { position: 'top', labels: { font: { size: 12 }, color: '#4a9f9c' } },
+        tooltip: { backgroundColor: primaryDark }
+        },
+        scales: {
+        y: {
+        beginAtZero: true,
+        ticks: { stepSize: 1, color: '#5a7a78' },
+        grid: { color: '#e0eceb' },
+        title: { display: true, text: 'عدد الشركات', color: '#4a9f9c' }
+        },
+        x: {
+        ticks: { color: '#5a7a78' },
+        grid: { display: false }
+        }
+        }
+        }
+        });
+        
+        // Chart 4: Top Companies by Shareholders (Horizontal Bar Chart)
+        if (topCompaniesByShareholders && topCompaniesByShareholders.length > 0) {
+        const ctx4 = document.getElementById('topCompaniesByShareholdersChart').getContext('2d');
+        new Chart(ctx4, {
+        type: 'bar',
+        data: {
+        labels: topCompaniesByShareholders.map(c => c.companyName.length > 20 ? c.companyName.substring(0, 20) + '...' : c.companyName),
+        datasets: [{
+        label: 'عدد المساهمين',
+        data: topCompaniesByShareholders.map(c => c.shareholderCount),
+        backgroundColor: (context) => {
+        const chart = context.chart;
+        const {ctx, chartArea} = chart;
+        if (!chartArea) return primaryColor;
+        const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+        gradient.addColorStop(0, primaryDark);
+        gradient.addColorStop(0.5, primaryColor);
+        gradient.addColorStop(1, primaryLight);
+        return gradient;
+        },
+        borderRadius: 8
+        }]
+        },
+        options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+        legend: { position: 'top', labels: { font: { size: 12 }, color: '#4a9f9c' } },
+        tooltip: {
+        backgroundColor: primaryDark,
+        callbacks: {
+        label: function(context) {
+        let company = topCompaniesByShareholders[context.dataIndex];
+        return [
+        `المساهمين: ${company.shareholderCount}`,
+        `الفروع: ${company.branchCount}`,
+        `تاريخ التسجيل: ${company.registrationDate ? new Date(company.registrationDate).toLocaleDateString('ar-EG') : 'غير محدد'}`
+        ];
+        }
+        }
+        }
+        },
+        scales: {
+        x: {
+        ticks: { stepSize: 1, color: '#5a7a78' },
+        title: { display: true, text: 'عدد المساهمين', color: '#4a9f9c' },
+        grid: { color: '#e0eceb' }
+        },
+        y: {
+        ticks: { color: '#5a7a78' },
+        grid: { display: false }
+        }
+        }
+        }
+        });
+        }
+        
+        // Chart 5: Top Companies by Branches (Horizontal Bar Chart)
+        if (topCompaniesByBranches && topCompaniesByBranches.length > 0) {
+        const ctx5 = document.getElementById('topCompaniesByBranchesChart').getContext('2d');
+        new Chart(ctx5, {
+        type: 'bar',
+        data: {
+        labels: topCompaniesByBranches.map(c => c.companyName.length > 20 ? c.companyName.substring(0, 20) + '...' : c.companyName),
+        datasets: [{
+        label: 'عدد الفروع',
+        data: topCompaniesByBranches.map(c => c.branchCount),
+        backgroundColor: (context) => {
+        const chart = context.chart;
+        const {ctx, chartArea} = chart;
+        if (!chartArea) return primaryColor;
+        const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+        gradient.addColorStop(0, primaryDark);
+        gradient.addColorStop(0.5, primaryColor);
+        gradient.addColorStop(1, primaryLight);
+        return gradient;
+        },
+        borderRadius: 8
+        }]
+        },
+        options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+        legend: { position: 'top', labels: { font: { size: 12 }, color: '#4a9f9c' } },
+        tooltip: {
+        backgroundColor: primaryDark,
+        callbacks: {
+        label: function(context) {
+        let company = topCompaniesByBranches[context.dataIndex];
+        return [
+        `الفروع: ${company.branchCount}`,
+        `المساهمين: ${company.shareholderCount}`,
+        `تاريخ التسجيل: ${company.registrationDate ? new Date(company.registrationDate).toLocaleDateString('ar-EG') : 'غير محدد'}`
+        ];
+        }
+        }
+        }
+        },
+        scales: {
+        x: {
+        ticks: { stepSize: 1, color: '#5a7a78' },
+        title: { display: true, text: 'عدد الفروع', color: '#4a9f9c' },
+        grid: { color: '#e0eceb' }
+        },
+        y: {
+        ticks: { color: '#5a7a78' },
+        grid: { display: false }
+        }
+        }
+        }
+        });
+        }
+        
+        // Expandable rows functionality for yearly reports
+        $(document).ready(function() {
+        $('.expandable-row').off('click').on('click', function(e) {
+        var $this = $(this);
+        var year = $this.data('year');
+        var $nextRow = $this.next('.detail-row');
+                
+        if ($nextRow.length && $nextRow.hasClass('detail-row')) {
+        $nextRow.remove();
+        $this.removeClass('expanded');
+        } else {
+        var reports = @Html.Raw(Json.Serialize(Model.YearlyReports));
+        var report = reports.find(r => r.year === year);
+                    
+        if (report) {
+        var detailHtml = `
+        <tr class="detail-row">
+        <td colspan="8">
+        <div class="detail-content">
+        <div class="detail-title mb-3">
+        <i class="fas fa-chart-line me-2"></i>
+        تفاصيل سنة ${year}
+        </div>
+        <div class="row">
+        <div class="col-md-6">
+        <div class="mb-3">
+        <strong style="color: #4a9f9c;">توزيع الشركات حسب عدد المساهمين:</strong>
+        <ul class="mt-2">
+        ${Object.entries(report.companiesBySize).map(([type, count]) =>
+        `<li>${type}: ${count} شركة</li>`
+        ).join('')}
+        </ul>
+        </div>
+        </div>
+        <div class="col-md-6">
+        <div class="mb-3">
+        <strong style="color: #4a9f9c;">مؤشرات إضافية:</strong>
+        <ul class="mt-2">
+        <li>متوسط المساهمين لكل شركة: ${(report.totalShareholders / report.totalCompanies).toFixed(1)}</li>
+        <li>متوسط الفروع لكل شركة: ${(report.totalBranches / report.totalCompanies).toFixed(1)}</li>
+        </ul>
+        </div>
+        </div>
+        </div>
+        </div>
+        </td>
+        </tr>
+        `;
+        $this.after(detailHtml);
+        }
+        $this.addClass('expanded');
+        }
+        });
+            
+        $('.expand-icon').off('click').on('click', function(e) {
+        e.stopPropagation();
+        $(this).closest('.expandable-row').trigger('click');
+        });
+        });
+    </script>
+}

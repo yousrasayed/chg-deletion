@@ -1,0 +1,145 @@
+﻿@using CHG_Legal.Models.ViewModels
+@model LoginViewModel
+@{
+    ViewData["Title"] = "تسجيل الدخول";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CHG Legal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: "Cairo", sans-serif;
+        }
+        .login-bg {
+            background: linear-gradient(135deg, #91d3d1 0%, #7bc6c3 50%, #65b8b5 100%);
+            height: 100vh;
+        }
+        .login-card {
+            width: 420px;
+            border-radius: 32px;
+        }
+        .btn-teal {
+            background: linear-gradient(135deg, #91d3d1 0%, #7bc6c3 50%, #65b8b5 100%);
+            color: white;
+            border-radius: 16px;
+        }
+        .btn-teal:hover {
+            background-color: #057a8a;
+            color: white;
+        }
+        .text-danger {
+            color: #dc3545;
+        }
+        .password-wrapper {
+            position: relative;
+            width: 100%;
+        }
+        .user-wrapper {
+            position: relative;
+            width: 100%;
+        }
+        .password-wrapper .form-control,
+        .user-wrapper .form-control{
+            
+            border-radius: 16px;
+            padding-left: 12px !important;
+            margin-bottom:24px;
+
+
+        }
+         .password-wrapper .form-control{
+             padding-right: 42px !important;
+         }
+        .password-toggle {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #adb5bd;
+            background: transparent;
+            border: none;
+            z-index: 10;
+            font-size: 1.1rem;
+        }
+        .password-toggle:hover {
+            color: #0697A8;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-bg d-flex justify-content-center align-items-center">
+        <div class="card login-card p-4 shadow">
+            <div class="text-center mb-4">
+                <img src="/images/logo.jpg" width="160" alt="logo" onerror="this.src='https://via.placeholder.com/160x80?text=Logo'">
+                <h3 class="mt-3">CHG-LEGAL</h3>
+            </div>
+
+            <form asp-action="Login" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-2"></div>
+                <div class="mb-3">
+                    <label asp-for="Username" class="form-label">اسم المستخدم</label>
+                    <div class="user-wrapper">
+                     <input asp-for="Username" class="form-control" placeholder="أدخل اسم المستخدم" />
+
+                    </div>
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label">كلمة السر</label>
+                    <div class="password-wrapper">
+                        <input asp-for="Password" type="password" class="form-control" id="loginPassword" placeholder="أدخل كلمة السر" />
+                        <button type="button" class="password-toggle" onclick="togglePassword('loginPassword', this)">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                @* <div class="d-flex justify-content-between mb-3">
+                    <div>
+                        <input asp-for="RememberMe" class="form-check-input ms-2" />
+                        <label asp-for="RememberMe">تذكرني</label>
+                    </div>
+                </div> *@
+                <div class="text-center">
+                    <button type="submit" class="btn btn-teal w-100 mb-4">
+                        تسجيل الدخول
+                    </button>
+                </div>
+                <div class="text-center py-3 mt-auto">
+    <p class="mb-0">
+        <span style="color: #6c757d; font-size: 13px;">Copyright © 2026. All rights reserved, Developed by</span>
+        <p class="fw-bold" style="color: #0697A8; margin-left: 3px;">CHG Hospitals Group</p>
+    </p>
+</div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js"></script>
+    
+    <script>
+        function togglePassword(inputId, button) {
+            var input = document.getElementById(inputId);
+            if (input) {
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    button.innerHTML = '<i class="fas fa-eye-slash"></i>';
+                } else {
+                    input.type = 'password';
+                    button.innerHTML = '<i class="fas fa-eye"></i>';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+﻿<div class="modal fade" id="addEditMeetingModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header bg-teal text-white">
+                <h5 class="modal-title" id="modalTitle">
+                    <i class="fas fa-calendar-plus me-2"></i> إضافة اجتماع
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="addEditMeetingForm" enctype="multipart/form-data">
+                    <input type="hidden" id="meetingId" />
+
+                    <!-- Basic Information -->
+                    <div class="card mb-3">
+                        <div class="card-header bg-light">
+                            <i class="fas fa-info-circle me-2"></i> المعلومات الأساسية
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label fw-bold">تاريخ الاجتماع <span class="text-danger">*</span></label>
+                                    <input type="date" class="form-control" id="meetingDate" required>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label fw-bold">نوع الاجتماع <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="meetingTypeId" required>
+                                        <option value="">اختر</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label fw-bold">حالة الاجتماع <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="meetingStatus" required>
+                                        <option value="">اختر</option>
+                                        <option value="approved">معتمد</option>
+                                        <option value="rejected">غير معتمد</option>
+                                        <option value="pending">قيد الانتظار</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label fw-bold">الاجتماع بخصوص (يمكن اختيار أكثر من مستشفى) <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="meetingCHGParty" multiple size="4" required>
+                                    </select>
+                                    <small class="text-muted">اضغط Ctrl لاختيار أكثر من مستشفى</small>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label fw-bold">موضوع الاجتماع <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="meetingSubject" required placeholder="أدخل موضوع الاجتماع">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                  <!-- Meeting Attachments -->
+<div class="card mb-3">
+    <div class="card-header bg-light">
+        <i class="fas fa-paperclip me-2"></i> مرفقات الاجتماع
+    </div>
+    <div class="card-body">
+        <!-- Existing Attachments Section - تظهر فقط في حالة التعديل -->
+        <div id="existingAttachmentsSection" style="display: none;" class="mb-3">
+            <label class="form-label fw-bold">المرفقات الحالية:</label>
+            <ul id="existingAttachmentsList" class="list-group">
+                <!-- سيتم عرض المرفقات هنا عبر JavaScript -->
+            </ul>
+            <hr />
+        </div>
+        
+        <!-- New Attachments Section -->
+        <div id="meetingAttachmentsContainer">
+            <div class="attachment-row mb-2">
+                <input type="file" name="meetingAttachments" class="form-control" multiple>
+            </div>
+        </div>
+        <button type="button" class="btn btn-sm btn-secondary mt-2" onclick="addMeetingAttachment()">
+            <i class="fas fa-plus"></i> إضافة مرفق آخر
+        </button>
+        <small class="text-muted d-block mt-2">
+            <i class="fas fa-info-circle"></i> 
+            <span id="attachmentsHelpText">يمكنك إضافة مرفقات جديدة</span>
+        </small>
+    </div>
+</div>
+
+                    <!-- Decisions -->
+                    <div class="card mb-3">
+                        <div class="card-header bg-light">
+                            <i class="fas fa-gavel me-2"></i> قرارات الاجتماع
+                        </div>
+                        <div class="card-body">
+                            <div id="decisionsContainer">
+                                <div class="decision-row card mb-3 p-3">
+                                    <div class="row">
+                                        <div class="col-md-4 mb-2">
+                                            <label>رقم القرار <span class="text-danger">*</span></label>
+                                            <input type="number" name="decisionNumbers" class="form-control decision-number" required>
+                                        </div>
+                                        <div class="col-md-4 mb-2">
+                                            <label>حالة التنفيذ</label>
+                                            <select name="decisionExecuted" class="form-select decision-executed">
+                                                <option value="False">لم ينفذ</option>
+                                                <option value="True">تم التنفيذ</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-12 mb-2">
+                                            <label>تفاصيل القرار <span class="text-danger">*</span></label>
+                                            <textarea name="decisionDetails" class="form-control decision-details" rows="2" required></textarea>
+                                        </div>
+                                        <div class="col-md-12 mb-2">
+                                            <label>ملاحظات القرار</label>
+                                            <textarea name="decisionNotes" class="form-control decision-notes" rows="2"></textarea>
+                                        </div>
+                                        <div class="col-md-12 mb-2">
+                                            <label>مرفقات القرار</label>
+                                            <div class="decision-attachments-container">
+                                                <input type="file" name="decisionAttachments" class="form-control" multiple>
+                                            </div>
+                                            <button type="button" class="btn btn-sm btn-secondary mt-1" onclick="addDecisionAttachment(this)">
+                                                <i class="fas fa-plus"></i> إضافة مرفق
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-sm btn-danger mt-2" onclick="removeDecision(this)">
+                                        <i class="fas fa-trash"></i> حذف القرار
+                                    </button>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-primary" onclick="addDecision()">
+                                <i class="fas fa-plus"></i> إضافة قرار
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Attendees and Approvals -->
+                    <div class="card mb-3">
+                        <div class="card-header bg-light">
+                            <i class="fas fa-users me-2"></i> الحضور والموافقات
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label fw-bold">الحضور</label>
+                                    <select id="attendeesSelect" class="form-select" multiple size="6">
+                                    </select>
+                                    <small class="text-muted">اضغط Ctrl لاختيار أكثر من واحد</small>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label fw-bold">الموافقات</label>
+                                    <select id="approvalsSelect" class="form-select" multiple size="6">
+                                    </select>
+                                    <small class="text-muted">اضغط Ctrl لاختيار أكثر من واحد</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- General Notes -->
+                    <div class="card mb-3">
+                        <div class="card-header bg-light">
+                            <i class="fas fa-sticky-note me-2"></i> ملاحظات عامة
+                        </div>
+                        <div class="card-body">
+                            <textarea class="form-control" id="meetingNotes" rows="3" placeholder="أضف ملاحظات عامة عن الاجتماع..."></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    <i class="fas fa-times"></i> إلغاء
+                </button>
+                <button type="button" class="btn btn-teal" id="saveMeetingBtn">
+                    <i class="fas fa-save"></i> حفظ
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .bg-teal {
+        background: linear-gradient(135deg, #0697A8, #057a8a);
+    }
+    .decision-row {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+    }
+    .attachment-row {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+        align-items: center;
+    }
+</style>

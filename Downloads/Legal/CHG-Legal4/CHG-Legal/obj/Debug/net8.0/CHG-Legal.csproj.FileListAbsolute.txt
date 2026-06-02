@@ -1,0 +1,1194 @@
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.AssemblyInfoInputs.cache
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.AssemblyInfo.cs
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.csproj.CoreCompileInputs.cache
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.RazorAssemblyInfo.cache
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.RazorAssemblyInfo.cs
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\bin\Debug\net8.0\appsettings.json
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.staticwebassets.runtime.json
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.staticwebassets.endpoints.json
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.exe
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.deps.json
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.runtimeconfig.json
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.pdb
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\obj\Debug\net8.0\scopedcss\bundle\CHG-Legal.styles.css
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\obj\Debug\net8.0\scopedcss\projectbundle\CHG-Legal.bundle.scp.css
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\obj\Debug\net8.0\swae.build.ex.cache
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\obj\Debug\net8.0\refint\CHG-Legal.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.pdb
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.genruntimeconfig.cache
+C:\Users\amin.mohamed\Desktop\CHG-Legal\CHG-Legal\obj\Debug\net8.0\ref\CHG-Legal.dll
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\bin\Debug\net8.0\appsettings.Development.json
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\bin\Debug\net8.0\appsettings.json
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.staticwebassets.runtime.json
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.staticwebassets.endpoints.json
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.exe
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.deps.json
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.runtimeconfig.json
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.dll
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.pdb
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.GeneratedMSBuildEditorConfig.editorconfig
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.AssemblyInfoInputs.cache
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.AssemblyInfo.cs
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.csproj.CoreCompileInputs.cache
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.MvcApplicationPartsAssemblyInfo.cache
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.RazorAssemblyInfo.cache
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.RazorAssemblyInfo.cs
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\obj\Debug\net8.0\scopedcss\bundle\CHG-Legal.styles.css
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\obj\Debug\net8.0\scopedcss\projectbundle\CHG-Legal.bundle.scp.css
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.json
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\obj\Debug\net8.0\staticwebassets.development.json
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\obj\Debug\net8.0\swae.build.ex.cache
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.dll
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\obj\Debug\net8.0\refint\CHG-Legal.dll
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.pdb
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.genruntimeconfig.cache
+D:\CHG-Legal last update\CHG-Legal\CHG-Legal\obj\Debug\net8.0\ref\CHG-Legal.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\appsettings.Development.json
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\appsettings.json
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.staticwebassets.runtime.json
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.staticwebassets.endpoints.json
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.exe
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.deps.json
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.runtimeconfig.json
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.pdb
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Azure.Core.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Azure.Identity.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Humanizer.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.CodeDom.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Composition.Convention.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Composition.Hosting.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Composition.Runtime.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Composition.TypedParts.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Memory.Data.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.csproj.AssemblyReference.cache
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.GeneratedMSBuildEditorConfig.editorconfig
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.AssemblyInfoInputs.cache
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.AssemblyInfo.cs
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.csproj.CoreCompileInputs.cache
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.MvcApplicationPartsAssemblyInfo.cache
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.RazorAssemblyInfo.cache
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.RazorAssemblyInfo.cs
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\scopedcss\bundle\CHG-Legal.styles.css
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\scopedcss\projectbundle\CHG-Legal.bundle.scp.css
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.json
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\staticwebassets.development.json
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\swae.build.ex.cache
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.csproj.Up2Date
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.dll
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\refint\CHG-Legal.dll
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.pdb
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.genruntimeconfig.cache
+D:\CHG-Legal\CHG-Legal\obj\Debug\net8.0\ref\CHG-Legal.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\appsettings.Development.json
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\appsettings.json
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\CHG-Legal.staticwebassets.endpoints.json
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\CHG-Legal.staticwebassets.runtime.json
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\CHG-Legal.exe
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\CHG-Legal.deps.json
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\CHG-Legal.runtimeconfig.json
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\CHG-Legal.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\CHG-Legal.pdb
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Azure.Core.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Azure.Identity.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Humanizer.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.CodeDom.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Composition.Convention.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Composition.Hosting.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Composition.Runtime.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Composition.TypedParts.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Memory.Data.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.csproj.AssemblyReference.cache
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.GeneratedMSBuildEditorConfig.editorconfig
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.AssemblyInfoInputs.cache
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.AssemblyInfo.cs
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.csproj.CoreCompileInputs.cache
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.MvcApplicationPartsAssemblyInfo.cache
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.RazorAssemblyInfo.cache
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.RazorAssemblyInfo.cs
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\scopedcss\bundle\CHG-Legal.styles.css
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\scopedcss\projectbundle\CHG-Legal.bundle.scp.css
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.json
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\staticwebassets.development.json
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\swae.build.ex.cache
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.csproj.Up2Date
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\refint\CHG-Legal.dll
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.pdb
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.genruntimeconfig.cache
+D:\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\ref\CHG-Legal.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\appsettings.json
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\CHG-Legal.staticwebassets.runtime.json
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\CHG-Legal.staticwebassets.endpoints.json
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\CHG-Legal.exe
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\CHG-Legal.deps.json
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\CHG-Legal.runtimeconfig.json
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\CHG-Legal.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\CHG-Legal.pdb
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Azure.Core.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Humanizer.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Composition.Convention.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Composition.Hosting.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Composition.Runtime.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Composition.TypedParts.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Memory.Data.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Runtime.Caching.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.csproj.AssemblyReference.cache
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.AssemblyInfoInputs.cache
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.AssemblyInfo.cs
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.csproj.CoreCompileInputs.cache
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.RazorAssemblyInfo.cache
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.RazorAssemblyInfo.cs
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\scopedcss\bundle\CHG-Legal.styles.css
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\scopedcss\projectbundle\CHG-Legal.bundle.scp.css
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\swae.build.ex.cache
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.csproj.Up2Date
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\refint\CHG-Legal.dll
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.pdb
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.genruntimeconfig.cache
+C:\Users\amin.mohamed\Desktop\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\ref\CHG-Legal.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\appsettings.Development.json
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\appsettings.json
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\CHG-Legal.staticwebassets.endpoints.json
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\CHG-Legal.staticwebassets.runtime.json
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\CHG-Legal.exe
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\CHG-Legal.deps.json
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\CHG-Legal.runtimeconfig.json
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\CHG-Legal.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\CHG-Legal.pdb
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Azure.Core.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Azure.Identity.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Humanizer.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.CodeDom.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Composition.Convention.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Composition.Hosting.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Composition.Runtime.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Composition.TypedParts.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Memory.Data.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.csproj.AssemblyReference.cache
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.GeneratedMSBuildEditorConfig.editorconfig
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.AssemblyInfoInputs.cache
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.AssemblyInfo.cs
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.csproj.CoreCompileInputs.cache
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.MvcApplicationPartsAssemblyInfo.cache
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.RazorAssemblyInfo.cache
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.RazorAssemblyInfo.cs
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\scopedcss\bundle\CHG-Legal.styles.css
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\scopedcss\projectbundle\CHG-Legal.bundle.scp.css
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.json
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\staticwebassets.development.json
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\swae.build.ex.cache
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.csproj.Up2Date
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\refint\CHG-Legal.dll
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.pdb
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\CHG-Legal.genruntimeconfig.cache
+D:\legal before attach\CHG-Legal-after companies front-end\CHG-Legal\obj\Debug\net8.0\ref\CHG-Legal.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\appsettings.Development.json
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\appsettings.json
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\CHG-Legal.staticwebassets.runtime.json
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\CHG-Legal.staticwebassets.endpoints.json
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\CHG-Legal.exe
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\CHG-Legal.deps.json
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\CHG-Legal.runtimeconfig.json
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\CHG-Legal.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\CHG-Legal.pdb
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Azure.Core.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Azure.Identity.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Humanizer.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\System.CodeDom.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\System.Composition.Convention.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\System.Composition.Hosting.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\System.Composition.Runtime.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\System.Composition.TypedParts.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\System.Memory.Data.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\CHG-Legal.csproj.AssemblyReference.cache
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\CHG-Legal.GeneratedMSBuildEditorConfig.editorconfig
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\CHG-Legal.AssemblyInfoInputs.cache
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\CHG-Legal.AssemblyInfo.cs
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\CHG-Legal.csproj.CoreCompileInputs.cache
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\CHG-Legal.MvcApplicationPartsAssemblyInfo.cache
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\CHG-Legal.RazorAssemblyInfo.cache
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\CHG-Legal.RazorAssemblyInfo.cs
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\scopedcss\bundle\CHG-Legal.styles.css
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\scopedcss\projectbundle\CHG-Legal.bundle.scp.css
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.json
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\staticwebassets.development.json
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\swae.build.ex.cache
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\CHG-Legal.csproj.Up2Date
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\CHG-Legal.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\refint\CHG-Legal.dll
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\CHG-Legal.pdb
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\CHG-Legal.genruntimeconfig.cache
+D:\legal before attach\CHG-Legal-after companies with attach\CHG-Legal\obj\Debug\net8.0\ref\CHG-Legal.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\appsettings.Development.json
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\appsettings.json
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.staticwebassets.runtime.json
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.staticwebassets.endpoints.json
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.exe
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.deps.json
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.runtimeconfig.json
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.pdb
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Azure.Core.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Azure.Identity.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Humanizer.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.CodeDom.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Composition.Convention.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Composition.Hosting.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Composition.Runtime.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Composition.TypedParts.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Memory.Data.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.csproj.AssemblyReference.cache
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.GeneratedMSBuildEditorConfig.editorconfig
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.AssemblyInfoInputs.cache
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.AssemblyInfo.cs
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.csproj.CoreCompileInputs.cache
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.MvcApplicationPartsAssemblyInfo.cache
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.RazorAssemblyInfo.cache
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.RazorAssemblyInfo.cs
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\scopedcss\bundle\CHG-Legal.styles.css
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\scopedcss\projectbundle\CHG-Legal.bundle.scp.css
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.json
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\staticwebassets.development.json
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\swae.build.ex.cache
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.csproj.Up2Date
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\refint\CHG-Legal.dll
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.pdb
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.genruntimeconfig.cache
+D:\legal before attach\CHG-Legal\CHG-Legal\obj\Debug\net8.0\ref\CHG-Legal.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\appsettings.Development.json
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\appsettings.json
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.staticwebassets.endpoints.json
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.staticwebassets.runtime.json
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.exe
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.deps.json
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.runtimeconfig.json
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\CHG-Legal.pdb
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Azure.Core.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Azure.Identity.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Humanizer.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.CodeDom.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Composition.Convention.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Composition.Hosting.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Composition.Runtime.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Composition.TypedParts.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Memory.Data.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.csproj.AssemblyReference.cache
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.GeneratedMSBuildEditorConfig.editorconfig
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.AssemblyInfoInputs.cache
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.AssemblyInfo.cs
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.csproj.CoreCompileInputs.cache
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.MvcApplicationPartsAssemblyInfo.cache
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.RazorAssemblyInfo.cache
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.RazorAssemblyInfo.cs
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\scopedcss\bundle\CHG-Legal.styles.css
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\scopedcss\projectbundle\CHG-Legal.bundle.scp.css
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.json
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\staticwebassets.development.json
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\swae.build.ex.cache
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.csproj.Up2Date
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\refint\CHG-Legal.dll
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.pdb
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\CHG-Legal.genruntimeconfig.cache
+D:\CHG-LEGAL\CHG-Legal\CHG-Legal\obj\Debug\net8.0\ref\CHG-Legal.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\appsettings.json
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\CHG-Legal.staticwebassets.runtime.json
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\CHG-Legal.staticwebassets.endpoints.json
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\CHG-Legal.exe
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\CHG-Legal.deps.json
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\CHG-Legal.runtimeconfig.json
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\CHG-Legal.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\CHG-Legal.pdb
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Azure.Core.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Humanizer.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\System.Composition.Convention.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\System.Composition.Hosting.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\System.Composition.Runtime.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\System.Composition.TypedParts.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\System.Memory.Data.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\System.Runtime.Caching.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\CHG-Legal.csproj.AssemblyReference.cache
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\CHG-Legal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\CHG-Legal.AssemblyInfoInputs.cache
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\CHG-Legal.AssemblyInfo.cs
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\CHG-Legal.csproj.CoreCompileInputs.cache
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\CHG-Legal.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\CHG-Legal.RazorAssemblyInfo.cache
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\CHG-Legal.RazorAssemblyInfo.cs
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\scopedcss\bundle\CHG-Legal.styles.css
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\scopedcss\projectbundle\CHG-Legal.bundle.scp.css
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\swae.build.ex.cache
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\CHG-Legal.csproj.Up2Date
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\CHG-Legal.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\refint\CHG-Legal.dll
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\CHG-Legal.pdb
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\CHG-Legal.genruntimeconfig.cache
+C:\Users\yousra.sayed\Downloads\CHG-Legal (4)\CHG-Legal4\CHG-Legal\obj\Debug\net8.0\ref\CHG-Legal.dll

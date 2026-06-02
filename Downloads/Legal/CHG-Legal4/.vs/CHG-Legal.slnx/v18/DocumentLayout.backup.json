@@ -1,0 +1,213 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\yousra.sayed\\Downloads\\CHG-Legal (4)\\CHG-Legal4\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5EE91FB8-6372-676B-9DC3-11DFB4DFD443}|CHG-Legal\\CHG-Legal.csproj|c:\\users\\yousra.sayed\\downloads\\chg-legal (4)\\chg-legal4\\chg-legal\\views\\companies\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5EE91FB8-6372-676B-9DC3-11DFB4DFD443}|CHG-Legal\\CHG-Legal.csproj|solutionrelative:chg-legal\\views\\companies\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EE91FB8-6372-676B-9DC3-11DFB4DFD443}|CHG-Legal\\CHG-Legal.csproj|c:\\users\\yousra.sayed\\downloads\\chg-legal (4)\\chg-legal4\\chg-legal\\wwwroot\\js\\companies.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{5EE91FB8-6372-676B-9DC3-11DFB4DFD443}|CHG-Legal\\CHG-Legal.csproj|solutionrelative:chg-legal\\wwwroot\\js\\companies.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EE91FB8-6372-676B-9DC3-11DFB4DFD443}|CHG-Legal\\CHG-Legal.csproj|c:\\users\\yousra.sayed\\downloads\\chg-legal (4)\\chg-legal4\\chg-legal\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5EE91FB8-6372-676B-9DC3-11DFB4DFD443}|CHG-Legal\\CHG-Legal.csproj|solutionrelative:chg-legal\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EE91FB8-6372-676B-9DC3-11DFB4DFD443}|CHG-Legal\\CHG-Legal.csproj|c:\\users\\yousra.sayed\\downloads\\chg-legal (4)\\chg-legal4\\chg-legal\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EE91FB8-6372-676B-9DC3-11DFB4DFD443}|CHG-Legal\\CHG-Legal.csproj|solutionrelative:chg-legal\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EE91FB8-6372-676B-9DC3-11DFB4DFD443}|CHG-Legal\\CHG-Legal.csproj|c:\\users\\yousra.sayed\\downloads\\chg-legal (4)\\chg-legal4\\chg-legal\\services\\implementations\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EE91FB8-6372-676B-9DC3-11DFB4DFD443}|CHG-Legal\\CHG-Legal.csproj|solutionrelative:chg-legal\\services\\implementations\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EE91FB8-6372-676B-9DC3-11DFB4DFD443}|CHG-Legal\\CHG-Legal.csproj|c:\\users\\yousra.sayed\\downloads\\chg-legal (4)\\chg-legal4\\chg-legal\\models\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EE91FB8-6372-676B-9DC3-11DFB4DFD443}|CHG-Legal\\CHG-Legal.csproj|solutionrelative:chg-legal\\models\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EE91FB8-6372-676B-9DC3-11DFB4DFD443}|CHG-Legal\\CHG-Legal.csproj|c:\\users\\yousra.sayed\\downloads\\chg-legal (4)\\chg-legal4\\chg-legal\\services\\implementations\\meetingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EE91FB8-6372-676B-9DC3-11DFB4DFD443}|CHG-Legal\\CHG-Legal.csproj|solutionrelative:chg-legal\\services\\implementations\\meetingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EE91FB8-6372-676B-9DC3-11DFB4DFD443}|CHG-Legal\\CHG-Legal.csproj|c:\\users\\yousra.sayed\\downloads\\chg-legal (4)\\chg-legal4\\chg-legal\\services\\interfaces\\imeetingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EE91FB8-6372-676B-9DC3-11DFB4DFD443}|CHG-Legal\\CHG-Legal.csproj|solutionrelative:chg-legal\\services\\interfaces\\imeetingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EE91FB8-6372-676B-9DC3-11DFB4DFD443}|CHG-Legal\\CHG-Legal.csproj|c:\\users\\yousra.sayed\\downloads\\chg-legal (4)\\chg-legal4\\chg-legal\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EE91FB8-6372-676B-9DC3-11DFB4DFD443}|CHG-Legal\\CHG-Legal.csproj|solutionrelative:chg-legal\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EE91FB8-6372-676B-9DC3-11DFB4DFD443}|CHG-Legal\\CHG-Legal.csproj|c:\\users\\yousra.sayed\\downloads\\chg-legal (4)\\chg-legal4\\chg-legal\\services\\interfaces\\idashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EE91FB8-6372-676B-9DC3-11DFB4DFD443}|CHG-Legal\\CHG-Legal.csproj|solutionrelative:chg-legal\\services\\interfaces\\idashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EE91FB8-6372-676B-9DC3-11DFB4DFD443}|CHG-Legal\\CHG-Legal.csproj|c:\\users\\yousra.sayed\\downloads\\chg-legal (4)\\chg-legal4\\chg-legal\\services\\interfaces\\icompanyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EE91FB8-6372-676B-9DC3-11DFB4DFD443}|CHG-Legal\\CHG-Legal.csproj|solutionrelative:chg-legal\\services\\interfaces\\icompanyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EE91FB8-6372-676B-9DC3-11DFB4DFD443}|CHG-Legal\\CHG-Legal.csproj|c:\\users\\yousra.sayed\\downloads\\chg-legal (4)\\chg-legal4\\chg-legal\\services\\implementations\\companyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EE91FB8-6372-676B-9DC3-11DFB4DFD443}|CHG-Legal\\CHG-Legal.csproj|solutionrelative:chg-legal\\services\\implementations\\companyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\yousra.sayed\\Downloads\\CHG-Legal (4)\\CHG-Legal4\\CHG-Legal\\Views\\Companies\\Index.cshtml",
+              "RelativeDocumentMoniker": "CHG-Legal\\Views\\Companies\\Index.cshtml",
+              "ToolTip": "C:\\Users\\yousra.sayed\\Downloads\\CHG-Legal (4)\\CHG-Legal4\\CHG-Legal\\Views\\Companies\\Index.cshtml",
+              "RelativeToolTip": "CHG-Legal\\Views\\Companies\\Index.cshtml",
+              "ViewState": "AgIAALsDAAAAAAAAAAAkwL0DAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-20T10:03:28.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "companies.js",
+              "DocumentMoniker": "C:\\Users\\yousra.sayed\\Downloads\\CHG-Legal (4)\\CHG-Legal4\\CHG-Legal\\wwwroot\\js\\companies.js",
+              "RelativeDocumentMoniker": "CHG-Legal\\wwwroot\\js\\companies.js",
+              "ToolTip": "C:\\Users\\yousra.sayed\\Downloads\\CHG-Legal (4)\\CHG-Legal4\\CHG-Legal\\wwwroot\\js\\companies.js",
+              "RelativeToolTip": "CHG-Legal\\wwwroot\\js\\companies.js",
+              "ViewState": "AgIAAO4JAAAAAAAAAAA6wFgKAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-05-23T09:20:03.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\yousra.sayed\\Downloads\\CHG-Legal (4)\\CHG-Legal4\\CHG-Legal\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "CHG-Legal\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\yousra.sayed\\Downloads\\CHG-Legal (4)\\CHG-Legal4\\CHG-Legal\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "CHG-Legal\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-23T09:51:45.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DashboardService.cs",
+              "DocumentMoniker": "C:\\Users\\yousra.sayed\\Downloads\\CHG-Legal (4)\\CHG-Legal4\\CHG-Legal\\Services\\Implementations\\DashboardService.cs",
+              "RelativeDocumentMoniker": "CHG-Legal\\Services\\Implementations\\DashboardService.cs",
+              "ToolTip": "C:\\Users\\yousra.sayed\\Downloads\\CHG-Legal (4)\\CHG-Legal4\\CHG-Legal\\Services\\Implementations\\DashboardService.cs",
+              "RelativeToolTip": "CHG-Legal\\Services\\Implementations\\DashboardService.cs",
+              "ViewState": "AgIAAMQAAAAAAAAAAAAkwNIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T11:17:46.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DashboardViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\yousra.sayed\\Downloads\\CHG-Legal (4)\\CHG-Legal4\\CHG-Legal\\Models\\ViewModels\\DashboardViewModel.cs",
+              "RelativeDocumentMoniker": "CHG-Legal\\Models\\ViewModels\\DashboardViewModel.cs",
+              "ToolTip": "C:\\Users\\yousra.sayed\\Downloads\\CHG-Legal (4)\\CHG-Legal4\\CHG-Legal\\Models\\ViewModels\\DashboardViewModel.cs",
+              "RelativeToolTip": "CHG-Legal\\Models\\ViewModels\\DashboardViewModel.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAywE4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T09:14:25.368Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReportsController.cs",
+              "DocumentMoniker": "C:\\Users\\yousra.sayed\\Downloads\\CHG-Legal (4)\\CHG-Legal4\\CHG-Legal\\Controllers\\ReportsController.cs",
+              "RelativeDocumentMoniker": "CHG-Legal\\Controllers\\ReportsController.cs",
+              "ToolTip": "C:\\Users\\yousra.sayed\\Downloads\\CHG-Legal (4)\\CHG-Legal4\\CHG-Legal\\Controllers\\ReportsController.cs",
+              "RelativeToolTip": "CHG-Legal\\Controllers\\ReportsController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAA5wC8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T11:50:55.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MeetingService.cs",
+              "DocumentMoniker": "C:\\Users\\yousra.sayed\\Downloads\\CHG-Legal (4)\\CHG-Legal4\\CHG-Legal\\Services\\Implementations\\MeetingService.cs",
+              "RelativeDocumentMoniker": "CHG-Legal\\Services\\Implementations\\MeetingService.cs",
+              "ToolTip": "C:\\Users\\yousra.sayed\\Downloads\\CHG-Legal (4)\\CHG-Legal4\\CHG-Legal\\Services\\Implementations\\MeetingService.cs",
+              "RelativeToolTip": "CHG-Legal\\Services\\Implementations\\MeetingService.cs",
+              "ViewState": "AgIAALwCAAAAAAAAAAAUwAkAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T09:17:58.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IMeetingService.cs",
+              "DocumentMoniker": "C:\\Users\\yousra.sayed\\Downloads\\CHG-Legal (4)\\CHG-Legal4\\CHG-Legal\\Services\\Interfaces\\IMeetingService.cs",
+              "RelativeDocumentMoniker": "CHG-Legal\\Services\\Interfaces\\IMeetingService.cs",
+              "ToolTip": "C:\\Users\\yousra.sayed\\Downloads\\CHG-Legal (4)\\CHG-Legal4\\CHG-Legal\\Services\\Interfaces\\IMeetingService.cs",
+              "RelativeToolTip": "CHG-Legal\\Services\\Interfaces\\IMeetingService.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwA4AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T09:17:53.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\yousra.sayed\\Downloads\\CHG-Legal (4)\\CHG-Legal4\\CHG-Legal\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "CHG-Legal\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\yousra.sayed\\Downloads\\CHG-Legal (4)\\CHG-Legal4\\CHG-Legal\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "CHG-Legal\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAowGIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T11:06:10.306Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IDashboardService.cs",
+              "DocumentMoniker": "C:\\Users\\yousra.sayed\\Downloads\\CHG-Legal (4)\\CHG-Legal4\\CHG-Legal\\Services\\Interfaces\\IDashboardService.cs",
+              "RelativeDocumentMoniker": "CHG-Legal\\Services\\Interfaces\\IDashboardService.cs",
+              "ToolTip": "C:\\Users\\yousra.sayed\\Downloads\\CHG-Legal (4)\\CHG-Legal4\\CHG-Legal\\Services\\Interfaces\\IDashboardService.cs",
+              "RelativeToolTip": "CHG-Legal\\Services\\Interfaces\\IDashboardService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T11:17:33.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ICompanyService.cs",
+              "DocumentMoniker": "C:\\Users\\yousra.sayed\\Downloads\\CHG-Legal (4)\\CHG-Legal4\\CHG-Legal\\Services\\Interfaces\\ICompanyService.cs",
+              "RelativeDocumentMoniker": "CHG-Legal\\Services\\Interfaces\\ICompanyService.cs",
+              "ToolTip": "C:\\Users\\yousra.sayed\\Downloads\\CHG-Legal (4)\\CHG-Legal4\\CHG-Legal\\Services\\Interfaces\\ICompanyService.cs",
+              "RelativeToolTip": "CHG-Legal\\Services\\Interfaces\\ICompanyService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T11:06:45.883Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CompanyService.cs",
+              "DocumentMoniker": "C:\\Users\\yousra.sayed\\Downloads\\CHG-Legal (4)\\CHG-Legal4\\CHG-Legal\\Services\\Implementations\\CompanyService.cs",
+              "RelativeDocumentMoniker": "CHG-Legal\\Services\\Implementations\\CompanyService.cs",
+              "ToolTip": "C:\\Users\\yousra.sayed\\Downloads\\CHG-Legal (4)\\CHG-Legal4\\CHG-Legal\\Services\\Implementations\\CompanyService.cs",
+              "RelativeToolTip": "CHG-Legal\\Services\\Implementations\\CompanyService.cs",
+              "ViewState": "AgIAAHECAAAAAAAAAAAswI8CAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T11:07:47.147Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,858 @@
+﻿@* @model List<CHG_Legal.Models.Entities.Board>
+@{
+    ViewData["Title"] = "التقارير";
+}
+
+<div class="d-flex">
+    @await Html.PartialAsync("_SidebarPartial")
+    <div class="flex-grow-1 p-4" style="background-color: #f0f7f7;">
+        <div class="header mb-4" style="background: linear-gradient(135deg, #91d3d1 0%, #7bc6c3 50%, #65b8b5 100%); border-radius: 15px; padding: 20px 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+            <h2 class="mb-0 text-white">التقارير</h2>
+        </div>
+
+        <!-- First Row: Meetings by Type & Meetings by Hospital -->
+        <div class="row g-4">
+            <div class="col-md-6 mb-4">
+                <div class="card border-0 shadow-sm h-100" style="border-radius: 20px; overflow: hidden;">
+                    <div class="card-header bg-white border-0 pt-4 pb-0 px-4" style="color: #4a9f9c; font-weight: bold;">
+                        <i class="fas fa-chart-bar me-2"></i> الاجتماعات حسب النوع
+                    </div>
+                    <div class="card-body d-flex align-items-center justify-content-center p-4" style="height: 400px;">
+                        <canvas id="meetingsByTypeReport" style="width: 100%; height: 100%;"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card border-0 shadow-sm h-100" style="border-radius: 20px; overflow: hidden;">
+                    <div class="card-header bg-white border-0 pt-4 pb-0 px-4" style="color: #4a9f9c; font-weight: bold;">
+                        <i class="fas fa-chart-pie me-2"></i> الاجتماعات حسب المستشفى
+                    </div>
+                    <div class="card-body d-flex align-items-center justify-content-center p-4" style="height: 400px;">
+                        <canvas id="meetingsByHospitalReport" style="width: 100%; height: 100%;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Row: Monthly Trend -->
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <div class="card border-0 shadow-sm" style="border-radius: 20px; overflow: hidden;">
+                    <div class="card-header bg-white border-0 pt-4 pb-0 px-4" style="color: #4a9f9c; font-weight: bold;">
+                        <i class="fas fa-chart-line me-2"></i> الاتجاه الشهري للاجتماعات
+                    </div>
+                    <div class="card-body d-flex align-items-center justify-content-center p-4" style="height: 450px;">
+                        <canvas id="monthlyTrendChart" style="width: 100%; height: 100%;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Custom styling for charts */
+        .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(101, 184, 181, 0.15) !important;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+        background: #e0eceb;
+        border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+        background: #7bc6c3;
+        border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+        background: #65b8b5;
+        }
+    </style>
+    
+    <script>
+        const meetings = @Html.Raw(Json.Serialize(Model));
+        
+        // New color palette
+        const primaryColor = '#7bc6c3';
+        const primaryDark = '#65b8b5';
+        const primaryLight = '#91d3d1';
+        const primaryLightColor = 'rgba(123, 198, 195, 0.1)';
+        const gradientColors = ['#91d3d1', '#7bc6c3', '#65b8b5'];
+        
+        // ========== 1. Meetings by type (Bar Chart) ==========
+        let typeCount = {};
+        meetings.forEach(m => {
+        if (m.meetingType) {
+        typeCount[m.meetingType] = (typeCount[m.meetingType] || 0) + 1;
+        }
+        });
+        
+        const ctx1 = document.getElementById('meetingsByTypeReport').getContext('2d');
+        new Chart(ctx1, {
+        type: 'bar',
+        data: {
+        labels: Object.keys(typeCount),
+        datasets: [{
+        label: 'عدد الاجتماعات',
+        data: Object.values(typeCount),
+        backgroundColor: (context) => {
+        const chart = context.chart;
+        const {ctx, chartArea} = chart;
+        if (!chartArea) return primaryColor;
+        const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+        gradient.addColorStop(0, primaryDark);
+        gradient.addColorStop(0.5, primaryColor);
+        gradient.addColorStop(1, primaryLight);
+        return gradient;
+        },
+        borderColor: primaryDark,
+        borderWidth: 1,
+        borderRadius: 8,
+        barPercentage: 0.7,
+        categoryPercentage: 0.8
+        }]
+        },
+        options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+        legend: { position: 'top', labels: { font: { size: 12 }, color: '#4a9f9c' } },
+        tooltip: { mode: 'index', intersect: false, backgroundColor: primaryDark, titleColor: 'white', bodyColor: 'white' }
+        },
+        scales: {
+        y: {
+        beginAtZero: true,
+        ticks: { stepSize: 1, font: { size: 11 }, color: '#5a7a78' },
+        title: { display: true, text: 'عدد الاجتماعات', font: { size: 12 }, color: '#4a9f9c' },
+        grid: { color: '#e0eceb' }
+        },
+        x: {
+        ticks: { font: { size: 11 }, rotation: 0, color: '#5a7a78' },
+        title: { display: true, text: 'نوع الاجتماع', font: { size: 12 }, color: '#4a9f9c' },
+        grid: { display: false }
+        }
+        }
+        }
+        });
+        
+        // ========== 2. Meetings by hospital (Pie Chart) ==========
+        let hospitalCount = {};
+        meetings.forEach(m => {
+        if (m.chgParty && m.chgParty !== '') {
+        const hospitals = m.chgParty.split(',').map(h => h.trim());
+        hospitals.forEach(h => {
+        if (h) {
+        hospitalCount[h] = (hospitalCount[h] || 0) + 1;
+        }
+        });
+        }
+        });
+        
+        const hospitalLabels = Object.keys(hospitalCount);
+        const hospitalData = Object.values(hospitalCount);
+        // Use gradient colors for pie chart
+        const pieColors = hospitalLabels.map((_, index) => {
+        return gradientColors[index % gradientColors.length];
+        });
+        
+        const ctx2 = document.getElementById('meetingsByHospitalReport').getContext('2d');
+        new Chart(ctx2, {
+        type: 'pie',
+        data: {
+        labels: hospitalLabels,
+        datasets: [{
+        data: hospitalData,
+        backgroundColor: pieColors,
+        borderColor: 'white',
+        borderWidth: 2
+        }]
+        },
+        options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+        legend: { position: 'right', labels: { font: { size: 11 }, color: '#4a9f9c' } },
+        tooltip: {
+        callbacks: {
+        label: function(context) {
+        return `${context.label}: ${context.raw} اجتماع`;
+        }
+        },
+        backgroundColor: primaryDark,
+        titleColor: 'white',
+        bodyColor: 'white'
+        }
+        }
+        }
+        });
+        
+        // ========== 3. Monthly trend (Line Chart) ==========
+        let monthlyCount = {};
+        meetings.forEach(m => {
+        if (m.boardDate) {
+        let date = new Date(m.boardDate);
+        let month = date.getMonth() + 1;
+        let year = date.getFullYear();
+        let key = `${year}-${month}`;
+        monthlyCount[key] = (monthlyCount[key] || 0) + 1;
+        }
+        });
+        
+        let sortedMonths = Object.keys(monthlyCount).sort();
+        const monthNames = {
+        1: 'يناير', 2: 'فبراير', 3: 'مارس', 4: 'أبريل', 5: 'مايو', 6: 'يونيو',
+        7: 'يوليو', 8: 'أغسطس', 9: 'سبتمبر', 10: 'أكتوبر', 11: 'نوفمبر', 12: 'ديسمبر'
+        };
+        
+        let labels = sortedMonths.map(key => {
+        let [year, month] = key.split('-');
+        return `${monthNames[parseInt(month)]} ${year}`;
+        });
+        let data = sortedMonths.map(key => monthlyCount[key]);
+        
+        const ctx5 = document.getElementById('monthlyTrendChart').getContext('2d');
+        new Chart(ctx5, {
+        type: 'line',
+        data: {
+        labels: labels,
+        datasets: [{
+        label: 'عدد الاجتماعات',
+        data: data,
+        borderColor: primaryColor,
+        backgroundColor: (context) => {
+        const chart = context.chart;
+        const {ctx, chartArea} = chart;
+        if (!chartArea) return primaryLightColor;
+        const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+        gradient.addColorStop(0, primaryLightColor);
+        gradient.addColorStop(1, 'rgba(123, 198, 195, 0.4)');
+        return gradient;
+        },
+        borderWidth: 3,
+        fill: true,
+        tension: 0.4,
+        pointBackgroundColor: primaryColor,
+        pointBorderColor: 'white',
+        pointRadius: 5,
+        pointHoverRadius: 7,
+        pointBorderWidth: 2
+        }]
+        },
+        options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+        legend: { position: 'top', labels: { font: { size: 12 }, color: '#4a9f9c' } },
+        tooltip: { mode: 'index', intersect: false, backgroundColor: primaryDark, titleColor: 'white', bodyColor: 'white' }
+        },
+        scales: {
+        y: {
+        beginAtZero: true,
+        ticks: { stepSize: 1, font: { size: 11 }, color: '#5a7a78' },
+        title: { display: true, text: 'عدد الاجتماعات', font: { size: 12 }, color: '#4a9f9c' },
+        grid: { color: '#e0eceb' }
+        },
+        x: {
+        ticks: { font: { size: 11 }, rotation: 45, color: '#5a7a78' },
+        title: { display: true, text: 'الشهر والسنة', font: { size: 12 }, color: '#4a9f9c' },
+        grid: { display: false }
+        }
+        }
+        }
+        });
+    </script>
+} *@
+
+
+@model IEnumerable<CHG_Legal.Models.ViewModels.CompanyViewModel>
+@{
+    ViewData["Title"] = "التقارير";
+}
+
+
+
+        <!-- First Row: Companies by Shareholders & Companies by Branches -->
+        @* <div class="row g-4">
+            <div class="col-md-6 mb-4">
+                <div class="card border-0 shadow-sm h-100" style="border-radius: 20px; overflow: hidden;">
+                    <div class="card-header bg-white border-0 pt-4 pb-0 px-4" style="color: #4a9f9c; font-weight: bold;">
+                        <i class="fas fa-users me-2"></i> الشركات حسب عدد المساهمين
+                    </div>
+                    <div class="card-body d-flex align-items-center justify-content-center p-4" style="min-height: 400px;">
+                        <canvas id="companiesByShareholdersReport" style="width: 100%; height: 100%; max-height: 350px;"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card border-0 shadow-sm h-100" style="border-radius: 20px; overflow: hidden;">
+                    <div class="card-header bg-white border-0 pt-4 pb-0 px-4" style="color: #4a9f9c; font-weight: bold;">
+                        <i class="fas fa-code-branch me-2"></i> الشركات حسب عدد الفروع
+                    </div>
+                    <div class="card-body d-flex align-items-center justify-content-center p-4" style="min-height: 400px;">
+                        <canvas id="companiesByBranchesReport" style="width: 100%; height: 100%; max-height: 350px;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div> *@
+
+        <!-- Second Row: Top Companies by Shareholders & Top Companies by Branches -->
+        <div class="row g-4">
+            <div class="col-md-6 mb-4">
+                <div class="card border-0 shadow-sm h-100" style="border-radius: 20px; overflow: hidden;">
+                    <div class="card-header bg-white border-0 pt-4 pb-0 px-4" style="color: #4a9f9c; font-weight: bold;">
+                        <i class="fas fa-trophy me-2"></i> أكبر الشركات من حيث عدد المساهمين
+                    </div>
+                    <div class="card-body d-flex align-items-center justify-content-center p-4" style="min-height: 400px;">
+                        <canvas id="topCompaniesByShareholdersReport" style="width: 100%; height: 100%; max-height: 350px;"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card border-0 shadow-sm h-100" style="border-radius: 20px; overflow: hidden;">
+                    <div class="card-header bg-white border-0 pt-4 pb-0 px-4" style="color: #4a9f9c; font-weight: bold;">
+                        <i class="fas fa-code-branch me-2"></i> أكبر الشركات من حيث عدد الفروع
+                    </div>
+                    <div class="card-body d-flex align-items-center justify-content-center p-4" style="min-height: 400px;">
+                        <canvas id="topCompaniesByBranchesReport" style="width: 100%; height: 100%; max-height: 350px;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Row: Monthly Registrations Trend -->
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <div class="card border-0 shadow-sm" style="border-radius: 20px; overflow: hidden;">
+                    <div class="card-header bg-white border-0 pt-4 pb-0 px-4" style="color: #4a9f9c; font-weight: bold;">
+                        <i class="fas fa-chart-line me-2"></i> الاتجاه الشهري لتسجيل الشركات
+                    </div>
+                    <div class="card-body d-flex align-items-center justify-content-center p-4" style="min-height: 450px;">
+                        <canvas id="monthlyRegistrationsTrendChart" style="width: 100%; height: 100%; max-height: 400px;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fourth Row: Registration Expiry Status -->
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <div class="card border-0 shadow-sm" style="border-radius: 20px; overflow: hidden;">
+                    <div class="card-header bg-white border-0 pt-4 pb-0 px-4" style="color: #4a9f9c; font-weight: bold;">
+                        <i class="fas fa-calendar-alt me-2"></i> حالة تسجيل الشركات
+                    </div>
+                    <div class="card-body d-flex align-items-center justify-content-center p-4" style="min-height: 400px;">
+                        <canvas id="registrationStatusChart" style="width: 100%; height: 100%; max-height: 350px;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Custom styling for charts */
+        .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(101, 184, 181, 0.15) !important;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+        background: #e0eceb;
+        border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+        background: #7bc6c3;
+        border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+        background: #65b8b5;
+        }
+        
+        canvas {
+        max-width: 100%;
+        }
+
+    </style>
+    
+    <script>
+        const companies = @Html.Raw(Json.Serialize(Model));
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        
+        // New color palette
+        const primaryColor = '#7bc6c3';
+        const primaryDark = '#65b8b5';
+        const primaryLight = '#91d3d1';
+        const primaryLightColor = 'rgba(123, 198, 195, 0.1)';
+        const gradientColors = ['#91d3d1', '#7bc6c3', '#65b8b5', '#4a9f9c', '#3a8a87'];
+        
+        // ========== Helper function to get current shareholders only ==========
+        function getCurrentShareholdersCount(shareholders) {
+        if (!shareholders || !Array.isArray(shareholders)) return 0;
+        return shareholders.filter(s => {
+        if (!s.endDate) return true;
+        let endDate = new Date(s.endDate);
+        endDate.setHours(0, 0, 0, 0);
+        return endDate > today;
+        }).length;
+        }
+        
+        // ========== 1. Companies by Shareholder Count (Bar Chart) ==========
+        // let shareholderRanges = {
+        // 'بدون مساهمين': 0,
+        // '1-3 مساهمين': 0,
+        // '4-7 مساهمين': 0,
+        // '8-12 مساهمين': 0,
+        // 'أكثر من 12': 0
+        // };
+        
+        // companies.forEach(company => {
+        // const currentCount = getCurrentShareholdersCount(company.shareholders);
+        // if (currentCount === 0) shareholderRanges['بدون مساهمين']++;
+        // else if (currentCount >= 1 && currentCount <= 3) shareholderRanges['1-3 مساهمين']++;
+        // else if (currentCount >= 4 && currentCount <= 7) shareholderRanges['4-7 مساهمين']++;
+        // else if (currentCount >= 8 && currentCount <= 12) shareholderRanges['8-12 مساهمين']++;
+        // else if (currentCount > 12) shareholderRanges['أكثر من 12']++;
+        // });
+        
+        // Remove empty ranges
+        // const filteredShareholderRanges = {};
+        // Object.keys(shareholderRanges).forEach(key => {
+        // if (shareholderRanges[key] > 0) {
+        // filteredShareholderRanges[key] = shareholderRanges[key];
+        // }
+        // });
+        
+        // const ctx1 = document.getElementById('companiesByShareholdersReport').getContext('2d');
+        // new Chart(ctx1, {
+        // type: 'bar',
+        // data: {
+        // labels: Object.keys(filteredShareholderRanges),
+        // datasets: [{
+        // label: 'عدد الشركات',
+        // data: Object.values(filteredShareholderRanges),
+        // backgroundColor: (context) => {
+        // const chart = context.chart;
+        // const {ctx, chartArea} = chart;
+        // if (!chartArea) return primaryColor;
+        // const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+        // gradient.addColorStop(0, primaryDark);
+        // gradient.addColorStop(0.5, primaryColor);
+        // gradient.addColorStop(1, primaryLight);
+        // return gradient;
+        // },
+        // borderColor: primaryDark,
+        // borderWidth: 1,
+        // borderRadius: 8,
+        // barPercentage: 0.7,
+        // categoryPercentage: 0.8
+        // }]
+        // },
+        // options: {
+        // responsive: true,
+        // maintainAspectRatio: true,
+        // plugins: {
+        // legend: { position: 'top', labels: { font: { size: 12 }, color: '#4a9f9c' } },
+        // tooltip: { mode: 'index', intersect: false, backgroundColor: primaryDark, titleColor: 'white', bodyColor: 'white' }
+        // },
+        // scales: {
+        // y: {
+        // beginAtZero: true,
+        // ticks: { stepSize: 1, font: { size: 11 }, color: '#5a7a78' },
+        // title: { display: true, text: 'عدد الشركات', font: { size: 12 }, color: '#4a9f9c' },
+        // grid: { color: '#e0eceb' }
+        // },
+        // x: {
+        // ticks: { font: { size: 11 }, rotation: 0, color: '#5a7a78' },
+        // title: { display: true, text: 'عدد المساهمين', font: { size: 12 }, color: '#4a9f9c' },
+        // grid: { display: false }
+        // }
+        // }
+        // }
+        // });
+        
+        // ========== 2. Companies by Branch Count (Pie Chart) ==========
+        // let branchRanges = {
+        // 'بدون فروع': 0,
+        // 'فرع واحد': 0,
+        // '2-4 فروع': 0,
+        // '5+ فروع': 0
+        // };
+        
+        // companies.forEach(company => {
+        // const branchCount = company.branches ? company.branches.length : 0;
+        // if (branchCount === 0) branchRanges['بدون فروع']++;
+        // else if (branchCount === 1) branchRanges['فرع واحد']++;
+        // else if (branchCount >= 2 && branchCount <= 4) branchRanges['2-4 فروع']++;
+        // else if (branchCount >= 5) branchRanges['5+ فروع']++;
+        // });
+        
+        // Remove empty ranges
+        // const filteredBranchRanges = {};
+        // Object.keys(branchRanges).forEach(key => {
+        // if (branchRanges[key] > 0) {
+        // filteredBranchRanges[key] = branchRanges[key];
+        // }
+        // });
+        
+        // const branchLabels = Object.keys(filteredBranchRanges);
+        // const branchData = Object.values(filteredBranchRanges);
+        // const pieColors = branchLabels.map((_, index) => {
+        // return gradientColors[index % gradientColors.length];
+        // });
+        
+        // const ctx2 = document.getElementById('companiesByBranchesReport').getContext('2d');
+        // new Chart(ctx2, {
+        // type: 'pie',
+        // data: {
+        // labels: branchLabels,
+        // datasets: [{
+        // data: branchData,
+        // backgroundColor: pieColors,
+        // borderColor: 'white',
+        // borderWidth: 2
+        // }]
+        // },
+        // options: {
+        // responsive: true,
+        // maintainAspectRatio: true,
+        // plugins: {
+        // legend: { position: 'right', labels: { font: { size: 11 }, color: '#4a9f9c' } },
+        // tooltip: {
+        // callbacks: {
+        // label: function(context) {
+        // return `${context.label}: ${context.raw} شركة`;
+        // }
+        // },
+        // backgroundColor: primaryDark,
+        // titleColor: 'white',
+        // bodyColor: 'white'
+        // }
+        // }
+        // }
+        // });
+        
+        // ========== 3. Top Companies by Shareholders (Horizontal Bar Chart) ==========
+        let companiesWithShareholderCount = companies.map(company => ({
+        name: company.name || 'بدون اسم',
+        shareholderCount: getCurrentShareholdersCount(company.shareholders),
+        branchCount: company.branches ? company.branches.length : 0,
+        registrationDate: company.registrationDate
+        })).filter(c => c.shareholderCount > 0)
+        .sort((a, b) => b.shareholderCount - a.shareholderCount)
+        .slice(0, 10);
+        
+        const ctx3 = document.getElementById('topCompaniesByShareholdersReport').getContext('2d');
+        new Chart(ctx3, {
+        type: 'bar',
+        data: {
+        labels: companiesWithShareholderCount.map(c => c.name.length > 20 ? c.name.substring(0, 20) + '...' : c.name),
+        datasets: [{
+        label: 'عدد المساهمين',
+        data: companiesWithShareholderCount.map(c => c.shareholderCount),
+        backgroundColor: (context) => {
+        const chart = context.chart;
+        const {ctx, chartArea} = chart;
+        if (!chartArea) return primaryColor;
+        const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+        gradient.addColorStop(0, primaryDark);
+        gradient.addColorStop(0.5, primaryColor);
+        gradient.addColorStop(1, primaryLight);
+        return gradient;
+        },
+        borderRadius: 8
+        }]
+        },
+        options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+        legend: { position: 'top', labels: { font: { size: 12 }, color: '#4a9f9c' } },
+        tooltip: {
+        backgroundColor: primaryDark,
+        callbacks: {
+        label: function(context) {
+        let company = companiesWithShareholderCount[context.dataIndex];
+        return [
+        `المساهمين: ${company.shareholderCount}`,
+        `الفروع: ${company.branchCount}`,
+        `تاريخ التسجيل: ${company.registrationDate ? new Date(company.registrationDate).toLocaleDateString('ar-EG') : 'غير محدد'}`
+        ];
+        }
+        }
+        }
+        },
+        scales: {
+        x: {
+        ticks: { stepSize: 1, color: '#5a7a78' },
+        title: { display: true, text: 'عدد المساهمين', color: '#4a9f9c' },
+        grid: { color: '#e0eceb' }
+        },
+        y: {
+        ticks: { color: '#5a7a78' },
+        grid: { display: false }
+        }
+        }
+        }
+        });
+        
+        // ========== 4. Top Companies by Branches (Horizontal Bar Chart) ==========
+        let companiesWithBranchCount = companies.map(company => ({
+        name: company.name || 'بدون اسم',
+        shareholderCount: getCurrentShareholdersCount(company.shareholders),
+        branchCount: company.branches ? company.branches.length : 0,
+        registrationDate: company.registrationDate
+        })).filter(c => c.branchCount > 0)
+        .sort((a, b) => b.branchCount - a.branchCount)
+        .slice(0, 10);
+        
+        const ctx4 = document.getElementById('topCompaniesByBranchesReport').getContext('2d');
+        new Chart(ctx4, {
+        type: 'bar',
+        data: {
+        labels: companiesWithBranchCount.map(c => c.name.length > 20 ? c.name.substring(0, 20) + '...' : c.name),
+        datasets: [{
+        label: 'عدد الفروع',
+        data: companiesWithBranchCount.map(c => c.branchCount),
+        backgroundColor: (context) => {
+        const chart = context.chart;
+        const {ctx, chartArea} = chart;
+        if (!chartArea) return primaryColor;
+        const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+        gradient.addColorStop(0, primaryDark);
+        gradient.addColorStop(0.5, primaryColor);
+        gradient.addColorStop(1, primaryLight);
+        return gradient;
+        },
+        borderRadius: 8
+        }]
+        },
+        options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+        legend: { position: 'top', labels: { font: { size: 12 }, color: '#4a9f9c' } },
+        tooltip: {
+        backgroundColor: primaryDark,
+        callbacks: {
+        label: function(context) {
+        let company = companiesWithBranchCount[context.dataIndex];
+        return [
+        `الفروع: ${company.branchCount}`,
+        `المساهمين: ${company.shareholderCount}`,
+        `تاريخ التسجيل: ${company.registrationDate ? new Date(company.registrationDate).toLocaleDateString('ar-EG') : 'غير محدد'}`
+        ];
+        }
+        }
+        }
+        },
+        scales: {
+        x: {
+        ticks: { stepSize: 1, color: '#5a7a78' },
+        title: { display: true, text: 'عدد الفروع', color: '#4a9f9c' },
+        grid: { color: '#e0eceb' }
+        },
+        y: {
+        ticks: { color: '#5a7a78' },
+        grid: { display: false }
+        }
+        }
+        }
+        });
+        
+        // ========== 5. Monthly Registrations Trend (Line Chart) ==========
+        let monthlyRegistrations = {};
+        const currentYear = new Date().getFullYear();
+        
+        companies.forEach(company => {
+        if (company.registrationDate) {
+        let date = new Date(company.registrationDate);
+        let month = date.getMonth() + 1;
+        let year = date.getFullYear();
+        let key = `${year}-${month}`;
+        monthlyRegistrations[key] = (monthlyRegistrations[key] || 0) + 1;
+        }
+        });
+        
+        let sortedMonths = Object.keys(monthlyRegistrations).sort();
+        const monthNames = {
+        1: 'يناير', 2: 'فبراير', 3: 'مارس', 4: 'إبريل', 5: 'مايو', 6: 'يونيو',
+        7: 'يوليو', 8: 'أغسطس', 9: 'سبتمبر', 10: 'أكتوبر', 11: 'نوفمبر', 12: 'ديسمبر'
+        };
+        
+        let labels = sortedMonths.map(key => {
+        let [year, month] = key.split('-');
+        return `${monthNames[parseInt(month)]} ${year}`;
+        });
+        let data = sortedMonths.map(key => monthlyRegistrations[key]);
+        
+        const ctx5 = document.getElementById('monthlyRegistrationsTrendChart').getContext('2d');
+        new Chart(ctx5, {
+        type: 'line',
+        data: {
+        labels: labels,
+        datasets: [{
+        label: 'عدد الشركات المسجلة',
+        data: data,
+        borderColor: primaryColor,
+        backgroundColor: (context) => {
+        const chart = context.chart;
+        const {ctx, chartArea} = chart;
+        if (!chartArea) return primaryLightColor;
+        const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+        gradient.addColorStop(0, primaryLightColor);
+        gradient.addColorStop(1, 'rgba(123, 198, 195, 0.4)');
+        return gradient;
+        },
+        borderWidth: 3,
+        fill: true,
+        tension: 0.4,
+        pointBackgroundColor: primaryColor,
+        pointBorderColor: 'white',
+        pointRadius: 5,
+        pointHoverRadius: 7,
+        pointBorderWidth: 2
+        }]
+        },
+        options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+        legend: { position: 'top', labels: { font: { size: 12 }, color: '#4a9f9c' } },
+        tooltip: { mode: 'index', intersect: false, backgroundColor: primaryDark, titleColor: 'white', bodyColor: 'white' }
+        },
+        scales: {
+        y: {
+        beginAtZero: true,
+        ticks: { stepSize: 1, font: { size: 11 }, color: '#5a7a78' },
+        title: { display: true, text: 'عدد الشركات', font: { size: 12 }, color: '#4a9f9c' },
+        grid: { color: '#e0eceb' }
+        },
+        x: {
+        ticks: { font: { size: 11 }, rotation: 45, color: '#5a7a78' },
+        title: { display: true, text: 'الشهر والسنة', font: { size: 12 }, color: '#4a9f9c' },
+        grid: { display: false }
+        }
+        }
+        }
+        });
+        
+        // ========== 6. Registration Status (Doughnut Chart) ==========
+        const todayDate = new Date();
+        todayDate.setHours(0, 0, 0, 0);
+        
+        let activeCount = 0;
+        let expiringCount = 0;
+        let expiredCount = 0;
+        let noExpiryDateCount = 0;
+        
+        companies.forEach(company => {
+        if (!company.registrationExpiry) {
+        noExpiryDateCount++;
+        } else {
+        let expiryDate = new Date(company.registrationExpiry);
+        expiryDate.setHours(0, 0, 0, 0);
+                
+        if (expiryDate > todayDate) {
+        activeCount++;
+        // Check if expiring within 30 days
+        let thirtyDaysFromNow = new Date(todayDate);
+        thirtyDaysFromNow.setDate(thirtyDaysFromNow.getDate() + 30);
+        if (expiryDate <= thirtyDaysFromNow) {
+        expiringCount++;
+        }
+        } else {
+        expiredCount++;
+        }
+        }
+        });
+        
+        const statusLabels = [];
+        const statusData = [];
+        const statusColors = [];
+        
+        if (activeCount > 0) {
+        statusLabels.push('شركات نشطة');
+        statusData.push(activeCount);
+        statusColors.push('#65b8b5');
+        }
+        if (expiringCount > 0) {
+        statusLabels.push('على وشك الانتهاء');
+        statusData.push(expiringCount);
+        statusColors.push('#91d3d1');
+        }
+        if (expiredCount > 0) {
+        statusLabels.push('شركات منتهية');
+        statusData.push(expiredCount);
+        statusColors.push('#4a9f9c');
+        }
+        if (noExpiryDateCount > 0) {
+        statusLabels.push('بدون تاريخ انتهاء');
+        statusData.push(noExpiryDateCount);
+        statusColors.push('#7bc6c3');
+        }
+        
+        const ctx6 = document.getElementById('registrationStatusChart').getContext('2d');
+        new Chart(ctx6, {
+        type: 'doughnut',
+        data: {
+        labels: statusLabels,
+        datasets: [{
+        data: statusData,
+        backgroundColor: statusColors,
+        borderColor: 'white',
+        borderWidth: 2
+        }]
+        },
+        options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+        legend: { position: 'bottom', labels: { font: { size: 12 }, color: '#4a9f9c' } },
+        tooltip: {
+        callbacks: {
+        label: function(context) {
+        const total = statusData.reduce((a, b) => a + b, 0);
+        const percentage = ((context.raw / total) * 100).toFixed(1);
+        return `${context.label}: ${context.raw} شركة (${percentage}%)`;
+        }
+        },
+        backgroundColor: primaryDark,
+        titleColor: 'white',
+        bodyColor: 'white'
+        }
+        }
+        }
+        });
+    </script>
+}

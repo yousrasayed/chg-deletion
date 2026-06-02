@@ -1,0 +1,1048 @@
+﻿@{
+    ViewData["Title"] = "مجالس الإدارات";
+    var hospitals = ViewBag.Hospitals as List<CHG_Legal.Models.Entities.Hospital>;
+    var boardTypes = ViewBag.BoardTypes as List<CHG_Legal.Models.Entities.BoardType>;
+    var allAttendees = ViewBag.AllAttendees as List<CHG_Legal.Models.Entities.Attendee>;
+    var meetings = ViewBag.Meetings as List<CHG_Legal.Models.Entities.Board>;
+}
+
+@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Xsrf
+@{
+    var token = Xsrf.GetAndStoreTokens(Context).RequestToken;
+}
+
+<div class="d-flex">
+    @await Html.PartialAsync("_SidebarPartial")
+    <div class="flex-grow-1 p-4">
+        <div class="header">
+            <h2>مجالس الإدارات</h2>
+        </div>
+
+        <button class="btn btn-dark my-4" id="addMeetingBtn">
+            <i class="fas fa-plus"></i> إضافة اجتماع
+        </button>
+
+        <!-- Filters Section -->
+        <div class="filters-wrapper mb-4">
+            <div class="table-container">
+                <div class="filters-header">
+                    <i class="fas fa-sliders-h me-2"></i>
+                    <span>خيارات البحث</span>
+                </div>
+                <div class="filters-body">
+                    <div class="row g-3">
+                        <div class="col-md-2">
+                            <label class="form-label fw-bold small text-muted mb-1">
+                                <i class="fas fa-tag me-1"></i> نوع الاجتماع
+                            </label>
+                            <select class="form-select form-select-sm" id="filterType">
+                                <option value="">الكل</option>
+                                @foreach (var type in boardTypes)
+                                {
+                                    if (ViewBag.SelectedType == type.BoardTypeName)
+                                    {
+                                        <option value="@type.BoardTypeName" selected="selected">@type.BoardTypeName</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@type.BoardTypeName">@type.BoardTypeName</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+
+                        <div class="col-md-2">
+                            <label class="form-label fw-bold small text-muted mb-1">
+                                <i class="fas fa-hospital me-1"></i> الاجتماع بخصوص
+                            </label>
+                            <select class="form-select form-select-sm" id="filterAbout">
+                                <option value="">الكل</option>
+                                @foreach (var hospital in hospitals)
+                                {
+                                    if (ViewBag.SelectedAbout == hospital.HospitalName)
+                                    {
+                                        <option value="@hospital.HospitalName" selected>@hospital.HospitalName</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@hospital.HospitalName">@hospital.HospitalName</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label class="form-label fw-bold small text-muted mb-1">
+                                <i class="fas fa-search me-1"></i> موضوع الاجتماع
+                            </label>
+                            <input type="text" placeholder="اكتب موضوع الاجتماع..." class="form-control form-control-sm" id="filterSubject" value="@ViewBag.SelectedSubject">
+                        </div>
+
+                        <div class="col-md-2">
+                            <label class="form-label fw-bold small text-muted mb-1">
+                                <i class="fas fa-calendar-alt me-1"></i> التاريخ
+                            </label>
+                            <input type="date" class="form-control form-control-sm" id="filterDate" value="@ViewBag.SelectedDate">
+                        </div>
+
+                        <div class="col-md-1 d-flex align-items-end">
+                            <button class="btn btn-teal btn-sm w-100" id="filterSearchBtn">
+                                <i class="fas fa-search me-1"></i> بحث
+                            </button>
+                        </div>
+
+                        <div class="col-md-1 d-flex align-items-end">
+                            <button class="btn btn-secondary btn-sm w-100" id="clearFiltersBtn">
+                                <i class="fas fa-undo-alt me-1"></i> إلغاء
+                            </button>
+                        </div>
+                
+                        <div class="col-md-1 d-flex align-items-end">
+                            <span id="filterCount" class="badge bg-info w-100 py-2" style="font-size: 0.75rem; display: none; background: linear-gradient(135deg, #0697A8, #057a8a) !important;">
+                                <i class="fas fa-filter me-1"></i> <span id="activeFilterCount">0</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="activeFilters"></div>
+
+        <!-- Simple Color Legend with Circle -->
+        <div class="legend-simple mb-3">
+            <div class="d-flex flex-wrap gap-3 align-items-center p-3 bg-white rounded shadow-sm">
+                <span class="fw-bold text-muted small">توضيح الألوان:</span>
+                <div class="d-flex align-items-center gap-2">
+                    <div style="width: 18px; height: 18px; background-color: #28a745; border-radius: 4px;"></div>
+                    <span class="small">معتمد (موافقة كاملة)</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <div style="width: 18px; height: 18px; background-color: #ffc107; border-radius: 4px;"></div>
+                    <span class="small">قيد الانتظار</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <div style="width: 18px; height: 18px; background-color: #dc3545; border-radius: 4px;"></div>
+                    <span class="small">غير معتمد</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <div class="table-responsive">
+                <table class="table table-hover mb-0" id="meetingsTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>التاريخ</th>
+                            <th>نوع الاجتماع</th>
+                            <th>الموضوع</th>
+                            <th>الاجتماع بخصوص</th>
+                            <th>الإجراءات</th>
+                        </thead>
+                        <tbody id="tableBody">
+                            @if (meetings != null && meetings.Any())
+                            {
+                                var index = 1;
+                                foreach (var m in meetings)
+                                {
+                                    var rowClass = m.MeetingStatus == "approved" ? "table-success" :
+                                                  (m.MeetingStatus == "rejected" ? "table-danger" : "table-warning");
+                                    <tr class="@rowClass" data-id="@m.ID">
+                                        <td class="text-center">@index</td>
+                                        <td class="text-center">@m.BoardDate.ToString("yyyy-MM-dd")</td>
+                                        <td class="text-center">@(m.MeetingType ?? "غير محدد")</td>
+                                        <td>@(m.Subject ?? "بدون موضوع")</td>
+                                        <td class="text-center">@(m.CHGParty ?? "")</td>
+                                        <td class="text-center">
+                                            <div class="btn-group btn-group-sm" role="group">
+                                                <button class="btn btn-warning btn-sm" onclick="editMeeting(@m.ID)" title="تعديل">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button class="btn btn-info btn-sm" onclick="downloadMeeting(@m.ID)" title="تحميل المرفقات">
+                                                    <i class="fas fa-download"></i>
+                                                </button>
+                                                <button class="btn btn-secondary btn-sm" onclick="printMeeting(@m.ID)" title="طباعة">
+                                                    <i class="fas fa-print"></i>
+                                                </button>
+                                                <button class="btn btn-danger btn-sm" onclick="deleteMeeting(@m.ID)" title="حذف">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    index++;
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="6" class="text-center text-muted py-4">
+                                        <i class="fas fa-database fa-2x mb-2 d-block"></i>
+                                        لا توجد بيانات في قاعدة البيانات
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Pagination Section -->
+            @if (ViewBag.TotalPages > 1)
+            {
+                <div class="pagination-wrapper mt-4" style="background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); padding: 15px 0;">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-center" style="gap: 5px; margin-bottom: 0;">
+                            <!-- Previous Button -->
+                            @if (ViewBag.CurrentPage > 1)
+                            {
+                                <li class="page-item" style="margin: 0 2px;">
+                                    <a class="page-link" href="#" onclick="goToPage(@(ViewBag.CurrentPage - 1)); return false;"
+                                           style="border-radius: 8px; border: 1px solid #dee2e6; color: #0697A8; background: white; padding: 8px 14px; transition: all 0.3s ease;">
+                                        <i class="fas fa-chevron-right"></i> السابق
+                                    </a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="page-item disabled" style="margin: 0 2px;">
+                                    <span class="page-link" style="border-radius: 8px; border: 1px solid #dee2e6; background: #f8f9fa; color: #adb5bd; padding: 8px 14px;">
+                                        <i class="fas fa-chevron-right"></i> السابق
+                                    </span>
+                                </li>
+                            }
+                
+                            <!-- Page Numbers -->
+                            @{
+                                int startPage = Math.Max(1, ViewBag.CurrentPage - 2);
+                                int endPage = Math.Min(ViewBag.TotalPages, startPage + 4);
+                    
+                                if (endPage - startPage < 4 && startPage > 1)
+                                {
+                                    startPage = Math.Max(1, endPage - 4);
+                                }
+                    
+                                if (startPage > 1)
+                                {
+                                    <li class="page-item" style="margin: 0 2px;">
+                                        <a class="page-link" href="#" onclick="goToPage(1); return false;"
+                                           style="border-radius: 8px; border: 1px solid #dee2e6; color: #0697A8; background: white; padding: 8px 14px;">1</a>
+                                    </li>
+                                    if (startPage > 2)
+                                    {
+                                        <li class="page-item disabled" style="margin: 0 2px;">
+                                            <span class="page-link" style="border-radius: 8px; border: 1px solid #dee2e6; background: #f8f9fa; color: #adb5bd; padding: 8px 14px;">...</span>
+                                        </li>
+                                    }
+                                }
+                    
+                                for (int i = startPage; i <= endPage; i++)
+                                {
+                                    if (i == ViewBag.CurrentPage)
+                                    {
+                                        <li class="page-item active" style="margin: 0 2px;">
+                                            <span class="page-link" style="border-radius: 8px; background: linear-gradient(135deg, #0697A8, #057a8a); border-color: #0697A8; color: white; padding: 8px 14px;">@i</span>
+                                        </li>
+                                    }
+                                    else
+                                    {
+                                        <li class="page-item" style="margin: 0 2px;">
+                                            <a class="page-link" href="#" onclick="goToPage(@i); return false;"
+                                               style="border-radius: 8px; border: 1px solid #dee2e6; color: #0697A8; background: white; padding: 8px 14px;">@i</a>
+                                        </li>
+                                    }
+                                }
+                    
+                                if (endPage < ViewBag.TotalPages)
+                                {
+                                    if (endPage < ViewBag.TotalPages - 1)
+                                    {
+                                        <li class="page-item disabled" style="margin: 0 2px;">
+                                            <span class="page-link" style="border-radius: 8px; border: 1px solid #dee2e6; background: #f8f9fa; color: #adb5bd; padding: 8px 14px;">...</span>
+                                        </li>
+                                    }
+                                    <li class="page-item" style="margin: 0 2px;">
+                                        <a class="page-link" href="#" onclick="goToPage(@ViewBag.TotalPages); return false;"
+                                           style="border-radius: 8px; border: 1px solid #dee2e6; color: #0697A8; background: white; padding: 8px 14px;">@ViewBag.TotalPages</a>
+                                    </li>
+                                }
+                            }
+                
+                            <!-- Next Button -->
+                            @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+                            {
+                                <li class="page-item" style="margin: 0 2px;">
+                                    <a class="page-link" href="#" onclick="goToPage(@(ViewBag.CurrentPage + 1)); return false;"
+                                           style="border-radius: 8px; border: 1px solid #dee2e6; color: #0697A8; background: white; padding: 8px 14px;">
+                                        التالي <i class="fas fa-chevron-left"></i>
+                                    </a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="page-item disabled" style="margin: 0 2px;">
+                                    <span class="page-link" style="border-radius: 8px; border: 1px solid #dee2e6; background: #f8f9fa; color: #adb5bd; padding: 8px 14px;">
+                                        التالي <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                </li>
+                            }
+                        </ul>
+                    </nav>
+        
+                    <!-- Info Bar -->
+                    <div class="pagination-info text-center text-muted mt-3" style="font-size: 0.85rem; color: #6c757d;">
+                        <i class="fas fa-info-circle" style="color: #0697A8; margin-left: 5px;"></i>
+                        عرض @(((ViewBag.CurrentPage - 1) * ViewBag.PageSize) + 1) -
+                        @(Math.Min(ViewBag.CurrentPage * ViewBag.PageSize, ViewBag.TotalItems))
+                        من إجمالي @ViewBag.TotalItems اجتماع
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@await Html.PartialAsync("_AddEditMeetingModal")
+
+<!-- Toast Container -->
+<div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 9999;"></div>
+
+@section Scripts {
+    <script>
+        // ========== 1. DEFINE GLOBAL VARIABLES ==========
+        window.antiForgeryToken = '@token';
+        window.hospitals = @Html.Raw(Json.Serialize(hospitals));
+        window.boardTypes = @Html.Raw(Json.Serialize(boardTypes));
+        window.allAttendees = @Html.Raw(Json.Serialize(allAttendees));
+        window.meetingsData = @Html.Raw(Json.Serialize(meetings));
+        window.currentPage = @ViewBag.CurrentPage;
+        window.totalPages = @ViewBag.TotalPages;
+        window.totalItems = @ViewBag.TotalItems;
+        window.pageSize = @ViewBag.PageSize;
+        window.filterType = '@Html.Raw(ViewBag.FilterType ?? "")';
+        window.filterAbout = '@Html.Raw(ViewBag.FilterAbout ?? "")';
+        window.filterSubject = '@Html.Raw(ViewBag.FilterSubject ?? "")';
+        window.filterDate = '@Html.Raw(ViewBag.FilterDate ?? "")';
+       
+    </script>
+
+    <script>
+        // ========== 2. ALL FUNCTIONS DEFINITIONS ==========
+        
+        // Populate modal dropdowns
+        function populateModalDropdowns() {
+            const typeSelect = $('#meetingTypeId');
+            typeSelect.empty().append('<option value="">اختر</option>');
+            if (window.boardTypes && window.boardTypes.length) {
+                window.boardTypes.forEach(type => {
+                    typeSelect.append(`<option value="${type.id}">${type.boardTypeName}</option>`);
+                });
+            }
+            
+            const hospitalsSelect = $('#meetingCHGParty');
+            hospitalsSelect.empty();
+            if (window.hospitals && window.hospitals.length) {
+                window.hospitals.forEach(hospital => {
+                    hospitalsSelect.append(`<option value="${hospital.hospitalName}">${hospital.hospitalName}</option>`);
+                });
+            }
+            
+            const attendeesSelect = $('#attendeesSelect');
+            const approvalsSelect = $('#approvalsSelect');
+            attendeesSelect.empty();
+            approvalsSelect.empty();
+            if (window.allAttendees && window.allAttendees.length) {
+                window.allAttendees.forEach(attendee => {
+                    attendeesSelect.append(`<option value="${attendee.id}">${attendee.name}</option>`);
+                    approvalsSelect.append(`<option value="${attendee.id}">${attendee.name}</option>`);
+                });
+            }
+        }
+        
+        // Pagination function
+        function goToPage(pageNumber) {
+            var type = $('#filterType').val();
+            var about = $('#filterAbout').val();
+            var subject = $('#filterSubject').val();
+            var date = $('#filterDate').val();
+            
+           
+            
+            var url = '/Meetings/Index?pageNumber=' + pageNumber + '&pageSize=5';
+            
+            if (type && type !== '') url += '&type=' + encodeURIComponent(type);
+            if (about && about !== '') url += '&about=' + encodeURIComponent(about);
+            if (subject && subject !== '') url += '&subject=' + encodeURIComponent(subject);
+            if (date && date !== '') url += '&date=' + encodeURIComponent(date);
+            
+          
+            window.location.href = url;
+        }
+        
+                // Update active filters from URL
+        function updateActiveFiltersFromUrl() {
+            var type = window.filterType || '';
+            var about = window.filterAbout || '';
+            var subject = window.filterSubject || '';
+            var date = window.filterDate || '';
+    
+    
+            var activeFilters = [];
+    
+            if (type && type !== '') {
+                activeFilters.push(`نوع الاجتماع: ${decodeURIComponent(type)}`);
+                $('#filterType').val(type);
+            }
+            if (about && about !== '') {
+                activeFilters.push(`بخصوص: ${about}`);
+                $('#filterAbout').val(about);
+            }
+            if (subject && subject !== '') {
+                activeFilters.push(`موضوع: ${subject}`);
+                $('#filterSubject').val(subject);
+            }
+            if (date && date !== '') {
+                activeFilters.push(`التاريخ: ${date}`);
+                $('#filterDate').val(date);
+              
+            }
+    
+            if (activeFilters.length > 0) {
+                $('#activeFilters').html(`
+                    <div class="alert alert-info alert-dismissible fade show mb-3" role="alert">
+                        <i class="fas fa-filter me-2"></i>
+                        <strong>الفلاتر النشطة:</strong> ${activeFilters.join(' | ')}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" onclick="clearAllFilters()"></button>
+                    </div>
+                `);
+            } else {
+                $('#activeFilters').empty();
+            }
+    
+            updateFilterCount();
+        }
+        
+        // Update filter count
+        function updateFilterCount() {
+            let activeCount = 0;
+            if ($('#filterType').val() && $('#filterType').val() !== '') activeCount++;
+            if ($('#filterAbout').val() && $('#filterAbout').val() !== '') activeCount++;
+            if ($('#filterSubject').val() && $('#filterSubject').val() !== '') activeCount++;
+            if ($('#filterDate').val() && $('#filterDate').val() !== '') activeCount++;
+            
+            if (activeCount > 0) {
+                $('#filterCount').show();
+                $('#activeFilterCount').text(activeCount);
+            } else {
+                $('#filterCount').hide();
+            }
+        }
+        
+        // Update pagination info
+        function updatePaginationInfo() {
+            var currentPage = window.currentPage || 1;
+            var totalPages = window.totalPages || 1;
+            var totalItems = window.totalItems || 0;
+            var pageSize = window.pageSize || 5;
+            
+            var start = ((currentPage - 1) * pageSize) + 1;
+            var end = Math.min(currentPage * pageSize, totalItems);
+            
+            $('.pagination-info').html(`
+                <i class="fas fa-info-circle" style="color: #0697A8; margin-left: 5px;"></i>
+                عرض ${start} - ${end} من إجمالي ${totalItems} اجتماع
+            `);
+        }
+        
+        // Validate meeting form
+        function validateMeetingForm() {
+            var errors = [];
+            
+            if (!$('#meetingDate').val()) {
+                errors.push('التاريخ مطلوب');
+            }
+            if (!$('#meetingTypeId').val()) {
+                errors.push('نوع الاجتماع مطلوب');
+            }
+            if ($('#meetingCHGParty option:selected').length === 0) {
+                errors.push('يجب اختيار مستشفى واحد على الأقل');
+            }
+            if (!$('#meetingSubject').val()) {
+                errors.push('موضوع الاجتماع مطلوب');
+            }
+            if (!$('#meetingStatus').val()) {
+                errors.push('حالة الاجتماع مطلوبة');
+            }
+            
+            $('.decision-row').each(function() {
+                var number = $(this).find('.decision-number').val();
+                var details = $(this).find('.decision-details').val();
+                if (number && !details) {
+                    errors.push('تفاصيل القرار مطلوبة عند إدخال رقم القرار');
+                }
+                if (!number && details) {
+                    errors.push('رقم القرار مطلوب عند إدخال تفاصيل القرار');
+                }
+            });
+            
+            if (errors.length > 0) {
+                showToast(errors.join('\n'), 'danger');
+                return false;
+            }
+            return true;
+        }
+                function renderTable() {
+            let meetings = window.meetingsData || [];
+            let filters = {
+                about: $('#filterAbout').val() || '',
+                subject: $('#filterSubject').val() || '',
+                date: $('#filterDate').val() || ''
+            };
+
+            let filtered = [...meetings];
+
+            if (filters.about && filters.about !== '') {
+                filtered = filtered.filter(m => {
+                    if (!m.chgParty) return false;
+                    const hospitals = m.chgParty.split(',').map(h => h.trim());
+                    return hospitals.includes(filters.about);
+                });
+            }
+
+            if (filters.subject && filters.subject !== '') {
+                filtered = filtered.filter(m =>
+                    m.subject && m.subject.toLowerCase().includes(filters.subject.toLowerCase())
+                );
+            }
+
+            if (filters.date && filters.date !== '') {
+                filtered = filtered.filter(m => {
+                    if (!m.boardDate) return false;
+                    const meetingDate = new Date(m.boardDate);
+                    const meetingDateStr = meetingDate.getFullYear() + '-' +
+                                           String(meetingDate.getMonth() + 1).padStart(2, '0') + '-' +
+                                           String(meetingDate.getDate()).padStart(2, '0');
+                    return meetingDateStr === filters.date;
+                });
+            }
+
+            let html = '';
+            filtered.forEach((m, index) => {
+                const rowClass = m.meetingStatus === 'approved' ? 'table-success' :
+                                (m.meetingStatus === 'rejected' ? 'table-danger' : 'table-warning');
+        
+                let meetingDate = '';
+                if (m.boardDate) {
+                    const date = new Date(m.boardDate);
+                    meetingDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+                }
+        
+                html += `
+                    <tr class="${rowClass}" data-id="${m.id}">
+                        <td class="text-center">${index + 1}</td>
+                        <td class="text-center">${meetingDate}
+                        <td class="text-center">${m.meetingType || ''}
+                        <td class="text-center">${m.subject || ''}
+                        <td class="text-center">${m.chgParty || ''}
+                        <td class="text-center">
+                            <div class="btn-group btn-group-sm" role="group">
+                                <button class="btn btn-warning btn-sm" onclick="editMeeting(${m.id})" title="تعديل">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn btn-info btn-sm" onclick="downloadMeeting(${m.id})" title="تحميل المرفقات">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="btn btn-secondary btn-sm" onclick="printMeeting(${m.id})" title="طباعة">
+                                    <i class="fas fa-print"></i>
+                                </button>
+                                <button class="btn btn-danger btn-sm" onclick="deleteMeeting(${m.id})" title="حذف">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            if (filtered.length === 0) {
+                html = '<tr><td colspan="6" class="text-center text-muted py-4">لا توجد بيانات تطابق معايير البحث<\/td><\/tr>';
+            }
+
+            $('#tableBody').html(html);
+            updateActiveFiltersFromUrl();
+        }
+        // Clear all filters
+        window.clearAllFilters = function() {
+            window.location.href = '/Meetings/Index?pageNumber=1&pageSize=5';
+        };
+        
+        // CRUD Functions
+        window.downloadMeeting = function (id) {
+            window.location.href = '/Meetings/DownloadAttachments?id=' + id;
+        };
+        
+        window.printMeeting = function (id) {
+            window.open('/Meetings/PrintAttachments?id=' + id, '_blank', 'width=800,height=600');
+        };
+        
+        window.deleteMeeting = function (id) {
+            if (!confirm('هل أنت متأكد من حذف هذا الاجتماع؟')) return;
+            
+            $.ajax({
+                url: '/Meetings/DeleteMeeting?id=' + id,
+                type: 'GET',
+                headers: { 'RequestVerificationToken': window.antiForgeryToken },
+                success: function (response) {
+                    window.location.reload();
+                },
+                error: function (xhr) {
+                    showToast('فشل في الحذف', 'danger');
+                }
+            });
+        };
+        
+        window.editMeeting = function (id) {
+            $.get('/Meetings/GetMeetingForEdit?id=' + id)
+                .done(function(meeting) {
+                    window.editingId = id;
+                    $('#meetingId').val(id);
+                    if (meeting.boardDate) {
+                        $('#meetingDate').val(new Date(meeting.boardDate).toISOString().split('T')[0]);
+                    }
+                    $('#meetingTypeId').val(meeting.boardTypeID);
+                    $('#meetingSubject').val(meeting.subject || '');
+                    $('#meetingStatus').val(meeting.meetingStatus || '');
+                    $('#meetingNotes').val(meeting.notes || '');
+                    
+                    let hospitalNames = [];
+                    if (meeting.chgParty) {
+                        hospitalNames = meeting.chgParty.split(',').map(h => h.trim()).filter(h => h);
+                    }
+                    $('#meetingCHGParty').val(hospitalNames);
+                    
+                    $('#attendeesSelect').val(meeting.attendeeIds || []);
+                    $('#approvalsSelect').val(meeting.approvalIds || []);
+                    
+                    $('#existingAttachmentsSection').hide();
+                    $('#existingAttachmentsList').empty();
+                    displayExistingAttachments(meeting.existingAttachments);
+                    
+                    $('#meetingAttachmentsContainer').empty();
+                    $('#meetingAttachmentsContainer').append(`
+                        <div class="attachment-row mb-2">
+                            <input type="file" name="meetingAttachments" class="form-control" multiple>
+                        </div>
+                    `);
+                    
+                    $('#decisionsContainer').empty();
+                    if (meeting.decisions && meeting.decisions.length > 0) {
+                        meeting.decisions.forEach(function(decision) {
+                            addDecisionWithData(decision);
+                        });
+                    } else {
+                        window.addDecision();
+                    }
+                    
+                    $('#modalTitle').html('<i class="fas fa-edit me-2"></i> تعديل الاجتماع');
+                    $('#addEditMeetingModal').modal('show');
+                })
+                .fail(function(xhr) {
+                    showToast('فشل في تحميل بيانات الاجتماع', 'danger');
+                });
+        };
+        
+        // ========== 3. ATTACHMENTS FUNCTIONS ==========
+            function displayExistingAttachments(attachments) {
+            $('#existingAttachmentsList').empty();
+    
+            if (!attachments || attachments.length === 0) {
+                $('#existingAttachmentsSection').hide();
+                return;
+            }
+    
+            $('#existingAttachmentsSection').show();
+    
+            let html = '';
+            attachments.forEach(att => {
+                let uploadDate = att.uploaded_at ? new Date(att.uploaded_at).toLocaleDateString('ar-EG') : '';
+                let fileSize = '';
+                if (att.file_size) {
+                    if (att.file_size < 1024) {
+                        fileSize = att.file_size + ' B';
+                    } else if (att.file_size < 1024 * 1024) {
+                        fileSize = (att.file_size / 1024).toFixed(2) + ' KB';
+                    } else {
+                        fileSize = (att.file_size / (1024 * 1024)).toFixed(2) + ' MB';
+                    }
+                }
+        
+                var attachmentId = att.id || att.ID;
+        
+                html += `
+                    <li class="list-group-item d-flex justify-content-between align-items-center" data-attachment-id="${attachmentId}">
+                        <div>
+                            <i class="fas ${getFileIcon(att.file_name)} me-2"></i>
+                            <a href="${att.file_path}" target="_blank" class="text-decoration-none">
+                                <strong>${escapeHtml(att.file_name)}</strong>
+                            </a>
+                            ${fileSize ? `<small class="text-muted ms-2">(${fileSize})</small>` : ''}
+                            ${uploadDate ? `<br><small class="text-muted">رفع في: ${uploadDate}</small>` : ''}
+                            ${att.description ? `<br><small class="text-muted">${escapeHtml(att.description)}</small>` : ''}
+                        </div>
+                        <div>
+                            <a href="${att.file_path}" download class="btn btn-sm btn-info me-1" title="تحميل">
+                                <i class="fas fa-download"></i>
+                            </a>
+                            <button type="button" class="btn btn-sm btn-danger" data-id="${attachmentId}" title="حذف">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </li>
+                `;
+            });
+    
+            $('#existingAttachmentsList').html(html);
+    
+            // Attach click handlers after HTML is added
+            $('#existingAttachmentsList .btn-danger').off('click').on('click', function() {
+                var attachmentId = $(this).data('id');
+                deleteExistingAttachment(attachmentId, this);
+            });
+        }
+        
+        function getFileIcon(fileName) {
+            const ext = fileName.split('.').pop().toLowerCase();
+            switch(ext) {
+                case 'pdf': return 'fa-file-pdf';
+                case 'doc': case 'docx': return 'fa-file-word';
+                case 'xls': case 'xlsx': return 'fa-file-excel';
+                case 'jpg': case 'jpeg': case 'png': case 'gif': case 'bmp': return 'fa-file-image';
+                case 'zip': case 'rar': case '7z': return 'fa-file-archive';
+                default: return 'fa-file-alt';
+            }
+        }
+        
+                     window.deleteExistingAttachment = function(attachmentId, btn) {
+    
+            if (!attachmentId) {
+                showToast('خطأ: معرف المرفق غير صالح', 'danger');
+                return;
+            }
+    
+            if (!confirm('هل أنت متأكد من حذف هذا المرفق؟')) return;
+    
+            $.ajax({
+                url: '/Meetings/DeleteAttachment',
+                type: 'POST',
+                data: { id: attachmentId },
+                headers: { 'RequestVerificationToken': window.antiForgeryToken },
+                success: function(response) {
+                    $(btn).closest('li').remove();
+                    showToast('تم حذف المرفق بنجاح', 'success');
+                    if ($('#existingAttachmentsList li').length === 0) {
+                        $('#existingAttachmentsSection').hide();
+                    }
+                },
+                error: function(xhr) {
+                    console.error('Error:', xhr);
+                    showToast('فشل في حذف المرفق', 'danger');
+                }
+            });
+        };
+        
+        function addDecisionWithData(decision) {
+            const container = document.getElementById("decisionsContainer");
+            const newRow = document.createElement("div");
+            newRow.className = "decision-row card mb-3 p-3";
+            newRow.innerHTML = `
+                <div class="row">
+                    <div class="col-md-4 mb-2">
+                        <label>رقم القرار <span class="text-danger">*</span></label>
+                        <input type="number" name="decisionNumbers" class="form-control decision-number" value="${decision.decision_Number || ''}" required>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <label>حالة التنفيذ</label>
+                        <select name="decisionExecuted" class="form-select decision-executed">
+                            <option value="False" ${decision.isExecuted === 'False' ? 'selected' : ''}>لم ينفذ</option>
+                            <option value="True" ${decision.isExecuted === 'True' ? 'selected' : ''}>تم التنفيذ</option>
+                        </select>
+                    </div>
+                    <div class="col-md-12 mb-2">
+                        <label>تفاصيل القرار <span class="text-danger">*</span></label>
+                        <textarea name="decisionDetails" class="form-control decision-details" rows="2" required>${escapeHtml(decision.decision_Details || '')}</textarea>
+                    </div>
+                    <div class="col-md-12 mb-2">
+                        <label>ملاحظات القرار</label>
+                        <textarea name="decisionNotes" class="form-control decision-notes" rows="2">${escapeHtml(decision.notes || '')}</textarea>
+                    </div>
+                    <div class="col-md-12 mb-2">
+                        <label>مرفقات القرار</label>
+                        <div class="decision-attachments-container">
+                            <input type="file" name="decisionAttachments" class="form-control" multiple>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-secondary mt-1" onclick="addDecisionAttachment(this)">
+                            <i class="fas fa-plus"></i> إضافة مرفق
+                        </button>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-sm btn-danger mt-2" onclick="removeDecision(this)">
+                    <i class="fas fa-trash"></i> حذف القرار
+                </button>
+            `;
+            container.appendChild(newRow);
+        }
+        
+        function escapeHtml(text) {
+            if (!text) return '';
+            return text.replace(/[&<>]/g, function(m) {
+                if (m === '&') return '&amp;';
+                if (m === '<') return '&lt;';
+                if (m === '>') return '&gt;';
+                return m;
+            });
+        }
+        
+        window.addDecision = function () {
+            const container = document.getElementById("decisionsContainer");
+            const newRow = document.createElement("div");
+            newRow.className = "decision-row card mb-3 p-3";
+            newRow.innerHTML = `
+                <div class="row">
+                    <div class="col-md-4 mb-2">
+                        <label>رقم القرار <span class="text-danger">*</span></label>
+                        <input type="number" name="decisionNumbers" class="form-control decision-number" required>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <label>حالة التنفيذ</label>
+                        <select name="decisionExecuted" class="form-select decision-executed">
+                            <option value="False">لم ينفذ</option>
+                            <option value="True">تم التنفيذ</option>
+                        </select>
+                    </div>
+                    <div class="col-md-12 mb-2">
+                        <label>تفاصيل القرار <span class="text-danger">*</span></label>
+                        <textarea name="decisionDetails" class="form-control decision-details" rows="2" required></textarea>
+                    </div>
+                    <div class="col-md-12 mb-2">
+                        <label>ملاحظات القرار</label>
+                        <textarea name="decisionNotes" class="form-control decision-notes" rows="2"></textarea>
+                    </div>
+                    <div class="col-md-12 mb-2">
+                        <label>مرفقات القرار</label>
+                        <div class="decision-attachments-container">
+                            <input type="file" name="decisionAttachments" class="form-control" multiple>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-secondary mt-1" onclick="addDecisionAttachment(this)">
+                            <i class="fas fa-plus"></i> إضافة مرفق
+                        </button>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-sm btn-danger mt-2" onclick="removeDecision(this)">
+                    <i class="fas fa-trash"></i> حذف القرار
+                </button>
+            `;
+            container.appendChild(newRow);
+        };
+        
+        window.addDecisionAttachment = function (btn) {
+            const container = $(btn).prev('.decision-attachments-container');
+            const newInput = $('<div class="mt-2"><input type="file" name="decisionAttachments" class="form-control" multiple></div>');
+            container.after(newInput);
+        };
+        
+        window.removeDecision = function (btn) {
+            $(btn).closest('.decision-row').remove();
+        };
+        
+        window.addMeetingAttachment = function () {
+            const container = document.getElementById("meetingAttachmentsContainer");
+            const newRow = document.createElement("div");
+            newRow.className = "attachment-row mb-2";
+            newRow.innerHTML = '<input type="file" name="meetingAttachments" class="form-control" multiple>';
+            container.appendChild(newRow);
+        };
+        
+        // ========== 4. SAVE MEETING ==========
+        $('#saveMeetingBtn').click(function () {
+            if (!validateMeetingForm()) return;
+            
+            var formData = new FormData();
+            formData.append('Id', $('#meetingId').val());
+            formData.append('BoardDate', $('#meetingDate').val());
+            formData.append('BoardTypeID', $('#meetingTypeId').val());
+            formData.append('Subject', $('#meetingSubject').val());
+            formData.append('MeetingStatus', $('#meetingStatus').val());
+            formData.append('Notes', $('#meetingNotes').val());
+            formData.append('MeetingType', $('#meetingTypeId option:selected').text());
+
+            var selectedHospitals = [];
+            $('#meetingCHGParty option:selected').each(function () {
+                selectedHospitals.push($(this).val());
+            });
+            formData.append('CHGParty', selectedHospitals.join(', '));
+
+            $('input[name="meetingAttachments"]').each(function () {
+                var files = $(this)[0].files;
+                for (var i = 0; i < files.length; i++) {
+                    formData.append('MeetingAttachments', files[i]);
+                }
+            });
+
+            $('#attendeesSelect option:selected').each(function () {
+                formData.append('AttendeeIds', $(this).val());
+            });
+
+            $('#approvalsSelect option:selected').each(function () {
+                formData.append('ApprovalIds', $(this).val());
+            });
+
+            $('.decision-row').each(function (idx) {
+                var number = $(this).find('.decision-number').val();
+                var details = $(this).find('.decision-details').val();
+                var notes = $(this).find('.decision-notes').val();
+                var executed = $(this).find('.decision-executed').val();
+
+                if (number && details) {
+                    formData.append(`Decisions[${idx}].Decision_Number`, number);
+                    formData.append(`Decisions[${idx}].Decision_Details`, details);
+                    formData.append(`Decisions[${idx}].Notes`, notes);
+                    formData.append(`Decisions[${idx}].IsExecuted`, executed);
+
+                    $(this).find('input[name="decisionAttachments"]').each(function () {
+                        var files = $(this)[0].files;
+                        for (var i = 0; i < files.length; i++) {
+                            formData.append(`Decisions[${idx}].Attachments`, files[i]);
+                        }
+                    });
+                }
+            });
+
+            var url = window.editingId ? '/Meetings/UpdateMeeting' : '/Meetings/AddMeeting';
+            
+            const saveBtn = $('#saveMeetingBtn');
+            const originalText = saveBtn.html();
+            saveBtn.html('<i class="fas fa-spinner fa-spin"></i> جاري الحفظ...').prop('disabled', true);
+
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: formData,
+                processData: false,
+                contentType: false,
+                headers: { 'RequestVerificationToken': window.antiForgeryToken },
+                success: function (response) {
+                    $('#addEditMeetingModal').modal('hide');
+                    showToast('تم حفظ الاجتماع بنجاح', 'success');
+                    setTimeout(function() { location.reload(); }, 1500);
+                },
+                error: function (xhr) {
+                    let errorMsg = 'حدث خطأ في حفظ البيانات';
+                    if (xhr.status === 400) {
+                        errorMsg = 'بيانات غير صحيحة. تأكد من إدخال جميع البيانات المطلوبة';
+                        if (xhr.responseJSON && xhr.responseJSON.errors) {
+                            const errors = Object.values(xhr.responseJSON.errors).flat();
+                            errorMsg = errors.join('\n');
+                        } else if (xhr.responseText) {
+                            errorMsg = xhr.responseText;
+                        }
+                    } else if (xhr.status === 401) {
+                        errorMsg = 'انتهت الجلسة، يرجى تسجيل الدخول مرة أخرى';
+                        setTimeout(function() { window.location.href = '/Account/Login'; }, 2000);
+                    }
+                    showToast(errorMsg, 'danger');
+                },
+                complete: function () {
+                    saveBtn.html(originalText).prop('disabled', false);
+                }
+            });
+        });
+        
+        // ========== 5. FILTER BUTTONS ==========
+        $('#filterSearchBtn').click(function () {
+            var type = $('#filterType').val();
+            var about = $('#filterAbout').val();
+            var subject = $('#filterSubject').val();
+            var date = $('#filterDate').val();
+            
+            var url = '/Meetings/Index?pageNumber=1&pageSize=5';
+            
+            if (type && type !== '') url += '&type=' + encodeURIComponent(type);
+            if (about && about !== '') url += '&about=' + encodeURIComponent(about);
+            if (subject && subject !== '') url += '&subject=' + encodeURIComponent(subject);
+            if (date && date !== '') url += '&date=' + encodeURIComponent(date);
+            
+            window.location.href = url;
+        });
+        
+        $('#clearFiltersBtn').click(function () {
+            window.location.href = '/Meetings/Index?pageNumber=1&pageSize=5';
+        });
+        
+        // ========== 6. ADD MEETING BUTTON ==========
+        $('#addMeetingBtn').click(function () {
+            window.editingId = null;
+            $('#modalTitle').html('<i class="fas fa-calendar-plus me-2"></i> إضافة اجتماع');
+            $('#addEditMeetingForm')[0].reset();
+            $('#meetingId').val('');
+            $('#meetingCHGParty').val([]);
+            $('#attendeesSelect').val([]);
+            $('#approvalsSelect').val([]);
+            $('#decisionsContainer').empty();
+            window.addDecision();
+            
+            $('#existingAttachmentsSection').hide();
+            $('#existingAttachmentsList').empty();
+            $('#meetingAttachmentsContainer').empty();
+            $('#meetingAttachmentsContainer').append(`
+                <div class="attachment-row mb-2">
+                    <input type="file" name="meetingAttachments" class="form-control" multiple>
+                </div>
+            `);
+            
+            $('#addEditMeetingModal').modal('show');
+        });
+        
+        // ========== 7. MODAL CLOSE EVENT ==========
+        $('#addEditMeetingModal').on('hidden.bs.modal', function() {
+            $('#existingAttachmentsSection').hide();
+            $('#existingAttachmentsList').empty();
+            $('#meetingAttachmentsContainer').empty();
+            $('#meetingAttachmentsContainer').append(`
+                <div class="attachment-row mb-2">
+                    <input type="file" name="meetingAttachments" class="form-control" multiple>
+                </div>
+            `);
+        });
+        
+        // ========== 8. DOCUMENT READY INITIALIZATION ==========
+        $(document).ready(function () {
+            
+            // Set initial filter values from ViewBag
+            if (window.filterType && window.filterType !== '') {
+                $('#filterType').val(window.filterType);
+               
+            }
+            if (window.filterAbout && window.filterAbout !== '') {
+                $('#filterAbout').val(window.filterAbout);
+              
+            }
+            if (window.filterSubject && window.filterSubject !== '') {
+                $('#filterSubject').val(window.filterSubject);
+               
+            }
+            if (window.filterDate && window.filterDate !== '') {
+                $('#filterDate').val(window.filterDate);
+               
+            }
+            
+          
+            
+            // Initialize all functions
+            populateModalDropdowns();
+            renderTable();
+            updateActiveFiltersFromUrl();
+            updatePaginationInfo();
+        });
+    </script>
+}

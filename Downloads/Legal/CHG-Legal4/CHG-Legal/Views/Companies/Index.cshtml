@@ -1,0 +1,1159 @@
+﻿@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Xsrf
+@{
+    var token = Xsrf.GetAndStoreTokens(Context).RequestToken;
+}
+
+<!-- Search Section -->
+<div class="card border-0 shadow-sm mb-4" style="border-radius: 20px; overflow: hidden;">
+    <div class="card-body p-4" style="background: #f8fbfb;">
+        <div class="search-section">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h6 class="mb-0" style="color: #4a9f9c;">
+                    <i class="fas fa-search me-2"></i> بحث وتصفية الشركات
+                </h6>
+                <div>
+                    <button class="btn btn-sm btn-teal" id="advancedSearchBtn" style="border-radius: 10px;">
+                        <i class="fas fa-sliders-h me-1"></i> بحث متقدم
+                    </button>
+                    <button class="btn btn-sm btn-secondary" id="resetSearchBtn" style="border-radius: 10px; background: #6c757d; border: none;">
+                        <i class="fas fa-undo-alt me-1"></i> إعادة تعيين
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Simple Search -->
+            <div class="row g-3">
+                <div class="col-md-7">
+                    <div class="input-group" style="border-radius: 10px; overflow: hidden;">
+                        <input type="text" class="form-control" id="searchInput" placeholder="ابحث باسم الشركة، رقم السجل التجاري، العنوان، أو أي كلمة..." style="border: 1px solid #e0eceb; border-left: none;">
+                        <span class="input-group-text" style="background: linear-gradient(135deg, #91d3d1, #7bc6c3, #65b8b5); color: white; border: none;">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </div>
+                    <div id="searchStats" class="mt-2 small text-muted"></div>
+                </div>
+                <div class="col-md-5">
+                    <div class="d-flex gap-2">
+                        <select class="form-select" id="filterType" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                            <option value="all">جميع الحقول</option>
+                            <option value="name">اسم الشركة</option>
+                            <option value="commercial">رقم السجل التجاري</option>
+                            <option value="address">العنوان الرئيسي</option>
+                            <option value="capital">رأس المال</option>
+                            <option value="shareholders">عدد المساهمين</option>
+                            <option value="branches">عدد الفروع</option>
+                        </select>
+                        <select class="form-select" id="statusFilter" style="border-radius: 10px; border: 1px solid #e0eceb; width: 140px;">
+                            <option value="all">جميع الحالات</option>
+                            <option value="active">نشطة</option>
+                            <option value="expiring">على وشك الانتهاء</option>
+                            <option value="expired">منتهية</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Advanced Search (Hidden by default) -->
+            <div id="advancedSearchPanel" style="display: none; margin-top: 20px; padding-top: 20px; border-top: 1px solid #e0eceb;">
+                <div class="row g-3">
+                    <div class="col-md-3">
+                        <label class="form-label small fw-bold" style="color: #4a9f9c;">اسم الشركة</label>
+                        <input type="text" class="form-control adv-search" id="advName" placeholder="اسم الشركة" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label small fw-bold" style="color: #4a9f9c;">رقم السجل التجاري</label>
+                        <input type="text" class="form-control adv-search" id="advCommercial" placeholder="رقم السجل" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label small fw-bold" style="color: #4a9f9c;">العنوان</label>
+                        <input type="text" class="form-control adv-search" id="advAddress" placeholder="العنوان الرئيسي" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label small fw-bold" style="color: #4a9f9c;">رأس المال (من - إلى)</label>
+                        <div class="d-flex gap-2">
+                            <input type="number" class="form-control adv-search" id="advCapitalMin" placeholder="الحد الأدنى" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                            <input type="number" class="form-control adv-search" id="advCapitalMax" placeholder="الحد الأقصى" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label small fw-bold" style="color: #4a9f9c;">عدد المساهمين (من - إلى)</label>
+                        <div class="d-flex gap-2">
+                            <input type="number" class="form-control adv-search" id="advShareholdersMin" placeholder="الحد الأدنى" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                            <input type="number" class="form-control adv-search" id="advShareholdersMax" placeholder="الحد الأقصى" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label small fw-bold" style="color: #4a9f9c;">عدد الفروع (من - إلى)</label>
+                        <div class="d-flex gap-2">
+                            <input type="number" class="form-control adv-search" id="advBranchesMin" placeholder="الحد الأدنى" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                            <input type="number" class="form-control adv-search" id="advBranchesMax" placeholder="الحد الأقصى" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label small fw-bold" style="color: #4a9f9c;">تاريخ التسجيل</label>
+                        <div class="d-flex gap-2">
+                            <input type="date" class="form-control adv-search" id="advDateFrom" placeholder="من" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                            <input type="date" class="form-control adv-search" id="advDateTo" placeholder="إلى" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label small fw-bold" style="color: #4a9f9c;">حالة التسجيل</label>
+                        <select class="form-select adv-search" id="advStatus" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                            <option value="all">الكل</option>
+                            <option value="active">نشطة</option>
+                            <option value="expiring">على وشك الانتهاء (30 يوم)</option>
+                            <option value="expired">منتهية</option>
+                        </select>
+                    </div>
+                    <div class="col-md-12 text-center mt-3">
+                        <button class="btn btn-teal" id="applyAdvancedSearch" style="border-radius: 10px;">
+                            <i class="fas fa-search me-2"></i> تطبيق البحث المتقدم
+                        </button>
+                        <button class="btn btn-secondary" id="clearAdvancedSearch" style="border-radius: 10px; background: #6c757d; border: none;">
+                            <i class="fas fa-times me-2"></i> مسح الكل
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card border-0 shadow-sm mb-4" style="border-radius: 20px; overflow: hidden;">
+    <div class="card-header bg-white border-0 pt-4 pb-0 px-4" style="color: #4a9f9c; font-weight: bold;">
+        <i class="fas fa-building me-2"></i> قائمة الشركات
+        <button class="btn btn-sm float-start" id="addNewCompanyBtn" style="background: linear-gradient(135deg, #91d3d1, #7bc6c3, #65b8b5); border: none; color: white; border-radius: 10px; padding: 6px 15px;">
+            <i class="fas fa-plus"></i> إضافة شركة جديدة
+        </button>
+    </div>
+    <div class="card-body p-0 table-container">
+        <div class="table-responsive">
+            <table class="table table-hover mb-0" id="companiesTable" style="width: 100%; border-collapse: separate; border-spacing: 0 8px;">
+                <thead>
+                    <tr>
+                        <th style="padding: 12px 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px;">#</th>
+                        <th style="padding: 12px 15px;">اسم الشركة</th>
+                        <th style="padding: 12px 15px;">رقم السجل التجاري</th>
+                        <th style="padding: 12px 15px;">الحالة</th>
+                        <th style="padding: 12px 15px;">رأس المال (جنيه)</th>
+                        <th style="padding: 12px 15px;">عدد المساهمين</th>
+                        <th style="padding: 12px 15px;">عدد الفروع</th>
+                        <th style="padding: 12px 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px;">الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody id="companiesTableBody">
+                    <tr>
+                        <td colspan="8" class="text-center text-muted py-4">
+                            <i class="fas fa-building fa-2x mb-2 d-block" style="color: #7bc6c3;"></i>
+                            لا توجد شركات حالياً، اضغط على "إضافة شركة جديدة" للبدء
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<!-- Company Modal -->
+<div class="modal fade" id="companyModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+        <div class="modal-content" style="border-radius: 20px; overflow: hidden;">
+            <div class="modal-header" style="background: linear-gradient(135deg, #91d3d1 0%, #7bc6c3 50%, #65b8b5 100%); color: white; border-bottom: none;">
+                <h5 class="modal-title" id="companyModalTitle">
+                    <i class="fas fa-building me-2"></i> إضافة شركة جديدة
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" style="background-color: #f0f7f7;">
+                <!-- Tabs Navigation -->
+                <div class="companies-tabs mb-4">
+                    <ul class="nav nav-tabs" id="companyTabs" role="tablist" style="border-bottom: 2px solid #e0eceb;">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="company-info-tab" data-bs-toggle="tab" data-bs-target="#company-info" type="button" role="tab" style="border-radius: 10px 10px 0 0;">
+                                <i class="fas fa-building me-1"></i> بيانات الشركة
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="shareholders-tab" data-bs-toggle="tab" data-bs-target="#shareholders" type="button" role="tab" style="border-radius: 10px 10px 0 0;">
+                                <i class="fas fa-users me-1"></i> المساهمين
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="branches-tab" data-bs-toggle="tab" data-bs-target="#branches" type="button" role="tab" style="border-radius: 10px 10px 0 0;">
+                                <i class="fas fa-code-branch me-1"></i> الفروع
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="meetings-tab" data-bs-toggle="tab" data-bs-target="#meetings" type="button" role="tab" style="border-radius: 10px 10px 0 0;">
+                                <i class="fas fa-calendar-alt me-1"></i> الاجتماعات
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="board-members-tab" data-bs-toggle="tab" data-bs-target="#board-members" type="button" role="tab" style="border-radius: 10px 10px 0 0;">
+                                <i class="fas fa-user-tie me-1"></i> أعضاء المجلس
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="bank-signatures-tab" data-bs-toggle="tab" data-bs-target="#bank-signatures" type="button" role="tab" style="border-radius: 10px 10px 0 0;">
+                                <i class="fas fa-university me-1"></i> صلاحيات التوقيع البنكية
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="non-bank-signatures-tab" data-bs-toggle="tab" data-bs-target="#non-bank-signatures" type="button" role="tab" style="border-radius: 10px 10px 0 0;">
+                                <i class="fas fa-file-signature me-1"></i> صلاحيات التوقيع غير البنكية
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tabs Content -->
+                <div class="tab-content">
+                    <!-- Tab 1: Company Info -->
+                    <div class="tab-pane fade show active" id="company-info" role="tabpanel">
+                        <div class="card border-0 shadow-sm" style="border-radius: 15px; overflow: hidden;">
+                            <div class="card-header" style="background: linear-gradient(135deg, #f0f9fa, #e8f5f6); color: #4a9f9c; border-bottom: 2px solid #7bc6c3; border-right: 4px solid #7bc6c3;">
+                                <span>🏢</span> بيانات الشركة الأساسية
+                            </div>
+                            <div class="card-body">
+                                <form id="companyInfoForm">
+                                    <input type="hidden" id="editingCompanyId" />
+                                    
+                                    <!-- Section 1: المعلومات الأساسية للشركة -->
+                                    <div class="sub-section mb-4" style="background: #ffffff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                                        <h5 class="mb-3" style="color: #4a9f9c; border-right: 4px solid #7bc6c3; padding-right: 12px; margin-bottom: 20px;">
+                                            <i class="fas fa-info-circle me-2"></i> المعلومات الأساسية
+                                        </h5>
+                                        <div class="row g-3">
+                                            <div class="col-md-4">
+                                                <label class="form-label fw-bold" style="color: #4a9f9c;">اسم الشركة <span class="text-danger ms-1">*</span></label>
+                                                <input type="text" class="form-control" id="companyName" placeholder="أدخل اسم الشركة" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="form-label fw-bold" style="color: #4a9f9c;">العنوان الرئيسي <span class="text-danger ms-1">*</span></label>
+                                                <input type="text" class="form-control" id="mainAddress" placeholder="أدخل عنوان المقر الرئيسي" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="form-label fw-bold" style="color: #4a9f9c;">رقم السجل التجاري <span class="text-danger ms-1">*</span></label>
+                                                <input type="text" class="form-control" id="commercialRecord" placeholder="أدخل رقم السجل التجاري" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Section 2: بيانات القيد والتسجيل -->
+                                    <div class="sub-section mb-4" style="background: #ffffff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                                        <h5 class="mb-3" style="color: #4a9f9c; border-right: 4px solid #7bc6c3; padding-right: 12px; margin-bottom: 20px;">
+                                            <i class="fas fa-registered me-2"></i> بيانات القيد والتسجيل
+                                        </h5>
+                                        <div class="row g-3">
+                                            <div class="col-md-4">
+                                                <label class="form-label fw-bold" style="color: #4a9f9c;">تاريخ انتهاء قيد التسجيل <span class="text-danger ms-1">*</span></label>
+                                                <input type="date" class="form-control" id="registrationExpiryDate" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="form-label fw-bold" style="color: #4a9f9c;">تاريخ التأشير بالسجل التجاري <span class="text-danger ms-1">*</span></label>
+                                                <input type="date" class="form-control" id="commercialRecordDate" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="form-label fw-bold" style="color: #4a9f9c;">إشعار قبل انتهاء القيد (أيام) <span class="text-danger ms-1">*</span></label>
+                                                <input type="number" class="form-control" id="registrationExpiryNotificationDays" placeholder="مثال: 30" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                                <small class="text-muted" style="color: #7bc6c3;">سيتم الإشعار قبل انتهاء القيد</small>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Section 3: البيانات الضريبية -->
+                                    <div class="sub-section mb-4" style="background: #ffffff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                                        <h5 class="mb-3" style="color: #4a9f9c; border-right: 4px solid #7bc6c3; padding-right: 12px; margin-bottom: 20px;">
+                                            <i class="fas fa-chart-line me-2"></i> البيانات الضريبية
+                                        </h5>
+                                        <div class="row g-3">
+                                            <div class="col-md-4">
+                                                <label class="form-label fw-bold" style="color: #4a9f9c;">رقم البطاقة الضريبية <span class="text-danger ms-1">*</span></label>
+                                                <input type="text" class="form-control" id="taxCard" placeholder="أدخل رقم البطاقة الضريبية" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="form-label fw-bold" style="color: #4a9f9c;">تاريخ تجديد البطاقة الضريبية <span class="text-danger ms-1">*</span></label>
+                                                <input type="date" class="form-control" id="taxCardRenewalDate" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="form-label fw-bold" style="color: #4a9f9c;">إشعار قبل تجديد البطاقة (أيام) <span class="text-danger ms-1">*</span></label>
+                                                <input type="number" class="form-control" id="taxCardNotificationDays" placeholder="مثال: 30" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                                <small class="text-muted" style="color: #7bc6c3;">سيتم الإشعار قبل تاريخ التجديد</small>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="form-label fw-bold" style="color: #4a9f9c;">ضريبة القيمة المضافة <span class="text-danger ms-1">*</span></label>
+                                                <input type="text" class="form-control" id="vatNumber" placeholder="أدخل رقم ضريبة القيمة المضافة" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Section 4: مراقب الحسابات -->
+                                    <div class="sub-section mb-4" style="background: #ffffff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                                        <h5 class="mb-3" style="color: #4a9f9c; border-right: 4px solid #7bc6c3; padding-right: 12px; margin-bottom: 20px;">
+                                            <i class="fas fa-user-check me-2"></i> مراقب الحسابات
+                                        </h5>
+                                        <div class="row g-3">
+                                            <div class="col-md-4">
+                                                <label class="form-label fw-bold" style="color: #4a9f9c;">اسم مراقب الحسابات <span class="text-danger ms-1">*</span></label>
+                                                <input type="text" class="form-control" id="auditor" placeholder="اسم مراقب الحسابات" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="form-label fw-bold" style="color: #4a9f9c;">تاريخ تعيين مراقب الحسابات <span class="text-danger ms-1">*</span></label>
+                                                <input type="date" class="form-control" id="auditorAppointmentDate" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Section 5: رأس المال -->
+                                    <div class="sub-section mb-4" style="background: #ffffff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                                        <h5 class="mb-3" style="color: #4a9f9c; border-right: 4px solid #7bc6c3; padding-right: 12px; margin-bottom: 20px;">
+                                            <i class="fas fa-money-bill-wave me-2"></i> رأس المال
+                                        </h5>
+                                        <div class="row g-3">
+                                            <div class="col-md-4">
+                                                <label class="form-label fw-bold" style="color: #4a9f9c;">رأس المال المرخص به (جنيه) <span class="text-danger ms-1">*</span></label>
+                                                <div class="d-flex gap-2">
+                                                    <input type="number" class="form-control" id="authorizedCapital" placeholder="رأس المال" step="0.01" style="border-radius: 10px; border: 1px solid #e0eceb; flex: 2;">
+                                                    <input type="date" class="form-control" id="authorizedCapitalRecordDate" placeholder="تاريخ التأشير" style="border-radius: 10px; border: 1px solid #e0eceb; flex: 1.5;">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="form-label fw-bold" style="color: #4a9f9c;">رأس المال المصدر (جنيه) <span class="text-danger ms-1">*</span></label>
+                                                <div class="d-flex gap-2">
+                                                    <input type="number" class="form-control" id="issuedCapital" placeholder="رأس المال" step="0.01" style="border-radius: 10px; border: 1px solid #e0eceb; flex: 2;">
+                                                    <input type="date" class="form-control" id="issuedCapitalRecordDate" placeholder="تاريخ التأشير" style="border-radius: 10px; border: 1px solid #e0eceb; flex: 1.5;">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="form-label fw-bold" style="color: #4a9f9c;">رأس المال المدفوع (جنيه) <span class="text-danger ms-1">*</span></label>
+                                                <div class="d-flex gap-2">
+                                                    <input type="number" class="form-control" id="paidCapital" placeholder="رأس المال" step="0.01" style="border-radius: 10px; border: 1px solid #e0eceb; flex: 2;">
+                                                    <input type="date" class="form-control" id="paidCapitalRecordDate" placeholder="تاريخ التأشير" style="border-radius: 10px; border: 1px solid #e0eceb; flex: 1.5;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 2: Shareholders -->
+                    <div class="tab-pane fade" id="shareholders" role="tabpanel">
+                        <div class="card border-0 shadow-sm" style="border-radius: 15px; overflow: hidden;">
+                            <div class="card-header" style="background: linear-gradient(135deg, #f0f9fa, #e8f5f6); color: #4a9f9c; border-bottom: 2px solid #7bc6c3; border-right: 4px solid #7bc6c3;">
+                                <i class="fas fa-users me-2"></i> إدارة المساهمين
+                                <button class="btn btn-sm float-start" id="addShareholderBtn" style="background: linear-gradient(135deg, #91d3d1, #7bc6c3, #65b8b5); border: none; color: white; border-radius: 10px;">
+                                    <i class="fas fa-plus"></i> إضافة مساهم جديد
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3 mb-4">
+                                    <div class="col-md-3">
+                                        <label class="form-label fw-bold" style="color: #4a9f9c;">قيمة السهم الواحد (جنيه) <span class="text-danger">*</span></label>
+                                        <input type="number" class="form-control" id="fixedShareValue" placeholder="قيمة السهم" step="0.01" value="1.00" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                        <small class="text-muted" style="color: #7bc6c3;">هذه القيمة ستطبق على جميع المساهمين</small>
+                                    </div>
+                                </div>
+                                <div id="shareholdersList" class="shareholders-list">
+                                    <div class="text-center text-muted py-4" id="noShareholdersMsg">
+                                        <i class="fas fa-users fa-2x mb-2 d-block" style="color: #7bc6c3;"></i>
+                                        لا يوجد مساهمين حالياً
+                                        <div class="invalid-feedback d-block mt-2" id="shareholdersValidationMsg" style="display: none;">يجب إضافة مساهم واحد على الأقل</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 3: Branches -->
+                    <div class="tab-pane fade" id="branches" role="tabpanel">
+                        <div class="card border-0 shadow-sm" style="border-radius: 15px; overflow: hidden;">
+                            <div class="card-header" style="background: linear-gradient(135deg, #f0f9fa, #e8f5f6); color: #4a9f9c; border-bottom: 2px solid #7bc6c3; border-right: 4px solid #7bc6c3;">
+                                <i class="fas fa-code-branch me-2"></i> إدارة الفروع
+                                <button class="btn btn-sm float-start" id="addBranchBtn" style="background: linear-gradient(135deg, #91d3d1, #7bc6c3, #65b8b5); border: none; color: white; border-radius: 10px;">
+                                    <i class="fas fa-plus"></i> إضافة فرع جديد
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div id="branchesList" class="branches-list">
+                                    <div class="text-center text-muted py-4" id="noBranchesMsg">
+                                        <i class="fas fa-code-branch fa-2x mb-2 d-block" style="color: #7bc6c3;"></i>
+                                        لا يوجد فروع حالياً
+                                        <div class="invalid-feedback d-block mt-2" id="branchesValidationMsg" style="display: none;">يجب إضافة فرع واحد على الأقل</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 4: Meetings -->
+                    <div class="tab-pane fade" id="meetings" role="tabpanel">
+                        <div class="card border-0 shadow-sm" style="border-radius: 15px; overflow: hidden;">
+                            <div class="card-header" style="background: linear-gradient(135deg, #f0f9fa, #e8f5f6); color: #4a9f9c; border-bottom: 2px solid #7bc6c3; border-right: 4px solid #7bc6c3;">
+                                <span>📅</span> إدارة الاجتماعات
+                            </div>
+                            <div class="card-body">
+                                <!-- Section 1: الجمعية العامة العادية -->
+                                <div class="sub-section mb-4" style="background: #ffffff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                                    <h5 class="mb-3" style="color: #4a9f9c; border-right: 4px solid #7bc6c3; padding-right: 12px;">
+                                        <i class="fas fa-chart-line me-2"></i> الجمعية العامة العادية
+                                    </h5>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-bold" style="color: #4a9f9c;">مكان الانعقاد <span class="text-danger ms-1">*</span></label>
+                                            <select class="form-select" id="ordinaryMeetingLocation" multiple size="3" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                                <option value="online">أونلاين</option>
+                                                <option value="مقر الشركة">مقر الشركة</option>
+                                            </select>
+                                            <small class="text-muted" style="color: #7bc6c3;">يمكنك اختيار أكثر من خيار بالضغط على Ctrl (أو Cmd)</small>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-bold" style="color: #4a9f9c;">العنوان (إن وجد)</label>
+                                            <input type="text" class="form-control" id="ordinaryMeetingAddress" placeholder="أدخل العنوان الكامل" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-bold" style="color: #4a9f9c;">نصاب صحة الاجتماع (%) <span class="text-danger ms-1">*</span></label>
+                                            <input type="number" class="form-control" id="ordinaryMeetingQuorum" placeholder="مثال: 50" step="0.01" min="0" max="100" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-bold" style="color: #4a9f9c;">آلية التصويت <span class="text-danger ms-1">*</span></label>
+                                            <select class="form-select" id="ordinaryVotingMechanism" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                                <option value="">اختر</option>
+                                                <option value="majority">أغلبية</option>
+                                                <option value="cumulative">تراكمي</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Section 2: الجمعية العامة الغير عادية -->
+                                <div class="sub-section mb-4" style="background: #ffffff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                                    <h5 class="mb-3" style="color: #4a9f9c; border-right: 4px solid #7bc6c3; padding-right: 12px;">
+                                        <i class="fas fa-exclamation-triangle me-2"></i> الجمعية العامة الغير عادية
+                                    </h5>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-bold" style="color: #4a9f9c;">مكان الانعقاد <span class="text-danger ms-1">*</span></label>
+                                            <select class="form-select" id="extraordinaryMeetingLocation" multiple size="3" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                                <option value="online">أونلاين</option>
+                                                <option value="مقر الشركة">مقر الشركة</option>
+                                            </select>
+                                            <small class="text-muted" style="color: #7bc6c3;">يمكنك اختيار أكثر من خيار بالضغط على Ctrl (أو Cmd)</small>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-bold" style="color: #4a9f9c;">العنوان (إن وجد)</label>
+                                            <input type="text" class="form-control" id="extraordinaryMeetingAddress" placeholder="أدخل العنوان الكامل" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-bold" style="color: #4a9f9c;">نصاب صحة الاجتماع (%) <span class="text-danger ms-1">*</span></label>
+                                            <input type="number" class="form-control" id="extraordinaryMeetingQuorum" placeholder="مثال: 75" step="0.01" min="0" max="100" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-bold" style="color: #4a9f9c;">آلية التصويت <span class="text-danger ms-1">*</span></label>
+                                            <select class="form-select" id="extraordinaryVotingMechanism" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                                <option value="">اختر</option>
+                                                <option value="majority">أغلبية</option>
+                                                <option value="cumulative">تراكمي</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Section 3: اجتماع مجلس الإدارة -->
+                                <div class="sub-section mb-4" style="background: #ffffff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                                    <h5 class="mb-3" style="color: #4a9f9c; border-right: 4px solid #7bc6c3; padding-right: 12px;">
+                                        <i class="fas fa-users me-2"></i> اجتماع مجلس الإدارة
+                                    </h5>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-bold" style="color: #4a9f9c;">مكان الانعقاد <span class="text-danger ms-1">*</span></label>
+                                            <select class="form-select" id="boardMeetingLocation" multiple size="3" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                                <option value="online">أونلاين</option>
+                                                <option value="مقر الشركة">مقر الشركة</option>
+                                            </select>
+                                            <small class="text-muted" style="color: #7bc6c3;">يمكنك اختيار أكثر من خيار بالضغط على Ctrl (أو Cmd)</small>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-bold" style="color: #4a9f9c;">العنوان (إن وجد)</label>
+                                            <input type="text" class="form-control" id="boardMeetingAddress" placeholder="أدخل العنوان الكامل" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-bold" style="color: #4a9f9c;">نصاب صحة الاجتماع (%) <span class="text-danger ms-1">*</span></label>
+                                            <input type="number" class="form-control" id="boardMeetingQuorum" placeholder="مثال: 50" step="0.01" min="0" max="100" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-bold" style="color: #4a9f9c;">آلية التصويت <span class="text-danger ms-1">*</span></label>
+                                            <select class="form-select" id="boardVotingMechanism" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                                <option value="">اختر</option>
+                                                <option value="majority">أغلبية</option>
+                                                <option value="cumulative">تراكمي</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 5: Board Members -->
+                    <div class="tab-pane fade" id="board-members" role="tabpanel">
+                        <div class="card border-0 shadow-sm" style="border-radius: 15px; overflow: hidden;">
+                            <div class="card-header" style="background: linear-gradient(135deg, #f0f9fa, #e8f5f6); color: #4a9f9c; border-bottom: 2px solid #7bc6c3; border-right: 4px solid #7bc6c3;">
+                                <i class="fas fa-user-tie me-2"></i> إدارة أعضاء مجلس الإدارة
+                                <button class="btn btn-sm float-start" id="addBoardMemberBtn" style="background: linear-gradient(135deg, #91d3d1, #7bc6c3, #65b8b5); border: none; color: white; border-radius: 10px;">
+                                    <i class="fas fa-plus"></i> إضافة عضو جديد
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3 mb-4">
+                                    <div class="col-md-3">
+                                        <label class="form-label fw-bold" style="color: #4a9f9c;">مدة المجلس <span class="text-danger ms-1">*</span></label>
+                                        <div class="input-group">
+                                            <input type="number" class="form-control" id="boardDuration" placeholder="المدة" style="border-radius: 10px 0 0 10px; border: 1px solid #e0eceb;">
+                                            <select class="form-select" id="boardDurationUnit" style="width: 100px; border-radius: 0 10px 10px 0; border: 1px solid #e0eceb;">
+                                                <option value="years">سنوات</option>
+                                                <option value="months">شهور</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label fw-bold" style="color: #4a9f9c;">تاريخ بداية المجلس <span class="text-danger ms-1">*</span></label>
+                                        <input type="month" class="form-control" id="boardStartDate" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label fw-bold" style="color: #4a9f9c;">إشعار قبل انتهاء مدة المجلس (أيام)</label>
+                                        <input type="number" class="form-control" id="boardExpiryNotificationDays" placeholder="مثال: 30" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                        <small class="text-muted" style="color: #7bc6c3;">سيتم الإشعار قبل انتهاء مدة المجلس</small>
+                                    </div>
+                                </div>
+                                <div id="boardMembersList" class="board-members-list">
+                                    <div class="text-center text-muted py-4" id="noBoardMembersMsg">
+                                        <i class="fas fa-user-tie fa-2x mb-2 d-block" style="color: #7bc6c3;"></i>
+                                        لا يوجد أعضاء مجلس إدارة حالياً
+                                        <div class="invalid-feedback d-block mt-2" id="boardMembersValidationMsg" style="display: none;">يجب إضافة عضو واحد على الأقل</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 6: Bank Signatures -->
+                    <div class="tab-pane fade" id="bank-signatures" role="tabpanel">
+                        <div class="card border-0 shadow-sm" style="border-radius: 15px; overflow: hidden;">
+                            <div class="card-header" style="background: linear-gradient(135deg, #f0f9fa, #e8f5f6); color: #4a9f9c; border-bottom: 2px solid #7bc6c3; border-right: 4px solid #7bc6c3;">
+                                <span>🏦</span> صلاحيات التوقيع البنكية
+                            </div>
+                            <div class="card-body">
+                                <!-- Notes Section -->
+                                <div class="sub-section mb-4" style="background: #ffffff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                                    <h5 class="mb-3" style="color: #4a9f9c; border-right: 4px solid #7bc6c3; padding-right: 12px;">
+                                        <i class="fas fa-sticky-note me-2"></i> ملاحظات عامة
+                                    </h5>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label class="form-label fw-bold" style="color: #4a9f9c;">الملاحظات</label>
+                                            <textarea class="form-control" id="bankSignaturesNotes" rows="3" placeholder="أدخل أي ملاحظات عامة بخصوص صلاحيات التوقيع البنكية..." style="border-radius: 10px; border: 1px solid #e0eceb;"></textarea>
+                                            <small class="text-muted" style="color: #7bc6c3;">هذه الملاحظات تنطبق على جميع مجموعات التوقيع البنكية</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr style="border-color: #e0eceb;">
+
+                                <!-- Bank Signature Groups Section -->
+                                <div class="mt-3">
+                                    <div class="row g-3 mb-4">
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-bold" style="color: #4a9f9c;">اختر مجموعة التوقيع <span class="text-danger">*</span></label>
+                                            <select class="form-select" id="bankSignatureGroupSelect" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                                <option value="">-- اختر مجموعة --</option>
+                                                <option value="المجموعة الأولى">المجموعة الأولى</option>
+                                                <option value="المجموعة الثانية">المجموعة الثانية</option>
+                                                <option value="المجموعة الثالثة">المجموعة الثالثة</option>
+                                                <option value="المجموعة الرابعة">المجموعة الرابعة</option>
+                                                <option value="المجموعة الخامسة">المجموعة الخامسة</option>
+                                                <option value="المجموعة السادسة">المجموعة السادسة</option>
+                                                <option value="المجموعة السابعة">المجموعة السابعة</option>
+                                                <option value="المجموعة الثامنة">المجموعة الثامنة</option>
+                                                <option value="المجموعة التاسعة">المجموعة التاسعة</option>
+                                                <option value="المجموعة العاشرة">المجموعة العاشرة</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-bold" style="color: #4a9f9c;">الأشخاص المصرح لهم <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="authorizedPersons" placeholder="أدخل الأسماء مفصولة بفواصل" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                            <small class="text-muted" style="color: #7bc6c3;">أدخل الأسماء مفصولة بفواصل (مثال: أحمد علي، محمد محمود، سارة أحمد)</small>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-sm mt-2" id="addBankSignatureBtn" style="background: linear-gradient(135deg, #91d3d1, #7bc6c3, #65b8b5); border: none; color: white; border-radius: 10px;">
+                                        <i class="fas fa-plus"></i> إضافة مجموعة التوقيع البنكية
+                                    </button>
+                                    <hr style="border-color: #e0eceb;">
+                                    <div class="mt-3">
+                                        <label class="form-label fw-bold" style="color: #4a9f9c;">المجموعات المضافة:</label>
+                                        <div id="bankSignaturesList" class="bank-signatures-list mt-2">
+                                            <div class="text-center text-muted py-4" id="noBankSignaturesMsg">
+                                                <i class="fas fa-university fa-2x mb-2 d-block" style="color: #7bc6c3;"></i>
+                                                لا يوجد مجموعات توقيع بنكية مضافة حالياً
+                                                <div class="invalid-feedback d-block mt-2" id="bankSignaturesValidationMsg" style="display: none;">يجب إضافة مجموعة توقيع بنكية واحدة على الأقل</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 7: Non-Bank Signatures -->
+                    <div class="tab-pane fade" id="non-bank-signatures" role="tabpanel">
+                        <div class="card border-0 shadow-sm" style="border-radius: 15px; overflow: hidden;">
+                            <div class="card-header" style="background: linear-gradient(135deg, #f0f9fa, #e8f5f6); color: #4a9f9c; border-bottom: 2px solid #7bc6c3; border-right: 4px solid #7bc6c3;">
+                                <span>📑</span> صلاحيات التوقيع غير البنكية
+                            </div>
+                            <div class="card-body">
+                                <!-- Notes Section -->
+                                <div class="sub-section mb-4" style="background: #ffffff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                                    <h5 class="mb-3" style="color: #4a9f9c; border-right: 4px solid #7bc6c3; padding-right: 12px;">
+                                        <i class="fas fa-sticky-note me-2"></i> ملاحظات عامة
+                                    </h5>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label class="form-label fw-bold" style="color: #4a9f9c;">الملاحظات</label>
+                                            <textarea class="form-control" id="nonBankSignaturesNotes" rows="3" placeholder="أدخل أي ملاحظات عامة بخصوص صلاحيات التوقيع غير البنكية..." style="border-radius: 10px; border: 1px solid #e0eceb;"></textarea>
+                                            <small class="text-muted" style="color: #7bc6c3;">هذه الملاحظات تنطبق على جميع تفويضات التوقيع غير البنكية</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-sm mt-2" id="addNonBankSignatureBtn" style="background: linear-gradient(135deg, #91d3d1, #7bc6c3, #65b8b5); border: none; color: white; border-radius: 10px;">
+                                    <i class="fas fa-plus"></i> إضافة تفويض جديد
+                                </button>
+
+                                <hr style="border-color: #e0eceb;">
+
+                                <!-- Non-Bank Signature Delegations List -->
+                                <div class="mt-3">
+                                    <div id="nonBankSignaturesList" class="non-bank-signatures-list">
+                                        <div class="text-center text-muted py-4" id="noNonBankSignaturesMsg">
+                                            <i class="fas fa-file-signature fa-2x mb-2 d-block" style="color: #7bc6c3;"></i>
+                                            لا يوجد تفويضات توقيع غير بنكية حالياً
+                                            <div class="invalid-feedback d-block mt-2" id="nonBankSignaturesValidationMsg" style="display: none;">يجب إضافة تفويض توقيع غير بنكي واحد على الأقل</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="d-flex justify-content-between mt-4">
+                    <button class="btn btn-secondary" id="prevTabBtn" style="display: none; background: #6c757d; border: none; border-radius: 10px;">
+                        <i class="fas fa-chevron-right"></i> السابق
+                    </button>
+                    <button class="btn" id="nextTabBtn" style="background: linear-gradient(135deg, #91d3d1, #7bc6c3, #65b8b5); border: none; color: white; border-radius: 10px;">
+                        التالي <i class="fas fa-chevron-left"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-footer" style="background: #f8fbfb; border-top: 1px solid #e0eceb;">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background: #6c757d; border: none; border-radius: 10px;">إلغاء</button>
+                <button type="button" class="btn" id="saveCompanyModalBtn" style="background: linear-gradient(135deg, #91d3d1, #7bc6c3, #65b8b5); border: none; color: white; border-radius: 10px;">حفظ الشركة</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modals (بقيت كما هي مع تحديث الألوان) -->
+<div class="modal fade" id="shareholderModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content" style="border-radius: 20px; overflow: hidden;">
+            <div class="modal-header" style="background: linear-gradient(135deg, #91d3d1 0%, #7bc6c3 50%, #65b8b5 100%); color: white; border-bottom: none;">
+                <h5 class="modal-title" id="shareholderModalTitle">إضافة مساهم</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="shareholderForm">
+                    <input type="hidden" id="shareholderId" />
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold" style="color: #4a9f9c;">اسم المساهم <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="shareholderName" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                            <div class="invalid-feedback">اسم المساهم مطلوب</div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold" style="color: #4a9f9c;">الصفة</label>
+                            <select class="form-select" id="shareholderTitle" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                <option value="مؤسس">مؤسس</option>
+                                <option value="مساهم">مساهم</option>
+                                <option value="مكتتب">مكتتب</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold" style="color: #4a9f9c;">اسم المؤسس (إن وجد)</label>
+                            <input type="text" class="form-control" id="founderName" placeholder="اسم المؤسس" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold" style="color: #4a9f9c;">عدد الأسهم المكتتبة</label>
+                            <input type="number" class="form-control" id="subscribedShares" step="0.01" value="0" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold" style="color: #4a9f9c;">عدد الأسهم الممتازة</label>
+                            <input type="number" class="form-control" id="preferredShares" step="0.01" value="0" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold" style="color: #4a9f9c;">عدد الأسهم المؤسس</label>
+                            <input type="number" class="form-control" id="founderShares" step="0.01" value="0" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold" style="color: #4a9f9c;">تاريخ الدخول <span class="text-danger">*</span></label>
+                            <input type="date" class="form-control" id="entryDate" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                            <div class="invalid-feedback">تاريخ الدخول مطلوب</div>
+                        </div>
+                        <div class="col-md-6 mb-3" id="exitDateContainer">
+                            <label class="form-label fw-bold" style="color: #4a9f9c;">تاريخ الخروج</label>
+                            <input type="date" class="form-control" id="exitDate" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                            <small class="text-muted" style="color: #7bc6c3;">اتركه فارغاً إذا كان المساهم لا يزال نشطاً</small>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold" style="color: #4a9f9c;">قيمة الأسهم الكلية (جنيه)</label>
+                            <input type="number" class="form-control" id="totalSharesValue" step="0.01" readonly style="border-radius: 10px; background: #f8fbfb;">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold" style="color: #4a9f9c;">النسبة المئوية (%)</label>
+                            <input type="number" class="form-control" id="sharePercentage" step="0.01" readonly style="border-radius: 10px; background: #f8fbfb;">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background: #6c757d; border: none; border-radius: 10px;">إلغاء</button>
+                <button type="button" class="btn" id="saveShareholderBtn" style="background: linear-gradient(135deg, #91d3d1, #7bc6c3, #65b8b5); border: none; color: white; border-radius: 10px;">حفظ</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Confirm Exit Modal -->
+<div class="modal fade" id="confirmExitModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="border-radius: 20px; overflow: hidden;">
+            <div class="modal-header" style="background: linear-gradient(135deg, #91d3d1 0%, #7bc6c3 50%, #65b8b5 100%); color: white;">
+                <h5 class="modal-title">تأكيد خروج المساهم</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>هل أنت متأكد من تسجيل خروج المساهم <strong id="exitShareholderName"></strong>؟</p>
+                <div class="mb-3">
+                    <label class="form-label fw-bold" style="color: #4a9f9c;">تاريخ الخروج</label>
+                    <input type="date" class="form-control" id="confirmExitDate" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background: #6c757d; border: none; border-radius: 10px;">إلغاء</button>
+                <button type="button" class="btn" id="confirmExitBtn" style="background: linear-gradient(135deg, #91d3d1, #7bc6c3, #65b8b5); border: none; color: white; border-radius: 10px;">تأكيد الخروج</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="branchModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content" style="border-radius: 20px; overflow: hidden;">
+            <div class="modal-header" style="background: linear-gradient(135deg, #91d3d1 0%, #7bc6c3 50%, #65b8b5 100%); color: white;">
+                <h5 class="modal-title" id="branchModalTitle">إضافة فرع</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="branchForm">
+                    <input type="hidden" id="branchId" />
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <label class="form-label fw-bold" style="color: #4a9f9c;">اسم الفرع <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="branchName" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                            <div class="invalid-feedback">اسم الفرع مطلوب</div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label class="form-label fw-bold" style="color: #4a9f9c;">عنوان الفرع <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="branchAddress" placeholder="أدخل عنوان الفرع" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                            <div class="invalid-feedback">عنوان الفرع مطلوب</div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold" style="color: #4a9f9c;">رقم السجل</label>
+                            <input type="text" class="form-control" id="branchRecord" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold" style="color: #4a9f9c;">تاريخ انتهاء سريان القيد</label>
+                            <input type="date" class="form-control" id="branchEffectiveDate" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold" style="color: #4a9f9c;">إشعار قبل انتهاء سريان القيد (أيام)</label>
+                            <input type="number" class="form-control" id="branchExpiryNotificationDays" placeholder="مثال: 30" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                            <small class="text-muted" style="color: #7bc6c3;">سيتم الإشعار قبل انتهاء سريان القيد بعدد الأيام المحدد</small>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background: #6c757d; border: none; border-radius: 10px;">إلغاء</button>
+                <button type="button" class="btn" id="saveBranchBtn" style="background: linear-gradient(135deg, #91d3d1, #7bc6c3, #65b8b5); border: none; color: white; border-radius: 10px;">حفظ</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="boardMemberModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content" style="border-radius: 20px; overflow: hidden;">
+            <div class="modal-header" style="background: linear-gradient(135deg, #91d3d1 0%, #7bc6c3 50%, #65b8b5 100%); color: white;">
+                <h5 class="modal-title" id="boardMemberModalTitle">إضافة عضو مجلس إدارة</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="boardMemberForm">
+                    <input type="hidden" id="boardMemberId" />
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <label class="form-label fw-bold" style="color: #4a9f9c;">اسم العضو <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="boardMemberName" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                            <div class="invalid-feedback">اسم العضو مطلوب</div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label class="form-label fw-bold" style="color: #4a9f9c;">الصفة (يمكن اختيار أكثر من صفة) <span class="text-danger">*</span></label>
+                            <select class="form-select" id="boardMemberTitle" multiple size="5" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                                <option value="رئيس مجلس الإدارة">رئيس مجلس الإدارة</option>
+                                <option value="نائب رئيس مجلس الإدارة">نائب رئيس مجلس الإدارة</option>
+                                <option value="عضو منتدب">عضو منتدب</option>
+                                <option value="عضو مجلس إدارة">عضو مجلس إدارة</option>
+                            </select>
+                            <small class="text-muted" style="color: #7bc6c3;">يمكنك اختيار أكثر من صفة بالضغط على Ctrl (أو Cmd)</small>
+                            <div class="invalid-feedback">الصفة مطلوبة</div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background: #6c757d; border: none; border-radius: 10px;">إلغاء</button>
+                <button type="button" class="btn" id="saveBoardMemberBtn" style="background: linear-gradient(135deg, #91d3d1, #7bc6c3, #65b8b5); border: none; color: white; border-radius: 10px;">حفظ</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="nonBankSignatureModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content" style="border-radius: 20px; overflow: hidden;">
+            <div class="modal-header" style="background: linear-gradient(135deg, #91d3d1 0%, #7bc6c3 50%, #65b8b5 100%); color: white;">
+                <h5 class="modal-title" id="nonBankSignatureModalTitle">إضافة تفويض توقيع غير بنكي</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="nonBankSignatureForm">
+                    <input type="hidden" id="nonBankSignatureId" />
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <label class="form-label fw-bold" style="color: #4a9f9c;">الاسم الكامل <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="fullName" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                            <div class="invalid-feedback">الاسم الكامل مطلوب</div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label class="form-label fw-bold" style="color: #4a9f9c;">صادر لصالح <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="issuedToNonBank" placeholder="صادر لصالح" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                            <div class="invalid-feedback">صادر لصالح مطلوب</div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label class="form-label fw-bold" style="color: #4a9f9c;">مضمون التفويض <span class="text-danger">*</span></label>
+                            <textarea class="form-control" id="delegationContentNonBank" rows="3" placeholder="أدخل مضمون التفويض" style="border-radius: 10px; border: 1px solid #e0eceb;"></textarea>
+                            <div class="invalid-feedback">مضمون التفويض مطلوب</div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold" style="color: #4a9f9c;">تاريخ الانتهاء <span class="text-danger">*</span></label>
+                            <input type="date" class="form-control" id="expiryDate" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                            <div class="invalid-feedback">تاريخ الانتهاء مطلوب</div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold" style="color: #4a9f9c;">إشعار قبل انتهاء التفويض (أيام)</label>
+                            <input type="number" class="form-control" id="expiryNotificationDays" placeholder="مثال: 30" style="border-radius: 10px; border: 1px solid #e0eceb;">
+                            <small class="text-muted" style="color: #7bc6c3;">سيتم الإشعار قبل انتهاء صلاحية التفويض</small>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background: #6c757d; border: none; border-radius: 10px;">إلغاء</button>
+                <button type="button" class="btn" id="saveNonBankSignatureBtn" style="background: linear-gradient(135deg, #91d3d1, #7bc6c3, #65b8b5); border: none; color: white; border-radius: 10px;">حفظ</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Toast Container -->
+<div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 9999;"></div>
+
+<script>
+    window.antiForgeryToken = '@token';
+</script>
+
+@section Scripts {
+    <script src="~/js/companies.js"></script>
+}
+
+<style>
+    /* ========== COMPANIES TABLE STYLES ========== */
+    
+    #companiesTable thead tr {
+        background: linear-gradient(135deg, #91d3d1 0%, #7bc6c3 50%, #65b8b5 100%) !important;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+        #companiesTable thead tr th {
+            background: transparent !important;
+            color: white !important;
+            font-weight: 600;
+            padding: 15px 15px;
+            border: none;
+            font-size: 14px;
+            white-space: nowrap;
+            text-align: center !important;
+            vertical-align: middle !important;
+        }
+
+            #companiesTable thead tr th:first-child {
+                border-top-right-radius: 15px;
+                border-bottom-right-radius: 15px;
+            }
+
+            #companiesTable thead tr th:last-child {
+                border-top-left-radius: 15px;
+                border-bottom-left-radius: 15px;
+            }
+
+    #companiesTable tbody tr {
+        background-color: white;
+        border-radius: 12px;
+        transition: all 0.2s ease;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+        #companiesTable tbody tr:hover {
+            background-color: #f8fbfb !important;
+            transform: scale(1.01);
+            box-shadow: 0 4px 12px rgba(101, 184, 181, 0.15) !important;
+        }
+
+    #companiesTable tbody td {
+        padding: 14px 15px;
+        vertical-align: middle;
+        border: none;
+        color: #2c3e50;
+        font-size: 14px;
+        text-align: right !important;
+    }
+    /* استثناء عمود الإجراءات - يبقى في المنتصف (لأن الأزرار تحتاج توسيط) */
+#companiesTable tbody td:last-child {
+    text-align: center !important;
+}
+    #companiesTable tbody tr td:first-child {
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+
+    #companiesTable tbody tr td:last-child {
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+    }
+
+    /* تنسيق أزرار الإجراءات */
+    .action-buttons {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .btn-action {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+        cursor: pointer;
+        border: none;
+    }
+
+    .btn-edit {
+        background: rgba(123, 198, 195, 0.1);
+        color: #7bc6c3;
+    }
+
+        .btn-edit:hover {
+            background: #7bc6c3;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+    .btn-delete {
+        background: rgba(231, 76, 60, 0.1);
+        color: #e74c3c;
+    }
+
+        .btn-delete:hover {
+            background: #e74c3c;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+    /* ========== MODAL STYLES ========== */
+    #companyModal .modal-dialog {
+        max-width: 95%;
+        width: 1600px;
+        margin: 1rem auto;
+    }
+
+    @@media (min-width: 1920px) {
+        #companyModal .modal-dialog {
+            max-width: 90%;
+            width: 1800px;
+        }
+    }
+
+    @@media (min-width: 1600px) and (max-width: 1919px) {
+        #companyModal .modal-dialog {
+            width: 1500px;
+        }
+    }
+
+    /* ========== TABS STYLES ========== */
+    .nav-tabs {
+        border-bottom: 2px solid #e0eceb;
+        gap: 5px;
+    }
+    
+        .nav-tabs .nav-link {
+            border: none;
+            color: #5a7a78;
+            padding: 12px 24px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: 10px 10px 0 0;
+            background: transparent;
+        }
+    
+            .nav-tabs .nav-link:hover {
+                color: #4a9f9c;
+                background: rgba(123, 198, 195, 0.1);
+            }
+    
+            .nav-tabs .nav-link.active {
+                color: #4a9f9c;
+                background: white;
+                border-bottom: 3px solid #7bc6c3;
+            }
+    
+    /* ========== FORM STYLES ========== */
+    .sub-section {
+        transition: all 0.3s ease;
+    }
+    
+    .form-control:focus, .form-select:focus {
+        border-color: #7bc6c3;
+        box-shadow: 0 0 0 0.2rem rgba(123, 198, 195, 0.25);
+    }
+    
+    /* ========== BUTTONS ========== */
+    .btn-teal {
+        background: linear-gradient(135deg, #91d3d1, #7bc6c3, #65b8b5);
+        border: none;
+        color: white;
+        transition: all 0.3s ease;
+        border-radius: 10px;
+    }
+    
+        .btn-teal:hover {
+            background: linear-gradient(135deg, #7bc6c3, #65b8b5, #4a9f9c);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(123, 198, 195, 0.4);
+            color: white;
+        }
+    
+    /* ========== FLOAT LEFT FIX ========== */
+    .float-start {
+        float: left !important;
+    }
+    
+    /* ========== RESPONSIVE ========== */
+    @@media (max-width: 768px) {
+        .nav-tabs .nav-link {
+            padding: 8px 12px;
+            font-size: 0.85rem;
+        }
+        
+        .float-start {
+            float: none !important;
+            margin-top: 10px;
+            display: block;
+            width: 100%;
+        }
+        
+        .card-header {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        #companiesTable thead tr th,
+        #companiesTable tbody td {
+            padding: 10px 8px;
+            font-size: 12px;
+        }
+        
+        .action-buttons {
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        /* ========== SEARCH SECTION STYLES ========== */
+        .search-section {
+            background: #ffffff;
+            border-radius: 15px;
+        }
+
+        #searchInput {
+            border-radius: 0 10px 10px 0 !important;
+        }
+
+        .input-group-text {
+            border-radius: 10px 0 0 10px !important;
+        }
+
+        #searchStats {
+            color: #7bc6c3;
+            font-size: 12px;
+        }
+
+        .adv-search:focus {
+            border-color: #7bc6c3;
+            box-shadow: 0 0 0 0.2rem rgba(123, 198, 195, 0.25);
+        }
+
+        #advancedSearchPanel {
+            background: #f8fbfb;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+        /* Highlight search matches */
+        .search-highlight {
+            background-color: #ffeb3b;
+            padding: 0 2px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+       
+    }
+</style>

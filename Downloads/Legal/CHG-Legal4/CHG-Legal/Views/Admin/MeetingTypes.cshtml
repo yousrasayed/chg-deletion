@@ -1,0 +1,376 @@
+﻿@{
+    ViewData["Title"] = "إدارة أنواع الاجتماعات";
+}
+
+@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Xsrf
+@{
+    var token = Xsrf.GetAndStoreTokens(Context).RequestToken;
+}
+
+<script>
+    window.antiForgeryToken = '@token';
+</script>
+
+<div class="d-flex">
+    @await Html.PartialAsync("_SidebarPartial")
+    <div class="flex-grow-1 p-4" style="background-color: #f0f7f7;">
+        @* <div class="header mb-4" style="background: linear-gradient(135deg, #91d3d1 0%, #7bc6c3 50%, #65b8b5 100%); border-radius: 15px; padding: 20px 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+            <h2 class="mb-0 text-white">إدارة أنواع الاجتماعات</h2>
+        </div> *@
+
+        <button class="btn mb-4" id="addTypeBtn" style="background: linear-gradient(135deg, #91d3d1, #7bc6c3, #65b8b5); border: none; color: white; border-radius: 10px; padding: 8px 20px;">
+            <i class="fas fa-plus"></i> إضافة نوع اجتماع
+        </button>
+
+        <div class="card border-0 shadow-sm" style="border-radius: 20px; overflow: hidden;">
+            <div class="card-header bg-white border-0 pt-4 pb-0 px-4" style="color: #4a9f9c; font-weight: bold;">
+                <i class="fas fa-tags me-2"></i> قائمة أنواع الاجتماعات
+            </div>
+            <div class="card-body p-0 table-container">
+                <div class="table-responsive">
+                    <table class="table mb-0" id="typesTable" style="width: 100%; border-collapse: collapse;">
+                        <thead id="typesTableHead">
+                            <tr id="typesTableHeaderRow" style="background: linear-gradient(135deg, #91d3d1 0%, #7bc6c3 50%, #65b8b5 100%); color: white; border-radius: 15px;">
+                                <th style="padding: 15px; text-align: center; width: 10%; background: transparent !important;">#</th>
+                                <th style="padding: 15px; text-align: center; width: 65%; background: transparent !important;">نوع الاجتماع</th>
+                                <th style="padding: 15px; text-align: center; width: 25%; background: transparent !important;">الإجراءات</th>
+                              </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            @{
+                                var index = 1;
+                                foreach (var type in Model)
+                                {
+                                    <tr data-id="@type.ID" style="border-bottom: 1px solid #e0eceb; transition: all 0.2s ease;">
+                                        <td style="padding: 12px; text-align: center; color: #2c5a58;">@index</td>
+                                        <td style="padding: 12px; text-align: center; color: #2c5a58;">@type.BoardTypeName</td>
+                                        <td style="padding: 12px; text-align: center;">
+                                            <button class="btn btn-sm" onclick="editType(@type.ID)" title="تعديل" style="background: #ffc107; border: none; color: #2c3e50; border-radius: 8px; margin: 0 3px; padding: 5px 10px;">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button class="btn btn-sm" onclick="deleteType(@type.ID)" title="حذف" style="background: #dc3545; border: none; color: white; border-radius: 8px; margin: 0 3px; padding: 5px 10px;">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    index++;
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Meeting Type Modal -->
+<div class="modal fade" id="typeModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="border-radius: 20px; overflow: hidden;">
+            <div class="modal-header" style="background: linear-gradient(135deg, #91d3d1 0%, #7bc6c3 50%, #65b8b5 100%); color: white; border-bottom: none;">
+                <h5 class="modal-title" id="modalTitle">إضافة نوع اجتماع</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" style="background-color: #f0f7f7;">
+                <form id="typeForm">
+                    <input type="hidden" id="typeId" />
+                    <div class="mb-3">
+                        <label class="form-label fw-bold" style="color: #4a9f9c;">اسم نوع الاجتماع</label>
+                        <input type="text" class="form-control" id="typeName" required style="border-radius: 10px; border: 1px solid #e0eceb;">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer" style="background: #f8fbfb; border-top: 1px solid #e0eceb;">
+                <button type="button" class="btn" data-bs-dismiss="modal" style="background: #6c757d; border: none; color: white; border-radius: 10px;">إلغاء</button>
+                <button type="button" class="btn" id="saveTypeBtn" style="background: linear-gradient(135deg, #91d3d1, #7bc6c3, #65b8b5); border: none; color: white; border-radius: 10px;">حفظ</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Custom styling for meeting types page */
+    
+    /* Force header background to show */
+    #typesTable thead tr {
+        background: linear-gradient(135deg, #91d3d1 0%, #7bc6c3 50%, #65b8b5 100%) !important;
+    }
+    
+    #typesTable thead th {
+        background: transparent !important;
+        color: white !important;
+        font-weight: 600;
+        border: none !important;
+    }
+    
+    /* Table hover effect */
+    #typesTable tbody tr {
+        transition: all 0.2s ease;
+    }
+    
+    #typesTable tbody tr:hover {
+        background-color: #f8fbfb !important;
+        transform: scale(1.01);
+        box-shadow: 0 4px 12px rgba(101, 184, 181, 0.15);
+    }
+    
+    /* Remove any default table background */
+    .table {
+        background-color: transparent !important;
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #e0eceb;
+        border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #7bc6c3;
+        border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: #65b8b5;
+    }
+    
+    /* Form inputs focus effect */
+    .form-control:focus {
+        border-color: #7bc6c3;
+        box-shadow: 0 0 0 0.2rem rgba(123, 198, 195, 0.25);
+    }
+    
+    /* Table container padding fix */
+    .table-container {
+        overflow-x: auto;
+    }
+    
+    /* Make table responsive */
+    .table-responsive {
+        border-radius: 0 0 20px 20px;
+    }
+    
+    /* Remove any conflicting styles */
+    .table thead th {
+        border-bottom: none !important;
+    }
+</style>
+
+@section Scripts {
+    <script>
+        let editingTypeId = null;
+
+        $('#addTypeBtn').click(function() {
+            editingTypeId = null;
+            $('#modalTitle').text('إضافة نوع اجتماع');
+            $('#typeForm')[0].reset();
+            $('#typeId').val('');
+            $('#typeModal').modal('show');
+        });
+
+        window.editType = function(id) {
+            $.get('/Admin/GetMeetingType?id=' + id, function(type) {
+                editingTypeId = id;
+                $('#modalTitle').text('تعديل نوع اجتماع');
+                $('#typeId').val(type.id);
+                $('#typeName').val(type.boardTypeName);
+                $('#typeModal').modal('show');
+            });
+        };
+
+        window.deleteType = function(id) {
+            if (!confirm('هل أنت متأكد من حذف هذا النوع؟')) return;
+            
+            $.ajax({
+                url: '/Admin/DeleteMeetingType',
+                type: 'POST',
+                data: { id: id },
+                headers: { 'RequestVerificationToken': window.antiForgeryToken },
+                success: function() {
+                    location.reload();
+                },
+                error: function(xhr) {
+                    if (typeof showToast === 'function') {
+                        showToast(xhr.responseJSON?.message || 'فشل في الحذف', 'danger');
+                    } else {
+                        alert(xhr.responseJSON?.message || 'فشل في الحذف');
+                    }
+                }
+            });
+        };
+
+        $('#saveTypeBtn').click(function() {
+            var typeData = {
+                id: $('#typeId').val() || null,
+                boardTypeName: $('#typeName').val()
+            };
+            
+            var url = editingTypeId ? '/Admin/UpdateMeetingType' : '/Admin/AddMeetingType';
+            
+            $.ajax({
+                url: url,
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(typeData),
+                headers: { 'RequestVerificationToken': window.antiForgeryToken },
+                success: function() {
+                    $('#typeModal').modal('hide');
+                    location.reload();
+                },
+                error: function(xhr) {
+                    if (typeof showToast === 'function') {
+                        showToast(xhr.responseJSON?.message || 'حدث خطأ', 'danger');
+                    } else {
+                        alert(xhr.responseJSON?.message || 'حدث خطأ');
+                    }
+                }
+            });
+        });
+    </script>
+    
+    <!-- Change Password Script for Admin Meeting Types -->
+    <script>
+        // Password validation for change password
+        function validateNewPasswordForMeetingTypes(password) {
+            var errors = [];
+            
+            if (!password || password.length === 0) {
+                errors.push('كلمة السر الجديدة مطلوبة');
+                return errors;
+            }
+            
+            if (password.length < 8) {
+                errors.push('• كلمة السر يجب أن تكون 8 أحرف على الأقل');
+            }
+            if (!/[a-z]/.test(password)) {
+                errors.push('• حرف صغير (a-z) على الأقل');
+            }
+            if (!/[A-Z]/.test(password)) {
+                errors.push('• حرف كبير (A-Z) على الأقل');
+            }
+            if (!/\d/.test(password)) {
+                errors.push('• رقم (0-9) على الأقل');
+            }
+            if (!/[\W_]/.test(password)) {
+                errors.push('• رمز خاص (!@@#$%^&*) على الأقل');
+            }
+            
+            return errors;
+        }
+        
+        (function() {
+            window.addEventListener('load', function() {
+                var saveBtn = document.getElementById('savePasswordBtn');
+                
+                if (saveBtn) {
+                    var newBtn = saveBtn.cloneNode(true);
+                    saveBtn.parentNode.replaceChild(newBtn, saveBtn);
+                    
+                    newBtn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        var currentInput = document.querySelector('#changePasswordModal #currentPassword');
+                        var newInput = document.querySelector('#changePasswordModal #newPassword');
+                        var confirmInput = document.querySelector('#changePasswordModal #confirmPassword');
+                        
+                        if (!currentInput || !newInput || !confirmInput) {
+                            alert('حدث خطأ في العثور على حقول كلمة السر');
+                            return;
+                        }
+                        
+                        var currentPassword = currentInput.value;
+                        var newPassword = newInput.value;
+                        var confirmPassword = confirmInput.value;
+                        
+                        currentInput.classList.remove('is-invalid');
+                        newInput.classList.remove('is-invalid');
+                        confirmInput.classList.remove('is-invalid');
+                        
+                        var errors = [];
+                        
+                        if (!currentPassword) {
+                            currentInput.classList.add('is-invalid');
+                            errors.push('كلمة السر الحالية مطلوبة');
+                        }
+                        
+                        // Validate new password strength
+                        var passwordErrors = validateNewPasswordForMeetingTypes(newPassword);
+                        if (passwordErrors.length > 0) {
+                            newInput.classList.add('is-invalid');
+                            errors.push('كلمة السر الجديدة غير متوافقة مع القواعد:\n' + passwordErrors.join('\n'));
+                        }
+                        
+                        if (!confirmPassword) {
+                            confirmInput.classList.add('is-invalid');
+                            errors.push('تأكيد كلمة السر مطلوب');
+                        } else if (newPassword !== confirmPassword) {
+                            confirmInput.classList.add('is-invalid');
+                            errors.push('كلمة السر غير متطابقة');
+                        }
+                        
+                        if (errors.length > 0) {
+                            if (typeof showToast === 'function') {
+                                showToast(errors.join('\n'), 'danger');
+                            } else {
+                                alert(errors.join('\n'));
+                            }
+                            return;
+                        }
+                        
+                        var xhr = new XMLHttpRequest();
+                        xhr.open('POST', '/Account/ChangePassword');
+                        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                        xhr.setRequestHeader('RequestVerificationToken', window.antiForgeryToken);
+                        
+                        xhr.onload = function() {
+                            if (xhr.status === 200) {
+                                var response = JSON.parse(xhr.responseText);
+                                var modal = bootstrap.Modal.getInstance(document.getElementById('changePasswordModal'));
+                                if (modal) modal.hide();
+                                document.getElementById('changePasswordForm').reset();
+                                if (typeof showToast === 'function') {
+                                    showToast(response.message || 'تم تغيير كلمة السر بنجاح', 'success');
+                                } else {
+                                    alert(response.message || 'تم تغيير كلمة السر بنجاح');
+                                }
+                            } else {
+                                try {
+                                    var response = JSON.parse(xhr.responseText);
+                                    if (typeof showToast === 'function') {
+                                        showToast(response.message || 'حدث خطأ', 'danger');
+                                    } else {
+                                        alert(response.message || 'حدث خطأ');
+                                    }
+                                } catch(e) {
+                                    if (typeof showToast === 'function') {
+                                        showToast('حدث خطأ في تغيير كلمة السر', 'danger');
+                                    } else {
+                                        alert('حدث خطأ في تغيير كلمة السر');
+                                    }
+                                }
+                            }
+                        };
+                        
+                        xhr.onerror = function() {
+                            if (typeof showToast === 'function') {
+                                showToast('حدث خطأ في الاتصال', 'danger');
+                            } else {
+                                alert('حدث خطأ في الاتصال');
+                            }
+                        };
+                        
+                        xhr.send('currentPassword=' + encodeURIComponent(currentPassword) +
+                                '&newPassword=' + encodeURIComponent(newPassword));
+                    });
+                }
+            });
+        })();
+    </script>
+}

@@ -1,0 +1,87 @@
+﻿@{
+    var controller = ViewContext.RouteData.Values["controller"]?.ToString();
+    var userRole = Context.Session.GetString("UserRole") ?? "User";
+}
+
+<div class="sidebar p-3 shadow d-flex flex-column justify-content-between">
+    <div>
+        <div class="text-center mb-4">
+            <img src="/images/logo-removebg-preview.png" width="140" class="mb-3" alt="logo" onerror="this.src='https://via.placeholder.com/140x70?text=CHG'">
+            <hr style="border-color: rgba(255,255,255,0.2);" />
+        </div>
+        
+        <div class="nav flex-column">
+            <a href="@Url.Action("Index", "Dashboard")" class="text-decoration-none mb-2">
+                <div class="sidebar-item @(controller == "Dashboard" ? "active" : "")">
+                    <i class="fas fa-tachometer-alt me-2"></i> الصفحة الرئيسية
+                </div>
+            </a>
+            <a href="@Url.Action("Index", "Companies")" class="text-decoration-none mb-2">
+                <div class="sidebar-item @(controller == "Companies" ? "active" : "")">
+                    <i class="fas fa-building me-2"></i> الشركات
+                </div>
+            </a>
+            <a href="@Url.Action("Index", "Reports")" class="text-decoration-none mb-2">
+                <div class="sidebar-item @(controller == "Reports" ? "active" : "")">
+                    <i class="fas fa-chart-line me-2"></i> تقارير
+                </div>
+            </a>
+
+            @if (userRole == "Admin")
+            {
+                <hr style="border-color: rgba(255,255,255,0.2); margin: 15px 0;" />
+                <div class="small text-white-50 mb-2 px-2">إدارة النظام</div>
+                <a href="@Url.Action("MeetingTypes", "Admin")" class="text-decoration-none mb-2">
+                    <div class="sidebar-item @(controller == "Admin" && ViewContext.RouteData.Values["action"]?.ToString() == "MeetingTypes" ? "active" : "")">
+                        <i class="fas fa-tags me-2"></i> أنواع الاجتماعات
+                    </div>
+                </a>
+                <a href="@Url.Action("Users", "Admin")" class="text-decoration-none mb-2">
+                    <div class="sidebar-item @(controller == "Admin" && ViewContext.RouteData.Values["action"]?.ToString() == "Users" ? "active" : "")">
+                        <i class="fas fa-users-cog me-2"></i> المستخدمين
+                    </div>
+                </a>
+              
+            }
+        </div>
+    </div>
+</div>
+
+<style>
+    .sidebar-item {
+        padding: 12px 16px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        color: #fff;
+        font-weight: 500;
+    }
+    
+        .sidebar-item:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateX(-5px);
+        }
+    
+        .sidebar-item.active {
+            background: linear-gradient(135deg, #7bc6c3 0%, #65b8b5 50%, #4a9f9c 100%);
+            color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+    
+            .sidebar-item.active i {
+                color: white;
+            }
+    
+        .sidebar-item i {
+            width: 20px;
+            color: rgba(255,255,255,0.8);
+        }
+    
+        .sidebar-item.active i {
+            color: white;
+        }
+    
+    hr {
+        margin: 10px 0;
+    }
+</style>

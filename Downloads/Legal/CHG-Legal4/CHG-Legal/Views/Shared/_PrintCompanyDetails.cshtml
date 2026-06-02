@@ -1,0 +1,294 @@
+﻿@{
+    Layout = null;
+    var companyName = ViewBag.CompanyName ?? "شركة";
+    var allDetailsHtml = ViewBag.AllDetailsHtml ?? "";
+}
+
+<!DOCTYPE html>
+<html dir="rtl" lang="ar"> 
+<head>
+    <meta charset="UTF-8">
+    <title>@companyName - تقرير الشركة</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            direction: rtl;
+            background: white;
+        }
+        
+        .print-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+           
+        }
+        
+        .print-header h1 {
+            color: #0697A8;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .print-header .print-date {
+            color: #666;
+            font-size: 12px;
+        }
+        
+        .print-footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+            color: #999;
+            font-size: 11px;
+        }
+        
+        h5 {
+            color: #0697A8;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #0697A8;
+
+        }
+        
+        h6 {
+            color: #0697A8;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .text-success { color: #28a745 !important; }
+        .text-danger { color: #dc3545 !important; }
+        
+        .alert-info {
+            background-color: #d1ecf1;
+            border: 1px solid #bee5eb;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+        
+        .col-md-4 {
+            width: 33.333%;
+            float: right;
+            padding: 0 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        
+        .col-md-6 {
+            width: 50%;
+            float: right;
+            padding: 0 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        
+        .clearfix {
+            clear: both;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        
+        .table-responsive {
+            overflow-x: visible;
+            margin-bottom: 15px;
+        }
+        
+        .list-group {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .list-group-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+        
+        .mb-4 {
+            margin-bottom: 20px;
+        }
+        
+        .mt-3 {
+            margin-top: 15px;
+        }
+        
+        .mt-2 {
+            margin-top: 10px;
+        }
+        
+        .badge {
+            background-color: #6c757d;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+        }
+        /* خلفية خفيفة لهيدرات الأقسام في الطباعة */
+.print-content h5,
+.print-content h6{
+    background: linear-gradient(135deg, #f0f9fa, #e8f5f6);
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: #0697A8;
+    font-weight: 600;
+    border-right: 4px solid #0697A8;
+    border-bottom: none;
+}
+
+/* خلفية خفيفة لبطاقات المعلومات */
+.alert-info {
+    background-color: #d1ecf1 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+}
+
+/* تظليل صفوف الجداول بالتناوب */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* خلفية رأس الجدول */
+th {
+    background: linear-gradient(135deg, #0697A8, #057a8a) !important;
+    color: white !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+}
+
+/* تنسيق المرفقات */
+.list-group-item {
+    background-color: #fef9e6;
+    border-left: 3px solid #ffc107;
+}
+
+/* تنسيق المساهمين النشطين */
+.border-success .card-header {
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9) !important;
+}
+
+/* تنسيق المساهمين السابقين */
+.border-danger .card-header {
+    background: linear-gradient(135deg, #ffebee, #ffcdd2) !important;
+}
+
+/* خلفية خفيفة للصندوق */
+.card, .sub-section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* إظهار الخلفيات في الطباعة */
+@@media print {
+     /* إخفاء الأزرار والعناصر غير المرغوب طباعتها */
+    .modal-header .btn-close,
+    .modal-header .btn-light,
+    .modal-footer,
+    .download-attachment-details,
+    .delete-attachment-details,
+    .btn-teal,
+    .float-start,
+    .add-attachment-btn,
+    .badge.bg-secondary,
+    #printDetailsBtn {
+        display: none !important;
+    }
+    .print-content h5,.print-content h6 {
+        background: #e8f5f6 !important;
+        print-color-adjust: exact !important;
+        -webkit-print-color-adjust: exact !important;
+        border-right: 4px solid #0697A8 !important;
+    }
+    
+    th {
+        background: #0697A8 !important;
+        color: white !important;
+        print-color-adjust: exact !important;
+        -webkit-print-color-adjust: exact !important;
+    }
+    
+    .border-success .card-header {
+        background: #e8f5e9 !important;
+        print-color-adjust: exact !important;
+        -webkit-print-color-adjust: exact !important;
+    }
+    
+    .border-danger .card-header {
+        background: #ffebee !important;
+        print-color-adjust: exact !important;
+        -webkit-print-color-adjust: exact !important;
+    }
+    
+    .list-group-item {
+        background-color: #fef9e6 !important;
+        print-color-adjust: exact !important;
+        -webkit-print-color-adjust: exact !important;
+    }
+}
+        
+        @@media print {
+            body {
+                padding: 0;
+                margin: 0;
+            }
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="print-header">
+        <h1><i class="fas fa-building"></i> @Html.Raw(companyName)</h1>
+        <p class="print-date">تاريخ التقرير: @DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")</p>
+        <p class="print-date">تقرير مفصل عن الشركة</p>
+    </div>
+    
+    <div class="print-content">
+        @Html.Raw(allDetailsHtml)
+    </div>
+    
+
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                window.print();
+            }, 500);
+        };
+    </script>
+</body>
+</html>
